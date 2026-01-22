@@ -1,129 +1,307 @@
-# Kautilya: NIFTY50 Multi-Agent Investment Decision Helper
+# Kautilya - RL-Enhanced Investment Decision System
 
-A minimal, production-lean LangGraph system that aggregates macroeconomic, policy, and company-specific signals to provide structured investment decisions for NIFTY50 stocks.
+An intelligent NIFTY50 investment advisor using multi-agent analysis with Thompson Sampling reinforcement learning for adaptive weight optimization.
 
-## Features
+## ⚡ Quick Start (New Users)
 
-- **18 Parallel Agents**: Macro signals (inflation, rates, GDP), policy changes, company-specific data (earnings volatility, AGM, governance, shocks, historical/current data, financial performance), plus data quality assessment and missing data detection
-- **Real-time Web Search**: Uses Tavily API for live data from trusted financial sources
-- **Strict Source Validation**: Only accepts data from verified domains (RBI, SEBI, NSE, BSE, major financial publications)
-- **Gemini 2.5 Integration**: Advanced reasoning model with CoT capabilities
-- **Personalization**: User context integration from `personal.py`
-- **NIFTY50 Validation**: Ensures only valid NIFTY50 symbols are processed
-- **Intelligent Data Gap Detection**: Automatically identifies missing information and searches for additional data
-- **File Logging**: Comprehensive logging stored in `kautilya.log` for debugging and analysis
+### Clone and Setup - One Command!
 
-## Installation
-
+**Linux/Mac:**
 ```bash
-pip install -r requirements.txt
+git clone https://github.com/Jatin-Khanijoan/investment-decision-helper.git && cd investment-decision-helper && chmod +x setup.sh && ./setup.sh
 ```
 
-## API Keys Required
-
-Get API keys from:
-
-- [Google AI Studio](https://makersuite.google.com/app/apikey) for Gemini
-- [Tavily](https://tavily.com/) for web search
-
-Set environment variables:
-
-```bash
-export GEMINI_API_KEY="your-gemini-key"
-export TAVILY_API_KEY="your-tavily-key"
-export GEMINI_MODEL="gemini-2.0-flash-thinking-exp-1219"  # Optional
+**Windows:**
+```cmd
+git clone https://github.com/Jatin-Khanijoan/investment-decision-helper.git && cd investment-decision-helper && setup.bat
 ```
 
-## Usage
+### Then:
+1. **Add API Keys**: Edit `.env` file with your Gemini and Tavily API keys
+2. **Activate Environment**: 
+   - Linux/Mac: `source venv/bin/activate`
+   - Windows: `venv\Scripts\activate.bat`
+3. **Run**: `streamlit run app.py`
+4. **Open**: http://localhost:8501
 
+That's it! 🎉
+
+---
+
+## 🚀 Detailed Installation
+
+### Prerequisites
+- Python 3.8 or higher
+- Git
+- Google Gemini API key ([Get here](https://aistudio.google.com/app/apikey))
+- Tavily API key ([Get here](https://tavily.com/))
+
+### Step-by-Step Installation
+
+#### Linux/Mac
 ```bash
-python main.py \
-  --user_id U123 \
-  --question "Should I increase allocation to RELIANCE for the next 6 months?" \
-  --symbol RELIANCE \
-  --sector Energy
+# Clone the repository
+git clone https://github.com/Jatin-Khanijoan/investment-decision-helper.git
+cd investment-decision-helper
+
+# Run setup script
+chmod +x setup.sh
+./setup.sh
+
+# Edit .env file with your API keys
+nano .env  # or use your preferred editor
+
+# Activate virtual environment
+source venv/bin/activate
+
+# Run the application
+streamlit run app.py
 ```
 
-## Output Format
+#### Windows
+```cmd
+# Clone the repository
+git clone https://github.com/Jatin-Khanijoan/investment-decision-helper.git
+cd investment-decision-helper
 
-```json
-{
-  "decision": "BUY | HOLD | SELL",
-  "confidence": 0.0-1.0,
-  "horizon": "short | medium | long",
-  "why": "3-6 bullet points explaining the decision and noting any data limitations",
-  "key_factors": ["inflation", "interest_rates", ...],
-  "risks": ["valuation_shock", "sector_risk", ...],
-  "personalization_considerations": ["risk_tolerance", ...],
-  "used_agents": ["inflation", "interest_rates", ...],
-  "citations": ["https://rbi.org.in", ...]
+# Run setup script
+setup.bat
+
+# Edit .env file with your API keys
+notepad .env
+
+# Activate virtual environment
+venv\Scripts\activate.bat
+
+# Run the application
+streamlit run app.py
+```
+
+## 📋 Features
+
+### Core Capabilities
+- **15 Specialized Agents**: Macro, company, policy, and data quality analysis
+- **RL-Enhanced Weighting**: Thompson Sampling adapts to market conditions
+- **Regime Detection**: Classifies inflation, interest rates, and sentiment
+- **Full Explainability**: Shows why agents are weighted as they are
+- **5 Years of Data**: 1,239 trading days (2021-2026) of NIFTY 50 data
+- **Interactive Dashboard**: Streamlit UI with visualizations
+
+### Technical Stack
+- **LangGraph**: Multi-agent orchestration
+- **Google Gemini**: LLM-powered decision making
+- **Thompson Sampling**: Bayesian RL for weight optimization
+- **SQLite**: Persistent RL state storage
+- **Streamlit**: Interactive web interface
+
+## 📊 System Architecture
+
+```
+User Query → Personal Context → 15 Agents (Parallel) → RL Weighting → 
+Priority Grouping (HIGH/MEDIUM/LOW) → LLM Decision → Explainable Output
+```
+
+### Key Components
+
+**Agents** (15 total):
+- Macro: Inflation, Interest Rates, GDP Growth
+- Policy: Regulatory Changes
+- Company: Historical, Current, Financial Performance
+- Risk: Earnings Volatility, Sector Shocks, Governance
+- Quality: Missing Data Detection, Completeness
+
+**RL System**:
+- Thompson Sampling learner
+- Regime-specific weight adaptation
+- 70% RL / 30% expert blend
+- Database-backed persistence
+
+**Explainability**:
+- Plain-language regime descriptions
+- Weight rationale for each agent
+- RL learning proof statistics
+- Priority-grouped LLM prompts
+
+## 🎯 Usage
+
+### Streamlit Web App
+```bash
+streamlit run app.py
+```
+Visit http://localhost:8501
+
+### Command Line
+```bash
+python main.py --symbol "HDFC Bank" --question "Should I invest for 6 months?"
+```
+
+### Using RL-Enhanced Graph Programmatically
+```python
+from graph_rl import build_rl_graph
+import asyncio
+
+graph = build_rl_graph()
+
+state = {
+    "user_id": "user123",
+    "question": "Should I invest in HDFC Bank?",
+    "symbol": "HDFC Bank",
+    "sector": "Banking",
+    "agent_outputs": {},
+    "citations": [],
+    "errors": []
 }
+
+result = asyncio.run(graph.ainvoke(state))
+decision = result["decision_json"]
+
+print(f"Decision: {decision['decision']}")
+print(f"Confidence: {decision['confidence']}")
+print(f"Regime: {decision['regime_detected']}")
 ```
 
-## Source Validation Rules
+## 📁 Project Structure
 
-### Macro Data
+```
+investment-decision-helper/
+├── setup.sh                 # Linux/Mac setup script
+├── setup.bat                # Windows setup script
+├── requirements.txt         # Python dependencies
+├── .env                     # API keys (create from template)
+│
+├── app.py                   # Streamlit web interface
+├── main.py                  # CLI entry point
+├── graph_rl.py              # RL-enhanced decision graph ⭐
+├── graph.py                 # Original decision graph
+│
+├── agents/                  # 15 specialized agents
+│   ├── macro_agents.py
+│   ├── company_agents.py
+│   ├── news_policy_agents.py
+│   └── data_quality_agents.py
+│
+├── weight_manager.py        # RL weight orchestration
+├── rl_learner.py            # Thompson Sampling learner
+├── regime_detector.py       # Market regime classification
+├── explainer.py             # Weight explanations
+├── reward_calculator.py     # RL reward function
+│
+├── data_accessor.py         # NIFTY 50 data loader
+├── database.py              # SQLite persistence
+├── technical_indicators.py  # RSI, MACD, volatility
+│
+├── backtester.py            # Backtesting engine
+├── evaluator.py             # Statistical analysis
+├── generate_visualizations.py
+│
+└── pages/
+    └── 3_RL_Performance.py  # Backtest results dashboard
+```
 
-- RBI (rbi.org.in)
-- Ministry of Finance (finmin.nic.in)
-- MOSPI (mospi.gov.in)
-- Major economic publications
+## 🔬 Testing
 
-### News & Policy
-
-- Government sites (pib.gov.in, finmin.nic.in)
-- Regulatory bodies (sebi.gov.in, nsdl.co.in)
-- Financial news (economictimes.indiatimes.com, business-standard.com)
-
-### Company Data
-
-- NSE/BSE (nseindia.com, bseindia.com)
-- Company official websites
-- Bloomberg, Reuters, CNBC
-- Moneycontrol, Livemint, BusinessLine
-
-## Architecture
-
-- **LangGraph**: Orchestrates 18 parallel agents with conditional re-decision
-- **Pydantic**: Type-safe data models
-- **Async Execution**: Concurrent agent processing
-- **Fallback Handling**: Graceful degradation when APIs unavailable
-
-## Testing
-
+### Run Full Backtest
 ```bash
-pytest -q tests/
+python run_full_backtest.py
+```
+Simulates 450 decisions (3 systems × 75 train + 75 test)
+
+### Generate Visualizations
+```bash
+python generate_visualizations.py
+```
+Creates accuracy comparisons, regime heatmaps, etc.
+
+### Test RL Pipeline
+```bash
+python graph_rl.py
+```
+Runs end-to-end test with all components
+
+## 📈 Performance
+
+Based on backtesting with 1,239 days of NIFTY 50 data (2021-2026):
+
+**Training Phase** (2021-2024, 743 days):
+- Equal Weights: 60.0% accuracy
+- Expert Weights: 57.3% accuracy  
+- RL Weights: 54.7% accuracy (learning phase)
+
+**Testing Phase** (2024-2026, 496 days):
+- Equal Weights: 82.7% accuracy
+- Expert Weights: 81.3% accuracy
+- RL Weights: 81.3% accuracy
+
+*Note: Results similar due to stable market conditions in test period. RL shows advantage in volatile regimes (see backtest_results_summary.md).*
+
+## 🔧 Configuration
+
+### API Keys (.env)
+```
+GOOGLE_API_KEY=your_gemini_api_key
+TAVILY_API_KEY=your_tavily_key
 ```
 
-## Logs
+### RL Parameters (weight_manager.py)
+- `rl_blend_ratio`: 0.7 (70% RL, 30% expert)
+- `uniform_prior`: α=1, β=1 (Thompson Sampling)
+- `regime_multipliers`: Defined in weights_config.py
 
-All agent activities and decision processes are logged to `kautilya.log` for debugging and analysis.
+## 📚 Documentation
 
-## Project Structure
+- **PLAN.md**: Original implementation plan (Phases 1-10)
+- **PROJECT_COMPLETE.md**: Comprehensive project summary
+- **phase6_implementation_plan.md**: Backtesting approach
+- **phase7_walkthrough.md**: Explainability features
+- **phase8_complete.md**: Evaluation results
+- **backtest_results_summary.md**: Detailed backtest analysis
 
-```
-kautilya/
-├── main.py              # CLI entry point
-├── graph.py             # LangGraph orchestration
-├── llm.py               # Gemini integration
-├── state.py             # Type definitions
-├── personal.py          # User personalization
-├── providers/
-│   ├── search_utils.py  # Tavily search + validation
-│   ├── macro.py         # Inflation, rates, GDP
-│   ├── news.py          # Policy changes
-│   ├── company.py       # Company-specific data
-│   └── utils.py         # NIFTY50 validation
-├── agents/              # Agent implementations
-│   ├── macro_agents.py          # Economic indicators (3 agents)
-│   ├── news_policy_agents.py    # Policy changes (1 agent)
-│   ├── company_agents.py        # Company-specific data (9 agents)
-│   ├── data_quality_agents.py   # Data quality assessment (3 agents)
-│   └── missing_data_search_agent.py # Missing data detection & search (1 agent)
-├── tests/               # Test suite
-└── stocks.json          # NIFTY50 company list
+## 🐛 Troubleshooting
+
+### Import Errors
+```bash
+# Reinstall dependencies
+pip install -r requirements.txt --force-reinstall
 ```
 
-## License
+### Database Issues
+```bash
+# Reinitialize database
+rm kautilya_production.db
+python -c "from database import DatabaseManager; DatabaseManager('kautilya_production.db').close()"
+```
 
-MIT
+### API Key Errors
+- Ensure .env file exists and contains valid keys
+- Check key format (no quotes needed)
+- Verify keys at provider dashboards
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see LICENSE file for details.
+
+## 🙏 Acknowledgments
+
+- LangGraph for multi-agent orchestration
+- Google Gemini for LLM capabilities
+- Thompson Sampling algorithm for RL
+- NIFTY 50 for historical market data
+
+## 📞 Support
+
+For issues and questions:
+- GitHub Issues: [Create an issue](https://github.com/Jatin-Khanijoan/investment-decision-helper/issues)
+- Documentation: See docs/ folder
+- Example Usage: See example_usage.sh
+
+---
+
+**⚠️ Disclaimer**: This is an educational project. Investment decisions should be made with professional financial advice. Past performance does not guarantee future results.
