@@ -20,6 +20,11 @@ class DecisionState(TypedDict, total=False):
     citations: list[str]
     errors: list[str]
     decision_json: dict | None
+    # RL-related fields
+    conversation_history: list[dict]  # Previous turns in this conversation
+    weights_used: dict[str, float]  # Final weights applied
+    market_regime: str  # Detected market regime key
+    agent_summaries: str  # Formatted agent outputs
 
 
 class DecisionOutput(BaseModel):
@@ -32,3 +37,8 @@ class DecisionOutput(BaseModel):
     personalization_considerations: list[str]
     used_agents: list[str]
     citations: list[str]
+    # RL-related fields (optional for backward compatibility)
+    weight_explanation: str | None = None  # How weights were determined
+    rl_proof: dict | None = None  # RL statistics and learning proof
+    regime_detected: str | None = None  # Market regime that was detected
+
