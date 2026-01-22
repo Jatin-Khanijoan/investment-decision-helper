@@ -1,0 +1,4514 @@
+{
+  "train_equal": [
+    {
+      "timestamp": "2025-01-23T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.599814680733692,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 1.1928283779387208,
+      "reward": 0.6596414188969361,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-01-24T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5783634436008096,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 1.1642459358571229,
+      "reward": 0.6582122967928561,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-01-27T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5830182000595014,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 3.9865698022046305,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-01-28T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5828894834239172,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 3.2192444652560708,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-01-31T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5404927472113504,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -0.5393816678293839,
+      "reward": 0.6269690833914692,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-02-05T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5840142247026596,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -3.237003245232375,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-02-06T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.58967726549741,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -2.727790758515205,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-02-10T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5698684667797002,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -1.9190303486502085,
+      "reward": 0.6959515174325104,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-02-12T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5527101025913695,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -1.0820017140191516,
+      "reward": 0.6541000857009576,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-02-13T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5551314837255598,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -2.0756445548251645,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-02-14T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5613071817155371,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -1.6646859360860067,
+      "reward": 0.6832342968043004,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-02-17T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5902651722015622,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -1.8051351292493336,
+      "reward": 0.6902567564624666,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-02-18T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5913257612740151,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -3.576331536305904,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-02-19T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5914464600501923,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -3.5477414544170256,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-02-20T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5985956801901502,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -3.624556204624855,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-02-25T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5663932603377678,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 0.021953604715371416,
+      "reward": 0.6010976802357686,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-02-27T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5678699785930784,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -0.37591400329562363,
+      "reward": 0.6187957001647811,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-02-28T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5411122175478923,
+      "regime": "low_rising_neutral",
+      "outcome_7d": 1.6868025329157037,
+      "reward": 0.6843401266457851,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-03-03T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5615090441109636,
+      "regime": "low_rising_neutral",
+      "outcome_7d": 1.5877536811743624,
+      "reward": 0.6793876840587181,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-03-04T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5587627037083853,
+      "regime": "low_rising_neutral",
+      "outcome_7d": 1.424421434927417,
+      "reward": 0.6712210717463708,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-03-05T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5815702338207278,
+      "regime": "low_rising_neutral",
+      "outcome_7d": 0.7675502410765882,
+      "reward": 0.6383775120538294,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-03-07T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5608305868630562,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 1.5745482762443124,
+      "reward": 0.6787274138122156,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-03-10T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5657966774820958,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 3.251737510184647,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-03-12T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5934175216347966,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 5.286264213079364,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-03-13T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5862276909433545,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 5.676825674637905,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-03-17T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.595685721027769,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 4.3454212250791295,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-03-18T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.570094986643198,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 3.3180347109392514,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-03-21T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "BUY",
+      "confidence": 0.9,
+      "regime": "low_stable_bullish",
+      "outcome_7d": -0.07730060298754159,
+      "reward": -0.3,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-03-24T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "BUY",
+      "confidence": 0.9,
+      "regime": "low_falling_bullish",
+      "outcome_7d": -1.725606392668973,
+      "reward": -0.8,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-03-25T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "BUY",
+      "confidence": 0.9,
+      "regime": "low_falling_bullish",
+      "outcome_7d": -3.228743506706131,
+      "reward": -0.8,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-03-26T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5744552222555213,
+      "regime": "low_falling_neutral",
+      "outcome_7d": -5.642519111758282,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-03-27T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5793108469233932,
+      "regime": "low_falling_neutral",
+      "outcome_7d": -4.476526950930306,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-04-01T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5575007446559055,
+      "regime": "low_falling_neutral",
+      "outcome_7d": -1.4553844692800193,
+      "reward": 0.6727692234640009,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-04-02T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5868437019012767,
+      "regime": "low_falling_neutral",
+      "outcome_7d": -0.01628640064116676,
+      "reward": 0.6008143200320584,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-04-03T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5710197758133598,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 0.8047277216012068,
+      "reward": 0.6402363860800603,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-04-04T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5477111399762324,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 4.135440929601019,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-04-07T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "SELL",
+      "confidence": 0.9,
+      "regime": "medium_stable_bearish",
+      "outcome_7d": 8.861950400693095,
+      "reward": -0.8,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-04-08T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "SELL",
+      "confidence": 0.9,
+      "regime": "medium_stable_bearish",
+      "outcome_7d": 7.23913231584343,
+      "reward": -0.8,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-04-15T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "BUY",
+      "confidence": 0.9,
+      "regime": "medium_stable_bullish",
+      "outcome_7d": 3.0469103309035463,
+      "reward": 1.3523455165451772,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-04-16T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "BUY",
+      "confidence": 0.9,
+      "regime": "medium_stable_bullish",
+      "outcome_7d": 3.8029286774870683,
+      "reward": 1.3901464338743534,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-04-17T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "BUY",
+      "confidence": 0.9,
+      "regime": "medium_stable_bullish",
+      "outcome_7d": 2.030467493863105,
+      "reward": 1.3015233746931552,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-04-21T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "BUY",
+      "confidence": 0.9,
+      "regime": "medium_stable_bullish",
+      "outcome_7d": 0.8648507495165974,
+      "reward": -0.3,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-04-23T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "BUY",
+      "confidence": 0.9,
+      "regime": "medium_falling_bullish",
+      "outcome_7d": 0.5433855550691696,
+      "reward": -0.3,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-04-24T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5668744091079653,
+      "regime": "medium_falling_neutral",
+      "outcome_7d": 0.5481158260711677,
+      "reward": 0.6274057913035583,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-04-25T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5928540489232369,
+      "regime": "medium_falling_neutral",
+      "outcome_7d": 1.5601503368435625,
+      "reward": 0.6780075168421781,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-04-28T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.586655494522546,
+      "regime": "medium_falling_neutral",
+      "outcome_7d": -0.224839180385148,
+      "reward": 0.6112419590192574,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-04-29T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5994245538751158,
+      "regime": "medium_falling_neutral",
+      "outcome_7d": -1.3475948134344486,
+      "reward": 0.6673797406717225,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-04-30T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5927825229825089,
+      "regime": "medium_falling_neutral",
+      "outcome_7d": 2.426625900995307,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-05-02T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5744294250884485,
+      "regime": "medium_falling_neutral",
+      "outcome_7d": 0.9514636480508561,
+      "reward": 0.6475731824025428,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-05-06T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5964127145231645,
+      "regime": "medium_falling_neutral",
+      "outcome_7d": 2.7994716894452742,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-05-07T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5934084539454758,
+      "regime": "medium_falling_neutral",
+      "outcome_7d": 2.4796841208467044,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-05-09T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5629494116180146,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 2.815311562812402,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-05-13T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5865694016645916,
+      "regime": "medium_stable_neutral",
+      "outcome_7d": 0.12755127988657572,
+      "reward": 0.6063775639943287,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-05-14T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5676111692442055,
+      "regime": "medium_stable_neutral",
+      "outcome_7d": 0.7550604251040869,
+      "reward": 0.6377530212552043,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-05-16T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5923690154746096,
+      "regime": "medium_stable_neutral",
+      "outcome_7d": -0.7737871605688237,
+      "reward": 0.6386893580284412,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-05-19T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5701281819161984,
+      "regime": "medium_stable_neutral",
+      "outcome_7d": -0.7736881876253986,
+      "reward": 0.6386844093812699,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-05-20T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5986216346602127,
+      "regime": "medium_stable_neutral",
+      "outcome_7d": 0.6064681837148793,
+      "reward": 0.6303234091857439,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-05-21T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5801572892933954,
+      "regime": "medium_stable_neutral",
+      "outcome_7d": -0.25288704311572957,
+      "reward": 0.6126443521557865,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-05-23T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.592599852878982,
+      "regime": "medium_stable_neutral",
+      "outcome_7d": -1.2499421602493102,
+      "reward": 0.6624971080124655,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-05-26T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.574294985800461,
+      "regime": "medium_stable_neutral",
+      "outcome_7d": -1.5237299084242153,
+      "reward": 0.6761864954212108,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-05-27T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.598972331537936,
+      "regime": "medium_stable_neutral",
+      "outcome_7d": -0.3033086013969084,
+      "reward": 0.6151654300698454,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-05-28T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5883988833671275,
+      "regime": "medium_stable_neutral",
+      "outcome_7d": 1.0124250326735273,
+      "reward": 0.6506212516336763,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-05-29T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5984267587810798,
+      "regime": "medium_stable_neutral",
+      "outcome_7d": 1.08562592616456,
+      "reward": 0.654281296308228,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-05-30T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5799649216136057,
+      "regime": "medium_stable_neutral",
+      "outcome_7d": 1.42844444803581,
+      "reward": 0.6714222224017905,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-06-02T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5911706181372902,
+      "regime": "medium_stable_neutral",
+      "outcome_7d": 1.7186829903789476,
+      "reward": 0.6859341495189474,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-06-03T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.583036022696743,
+      "regime": "medium_stable_neutral",
+      "outcome_7d": 1.4085769583375807,
+      "reward": 0.670428847916879,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-06-06T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5768212456405816,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -0.5985269797084669,
+      "reward": 0.6299263489854233,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-06-09T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5543078333503106,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -1.1598122948468779,
+      "reward": 0.6579906147423439,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-06-10T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5606786297430566,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -1.23883406196162,
+      "reward": 0.661941703098081,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-06-13T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5693584881608718,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 1.3178335342616492,
+      "reward": 0.6658916767130825,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-06-16T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5874324068633797,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 1.1955584951796845,
+      "reward": 0.6597779247589842,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-06-17T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5770895813280088,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 2.7988122349457156,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-06-18T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5938806341961249,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 3.328020054771774,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-06-19T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5939600139166457,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 2.919342966331559,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-06-20T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5866995370091995,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 1.70991223459326,
+      "reward": 0.685495611729663,
+      "evaluated": true
+    }
+  ],
+  "train_expert": [
+    {
+      "timestamp": "2025-01-23T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.595068644405142,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 1.1928283779387208,
+      "reward": 0.6596414188969361,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-01-27T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5877642363880515,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 3.9865698022046305,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-01-28T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5876355197524673,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 3.2192444652560708,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-01-29T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.598895365330981,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 1.9006523306465888,
+      "reward": 0.6950326165323294,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-01-31T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5357467108828002,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -0.5393816678293839,
+      "reward": 0.6269690833914692,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-02-01T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5495254900955642,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -1.7474975673011293,
+      "reward": 0.6873748783650564,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-02-03T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5781621236327676,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -1.3518227990608267,
+      "reward": 0.6675911399530413,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-02-04T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5531240253932074,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -2.9817706962098574,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-02-05T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5792681883741095,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -3.237003245232375,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-02-06T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5849312291688599,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -2.727790758515205,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-02-07T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5782256194831534,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -2.608876504406849,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-02-11T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5520373856109275,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -0.687635988522776,
+      "reward": 0.6343817994261388,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-02-12T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5574561389199196,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -1.0820017140191516,
+      "reward": 0.6541000857009576,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-02-13T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5598775200541098,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -2.0756445548251645,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-02-17T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5950112085301122,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -1.8051351292493336,
+      "reward": 0.6902567564624666,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-02-19T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5961924963787424,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -3.5477414544170256,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-02-20T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5966582834812997,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -3.624556204624855,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-02-21T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5904948549003832,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -2.0117652735799076,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-02-25T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5711392966663179,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 0.021953604715371416,
+      "reward": 0.6010976802357686,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-02-27T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5726160149216285,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -0.37591400329562363,
+      "reward": 0.6187957001647811,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-02-28T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5458582538764424,
+      "regime": "low_rising_neutral",
+      "outcome_7d": 1.6868025329157037,
+      "reward": 0.6843401266457851,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-03-04T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5635087400369354,
+      "regime": "low_rising_neutral",
+      "outcome_7d": 1.424421434927417,
+      "reward": 0.6712210717463708,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-03-05T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5863162701492779,
+      "regime": "low_rising_neutral",
+      "outcome_7d": 0.7675502410765882,
+      "reward": 0.6383775120538294,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-03-06T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.557287347174955,
+      "regime": "low_rising_neutral",
+      "outcome_7d": 1.2845591203253914,
+      "reward": 0.6642279560162696,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-03-07T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5560845505345061,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 1.5745482762443124,
+      "reward": 0.6787274138122156,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-03-10T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5610506411535457,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 3.251737510184647,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-03-12T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5981635579633466,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 5.286264213079364,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-03-13T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5909737272719046,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 5.676825674637905,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-03-17T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5909396846992189,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 4.3454212250791295,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-03-18T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5653489503146479,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 3.3180347109392514,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-03-25T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "BUY",
+      "confidence": 0.9,
+      "regime": "low_falling_bullish",
+      "outcome_7d": -3.228743506706131,
+      "reward": -0.8,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-03-27T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5745648105948431,
+      "regime": "low_falling_neutral",
+      "outcome_7d": -4.476526950930306,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-03-28T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5929954281923107,
+      "regime": "low_falling_neutral",
+      "outcome_7d": -4.762886729437664,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-04-02T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5915897382298267,
+      "regime": "low_falling_neutral",
+      "outcome_7d": -0.01628640064116676,
+      "reward": 0.6008143200320584,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-04-03T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5757658121419099,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 0.8047277216012068,
+      "reward": 0.6402363860800603,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-04-04T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5524571763047825,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 4.135440929601019,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-04-07T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "SELL",
+      "confidence": 0.9,
+      "regime": "medium_stable_bearish",
+      "outcome_7d": 8.861950400693095,
+      "reward": -0.8,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-04-08T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "SELL",
+      "confidence": 0.9,
+      "regime": "medium_stable_bearish",
+      "outcome_7d": 7.23913231584343,
+      "reward": -0.8,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-04-09T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "SELL",
+      "confidence": 0.9,
+      "regime": "medium_stable_bearish",
+      "outcome_7d": 8.615505499092595,
+      "reward": -0.8,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-04-11T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5981185032509165,
+      "regime": "medium_stable_neutral",
+      "outcome_7d": 6.21217729553564,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-04-15T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "BUY",
+      "confidence": 0.9,
+      "regime": "medium_stable_bullish",
+      "outcome_7d": 3.0469103309035463,
+      "reward": 1.3523455165451772,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-04-17T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "BUY",
+      "confidence": 0.9,
+      "regime": "medium_stable_bullish",
+      "outcome_7d": 2.030467493863105,
+      "reward": 1.3015233746931552,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-04-21T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "BUY",
+      "confidence": 0.9,
+      "regime": "medium_stable_bullish",
+      "outcome_7d": 0.8648507495165974,
+      "reward": -0.3,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-04-22T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "BUY",
+      "confidence": 0.9,
+      "regime": "medium_falling_bullish",
+      "outcome_7d": 0.7425338009082569,
+      "reward": -0.3,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-04-24T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5621283727794152,
+      "regime": "medium_falling_neutral",
+      "outcome_7d": 0.5481158260711677,
+      "reward": 0.6274057913035583,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-04-25T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.597600085251787,
+      "regime": "medium_falling_neutral",
+      "outcome_7d": 1.5601503368435625,
+      "reward": 0.6780075168421781,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-04-28T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5819094581939959,
+      "regime": "medium_falling_neutral",
+      "outcome_7d": -0.224839180385148,
+      "reward": 0.6112419590192574,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-04-29T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5946785175465658,
+      "regime": "medium_falling_neutral",
+      "outcome_7d": -1.3475948134344486,
+      "reward": 0.6673797406717225,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-04-30T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5880364866539588,
+      "regime": "medium_falling_neutral",
+      "outcome_7d": 2.426625900995307,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-05-02T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5696833887598984,
+      "regime": "medium_falling_neutral",
+      "outcome_7d": 0.9514636480508561,
+      "reward": 0.6475731824025428,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-05-05T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5843490579024957,
+      "regime": "medium_falling_neutral",
+      "outcome_7d": 0.8411297097642588,
+      "reward": 0.6420564854882129,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-05-06T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5916666781946144,
+      "regime": "medium_falling_neutral",
+      "outcome_7d": 2.7994716894452742,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-05-07T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5886624176169257,
+      "regime": "medium_falling_neutral",
+      "outcome_7d": 2.4796841208467044,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-05-08T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5987575450751151,
+      "regime": "low_falling_neutral",
+      "outcome_7d": 2.7669750924865553,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-05-12T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5505362488607063,
+      "regime": "medium_stable_neutral",
+      "outcome_7d": -0.4463443893005733,
+      "reward": 0.6223172194650286,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-05-13T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5818233653360415,
+      "regime": "medium_stable_neutral",
+      "outcome_7d": 0.12755127988657572,
+      "reward": 0.6063775639943287,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-05-15T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "BUY",
+      "confidence": 0.9,
+      "regime": "medium_stable_bullish",
+      "outcome_7d": -0.24319590138095806,
+      "reward": -0.3,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-05-16T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5876229791460595,
+      "regime": "medium_stable_neutral",
+      "outcome_7d": -0.7737871605688237,
+      "reward": 0.6386893580284412,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-05-21T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5849033256219455,
+      "regime": "medium_stable_neutral",
+      "outcome_7d": -0.25288704311572957,
+      "reward": 0.6126443521557865,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-05-23T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5973458892075321,
+      "regime": "medium_stable_neutral",
+      "outcome_7d": -1.2499421602493102,
+      "reward": 0.6624971080124655,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-05-26T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5695489494719109,
+      "regime": "medium_stable_neutral",
+      "outcome_7d": -1.5237299084242153,
+      "reward": 0.6761864954212108,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-05-28T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5836528470385774,
+      "regime": "medium_stable_neutral",
+      "outcome_7d": 1.0124250326735273,
+      "reward": 0.6506212516336763,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-05-29T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5968272048903701,
+      "regime": "medium_stable_neutral",
+      "outcome_7d": 1.08562592616456,
+      "reward": 0.654281296308228,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-05-30T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5847109579421558,
+      "regime": "medium_stable_neutral",
+      "outcome_7d": 1.42844444803581,
+      "reward": 0.6714222224017905,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-06-03T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5877820590252931,
+      "regime": "medium_stable_neutral",
+      "outcome_7d": 1.4085769583375807,
+      "reward": 0.670428847916879,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-06-04T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5875596436992093,
+      "regime": "medium_stable_neutral",
+      "outcome_7d": 0.399671814201338,
+      "reward": 0.6199835907100669,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-06-05T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5952378025123715,
+      "regime": "medium_stable_neutral",
+      "outcome_7d": 0.7902742930560042,
+      "reward": 0.6395137146528002,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-06-06T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5720752093120315,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -0.5985269797084669,
+      "reward": 0.6299263489854233,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-06-10T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5559325934145065,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -1.23883406196162,
+      "reward": 0.661941703098081,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-06-12T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5955591571278127,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 0.3363039512700827,
+      "reward": 0.6168151975635041,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-06-13T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5741045244894218,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 1.3178335342616492,
+      "reward": 0.6658916767130825,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-06-16T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5921784431919298,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 1.1955584951796845,
+      "reward": 0.6597779247589842,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-06-17T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5818356176565589,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 2.7988122349457156,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-06-18T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.598626670524675,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 3.328020054771774,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-06-20T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5819535006806494,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 1.70991223459326,
+      "reward": 0.685495611729663,
+      "evaluated": true
+    }
+  ],
+  "train_rl": [
+    {
+      "timestamp": "2025-01-23T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5957752290088922,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 1.1928283779387208,
+      "reward": 0.6596414188969361,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-01-24T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5563833439458997,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 1.1642459358571229,
+      "reward": 0.6582122967928561,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-01-27T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.562865044795219,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 3.9865698022046305,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-01-28T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5402127773783794,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 3.2192444652560708,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-01-29T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5645378529188725,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 1.9006523306465888,
+      "reward": 0.6950326165323294,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-01-30T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5623242390705312,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 1.3352975332802888,
+      "reward": 0.6667648766640144,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-01-31T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5952296284837107,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -0.5393816678293839,
+      "reward": 0.6269690833914692,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-02-03T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5774124687805745,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -1.3518227990608267,
+      "reward": 0.6675911399530413,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-02-04T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.566428450839868,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -2.9817706962098574,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-02-06T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5660781275474903,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -2.727790758515205,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-02-07T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5713256087653888,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -2.608876504406849,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-02-10T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5180214511321962,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -1.9190303486502085,
+      "reward": 0.6959515174325104,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-02-17T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5015022887792328,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -1.8051351292493336,
+      "reward": 0.6902567564624666,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-02-18T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5641308335287647,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -3.576331536305904,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-02-19T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5585828261857669,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -3.5477414544170256,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-02-20T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5709067533267499,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -3.624556204624855,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-02-21T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5501964600810636,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -2.0117652735799076,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-02-25T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5620300706245748,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 0.021953604715371416,
+      "reward": 0.6010976802357686,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-02-27T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5275984139701899,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -0.37591400329562363,
+      "reward": 0.6187957001647811,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-02-28T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "SELL",
+      "confidence": 0.7420509857131631,
+      "regime": "low_rising_neutral",
+      "outcome_7d": 1.6868025329157037,
+      "reward": -0.8,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-03-03T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5840444642688425,
+      "regime": "low_rising_neutral",
+      "outcome_7d": 1.5877536811743624,
+      "reward": 0.6793876840587181,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-03-04T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5622706466596237,
+      "regime": "low_rising_neutral",
+      "outcome_7d": 1.424421434927417,
+      "reward": 0.6712210717463708,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-03-05T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5739630733925767,
+      "regime": "low_rising_neutral",
+      "outcome_7d": 0.7675502410765882,
+      "reward": 0.6383775120538294,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-03-07T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5932407354223411,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 1.5745482762443124,
+      "reward": 0.6787274138122156,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-03-10T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5835737994922202,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 3.251737510184647,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-03-11T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5864157143397772,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 3.7892425515270314,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-03-12T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5852612117237926,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 5.286264213079364,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-03-13T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5801135559521632,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 5.676825674637905,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-03-18T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5557905684145357,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 3.3180347109392514,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-03-19T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5062927514941677,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 2.670511096753916,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-03-21T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "BUY",
+      "confidence": 0.9,
+      "regime": "low_stable_bullish",
+      "outcome_7d": -0.07730060298754159,
+      "reward": -0.3,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-03-24T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "BUY",
+      "confidence": 0.9,
+      "regime": "low_falling_bullish",
+      "outcome_7d": -1.725606392668973,
+      "reward": -0.8,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-03-25T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "BUY",
+      "confidence": 0.9,
+      "regime": "low_falling_bullish",
+      "outcome_7d": -3.228743506706131,
+      "reward": -0.8,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-03-26T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.511038638102635,
+      "regime": "low_falling_neutral",
+      "outcome_7d": -5.642519111758282,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-03-27T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5133566874406147,
+      "regime": "low_falling_neutral",
+      "outcome_7d": -4.476526950930306,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-04-01T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "SELL",
+      "confidence": 0.8105732554530818,
+      "regime": "low_falling_neutral",
+      "outcome_7d": -1.4553844692800193,
+      "reward": 1.272769223464001,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-04-03T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5303895183721241,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 0.8047277216012068,
+      "reward": 0.6402363860800603,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-04-04T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "SELL",
+      "confidence": 0.7557723448514401,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 4.135440929601019,
+      "reward": -0.8,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-04-07T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "SELL",
+      "confidence": 0.9,
+      "regime": "medium_stable_bearish",
+      "outcome_7d": 8.861950400693095,
+      "reward": -0.8,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-04-08T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "SELL",
+      "confidence": 0.9,
+      "regime": "medium_stable_bearish",
+      "outcome_7d": 7.23913231584343,
+      "reward": -0.8,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-04-09T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "SELL",
+      "confidence": 0.8670186569198588,
+      "regime": "medium_stable_bearish",
+      "outcome_7d": 8.615505499092595,
+      "reward": -0.8,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-04-11T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5735877222442177,
+      "regime": "medium_stable_neutral",
+      "outcome_7d": 6.21217729553564,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-04-16T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "BUY",
+      "confidence": 0.8869878966895341,
+      "regime": "medium_stable_bullish",
+      "outcome_7d": 3.8029286774870683,
+      "reward": 1.3901464338743534,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-04-17T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "BUY",
+      "confidence": 0.9,
+      "regime": "medium_stable_bullish",
+      "outcome_7d": 2.030467493863105,
+      "reward": 1.3015233746931552,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-04-21T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "BUY",
+      "confidence": 0.9,
+      "regime": "medium_stable_bullish",
+      "outcome_7d": 0.8648507495165974,
+      "reward": -0.3,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-04-22T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "BUY",
+      "confidence": 0.9,
+      "regime": "medium_falling_bullish",
+      "outcome_7d": 0.7425338009082569,
+      "reward": -0.3,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-04-23T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "BUY",
+      "confidence": 0.9,
+      "regime": "medium_falling_bullish",
+      "outcome_7d": 0.5433855550691696,
+      "reward": -0.3,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-04-24T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5284078483774698,
+      "regime": "medium_falling_neutral",
+      "outcome_7d": 0.5481158260711677,
+      "reward": 0.6274057913035583,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-04-28T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5605191109968474,
+      "regime": "medium_falling_neutral",
+      "outcome_7d": -0.224839180385148,
+      "reward": 0.6112419590192574,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-04-29T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5948816531323555,
+      "regime": "medium_falling_neutral",
+      "outcome_7d": -1.3475948134344486,
+      "reward": 0.6673797406717225,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-05-02T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5473047009844606,
+      "regime": "medium_falling_neutral",
+      "outcome_7d": 0.9514636480508561,
+      "reward": 0.6475731824025428,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-05-06T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5598439706375563,
+      "regime": "medium_falling_neutral",
+      "outcome_7d": 2.7994716894452742,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-05-09T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5408154098006512,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 2.815311562812402,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-05-13T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5641101991986769,
+      "regime": "medium_stable_neutral",
+      "outcome_7d": 0.12755127988657572,
+      "reward": 0.6063775639943287,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-05-14T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5249693834400964,
+      "regime": "medium_stable_neutral",
+      "outcome_7d": 0.7550604251040869,
+      "reward": 0.6377530212552043,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-05-15T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "BUY",
+      "confidence": 0.9,
+      "regime": "medium_stable_bullish",
+      "outcome_7d": -0.24319590138095806,
+      "reward": -0.3,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-05-16T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5718087120507062,
+      "regime": "medium_stable_neutral",
+      "outcome_7d": -0.7737871605688237,
+      "reward": 0.6386893580284412,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-05-19T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5344464214131159,
+      "regime": "medium_stable_neutral",
+      "outcome_7d": -0.7736881876253986,
+      "reward": 0.6386844093812699,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-05-20T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5466260629645183,
+      "regime": "medium_stable_neutral",
+      "outcome_7d": 0.6064681837148793,
+      "reward": 0.6303234091857439,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-05-22T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5642564571489366,
+      "regime": "medium_stable_neutral",
+      "outcome_7d": 0.43438156499265657,
+      "reward": 0.6217190782496328,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-05-23T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5694112961872029,
+      "regime": "medium_stable_neutral",
+      "outcome_7d": -1.2499421602493102,
+      "reward": 0.6624971080124655,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-05-26T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "BUY",
+      "confidence": 0.7126884087450479,
+      "regime": "medium_stable_neutral",
+      "outcome_7d": -1.5237299084242153,
+      "reward": -0.8,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-05-27T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5783206054425375,
+      "regime": "medium_stable_neutral",
+      "outcome_7d": -0.3033086013969084,
+      "reward": 0.6151654300698454,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-05-28T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5237560080958228,
+      "regime": "medium_stable_neutral",
+      "outcome_7d": 1.0124250326735273,
+      "reward": 0.6506212516336763,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-06-02T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5909223983000332,
+      "regime": "medium_stable_neutral",
+      "outcome_7d": 1.7186829903789476,
+      "reward": 0.6859341495189474,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-06-03T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5918539509479672,
+      "regime": "medium_stable_neutral",
+      "outcome_7d": 1.4085769583375807,
+      "reward": 0.670428847916879,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-06-04T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5267255068833163,
+      "regime": "medium_stable_neutral",
+      "outcome_7d": 0.399671814201338,
+      "reward": 0.6199835907100669,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-06-05T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5717358957837113,
+      "regime": "medium_stable_neutral",
+      "outcome_7d": 0.7902742930560042,
+      "reward": 0.6395137146528002,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-06-09T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5559361405170101,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -1.1598122948468779,
+      "reward": 0.6579906147423439,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-06-10T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5430183025783566,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -1.23883406196162,
+      "reward": 0.661941703098081,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-06-11T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5545051044863628,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -0.1153475940082891,
+      "reward": 0.6057673797004144,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-06-13T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5842798282076428,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 1.3178335342616492,
+      "reward": 0.6658916767130825,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-06-16T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5686603388589595,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 1.1955584951796845,
+      "reward": 0.6597779247589842,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-06-19T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5945370463891478,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 2.919342966331559,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-06-20T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5404738649005087,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 1.70991223459326,
+      "reward": 0.685495611729663,
+      "evaluated": true
+    }
+  ],
+  "test_equal": [
+    {
+      "timestamp": "2025-07-01T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5764663940027135,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -0.7303713912097004,
+      "reward": 0.636518569560485,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-07-02T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5925163411483816,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -1.1925715228613973,
+      "reward": 0.6596285761430698,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-07-04T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.595606858943334,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -1.0415930246259013,
+      "reward": 0.6520796512312951,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-07-09T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5944263598540462,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -1.9928481989001343,
+      "reward": 0.6996424099450067,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-07-10T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5916931778013432,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -1.0433736602873143,
+      "reward": 0.6521686830143657,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-07-14T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5655049466157311,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 0.548594028458324,
+      "reward": 0.6274297014229162,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-07-17T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5969463038546952,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -1.7145565070913835,
+      "reward": 0.6857278253545691,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-07-21T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5916573397153495,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -0.9391926092137782,
+      "reward": 0.6469596304606889,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-07-22T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5880097017100951,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -1.1673563200044808,
+      "reward": 0.658367816000224,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-07-23T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5913625059484816,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -2.595371115666608,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-07-24T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5924945130645137,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -1.3540365731522839,
+      "reward": 0.6677018286576142,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-07-29T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5683741807065054,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -0.9062853781661453,
+      "reward": 0.6453142689083072,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-07-30T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5834770430251256,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -1.9784711758777391,
+      "reward": 0.6989235587938869,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-08-01T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.590636484082833,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -0.31731687112130336,
+      "reward": 0.6158658435560651,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-08-05T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5834641249967311,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -0.07403786276017209,
+      "reward": 0.6037018931380086,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-08-06T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5843227344574832,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 1.2319831367857346,
+      "reward": 0.6615991568392867,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-08-07T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5974924029171167,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 1.5632527854969172,
+      "reward": 0.6781626392748459,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-08-12T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5929356805104541,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 1.5628445649599265,
+      "reward": 0.6781422282479963,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-08-13T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5981135258973459,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 1.415147028658358,
+      "reward": 0.6707573514329179,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-08-14T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5779996962644633,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 0.32783490924149356,
+      "reward": 0.6163917454620746,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-08-19T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5597139753505884,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -2.2169158929011172,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-09-01T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5725485876781047,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 1.4133981453844735,
+      "reward": 0.6706699072692237,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-09-02T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5892805331811808,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 1.7327377174567586,
+      "reward": 0.6866368858728379,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-09-04T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5748268810755377,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 1.3539902079298847,
+      "reward": 0.6676995103964942,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-09-09T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.587574372700035,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 2.2317299727367046,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-09-10T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5806907816271332,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 1.4173250417449206,
+      "reward": 0.670866252087246,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-09-12T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5724823044304016,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 0.2209922752249741,
+      "reward": 0.6110496137612487,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-09-15T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5838672060349194,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -0.04906419032118804,
+      "reward": 0.6024532095160594,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-09-17T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5740257143428446,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -2.6669693350835435,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-09-18T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5753444294019273,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -3.102235717994293,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-09-19T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5794289406921642,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -2.8268195466902015,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-09-22T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5970878517855233,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -1.4524439189202567,
+      "reward": 0.6726221959460128,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-09-26T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5565397671248913,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 1.5877297229331555,
+      "reward": 0.6793864861466578,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-09-29T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5575200143030256,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 2.2200211894507293,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-09-30T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5644169869377295,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 2.7396174896692957,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-10-01T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5956168632248396,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 1.5745098907647244,
+      "reward": 0.6787254945382362,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-10-03T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5805675996868751,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 1.0092692087530253,
+      "reward": 0.6504634604376512,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-10-07T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5595954670859896,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 1.8997701955130377,
+      "reward": 0.6949885097756519,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-10-08T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5831013476242434,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 2.649908269334796,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-10-09T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5768982797232293,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 2.626301535235774,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-10-10T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5834354494938723,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 2.306671649789305,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-10-13T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5905170800093993,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 2.632262207485142,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-10-15T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5887418691277033,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 2.5371640232115955,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-10-16T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5762747994392009,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 1.3714906606528026,
+      "reward": 0.6685745330326401,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-10-17T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5617478649164498,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 1.3382030622504717,
+      "reward": 0.6669101531125236,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-10-20T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.544510946292577,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 0.13427155745331776,
+      "reward": 0.6067135778726659,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-10-21T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5569531128139618,
+      "regime": "low_falling_neutral",
+      "outcome_7d": -0.5663236510673172,
+      "reward": 0.6283161825533659,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-10-23T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.576072197707277,
+      "regime": "low_falling_neutral",
+      "outcome_7d": -0.494565763149165,
+      "reward": 0.6247282881574582,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-10-27T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5904887755556116,
+      "regime": "low_falling_neutral",
+      "outcome_7d": -1.7574871803759082,
+      "reward": 0.6878743590187953,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-10-30T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5935879419193145,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -0.7067820549234107,
+      "reward": 0.6353391027461706,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-11-03T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5866711391799876,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 0.4494757087102528,
+      "reward": 0.6224737854355126,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-11-06T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.571547095295784,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 1.974739020843052,
+      "reward": 0.6987369510421526,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-11-10T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5853279950006501,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 1.87023326106041,
+      "reward": 0.6935116630530205,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-11-11T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5923977396362557,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 1.9350105760081289,
+      "reward": 0.6967505288004064,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-11-12T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5712971928325304,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 0.7433586594424219,
+      "reward": 0.637167932972121,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-11-13T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5696496589166138,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 0.31048160391666085,
+      "reward": 0.615524080195833,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-11-14T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.573747133358228,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -0.09745253289746643,
+      "reward": 0.6048726266448733,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-11-17T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5752091364256401,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 0.737503099358211,
+      "reward": 0.6368751549679106,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-11-18T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5973527388525185,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 1.1790791604030098,
+      "reward": 0.6589539580201504,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-11-19T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5865915225190935,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 0.5769086829938577,
+      "reward": 0.6288454341496929,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-11-20T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5782246657185144,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -0.06261418020285259,
+      "reward": 0.6031307090101427,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-11-24T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.596182948315422,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 0.10208208940850172,
+      "reward": 0.6051041044704251,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-11-25T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5871145545654662,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 0.5754342316726447,
+      "reward": 0.6287717115836322,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-11-26T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5989958823540642,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -0.07193201375293755,
+      "reward": 0.6035966006876469,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-11-27T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5886911806169599,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -0.97270513111493,
+      "reward": 0.6486352565557465,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-12-04T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.587085423587802,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -0.024775531761658337,
+      "reward": 0.6012387765880829,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-12-05T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.599182449404506,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -1.2462552197797037,
+      "reward": 0.6623127609889852,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-12-08T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5944952789237943,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -0.5469837888642576,
+      "reward": 0.6273491894432128,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-12-09T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5887362425921651,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -0.09326751716839114,
+      "reward": 0.6046633758584196,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-12-11T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5780115288632096,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 1.0573951051313768,
+      "reward": 0.6528697552565688,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-12-15T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5854758094633636,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 0.44107533243939745,
+      "reward": 0.6220537666219699,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-12-26T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5941539836095879,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 0.5237632620774719,
+      "reward": 0.6261881631038736,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-12-29T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5824013082483835,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 0.7657437138859285,
+      "reward": 0.6382871856942964,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-12-30T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5817932815451642,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -0.23902370382649965,
+      "reward": 0.611951185191325,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-12-31T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5990436881505311,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -1.7080246157614325,
+      "reward": 0.6854012307880716,
+      "evaluated": true
+    }
+  ],
+  "test_expert": [
+    {
+      "timestamp": "2025-07-01T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5717203576741634,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -0.7303713912097004,
+      "reward": 0.636518569560485,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-07-02T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5972623774769317,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -1.1925715228613973,
+      "reward": 0.6596285761430698,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-07-03T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5866087546585159,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -1.2713882536321162,
+      "reward": 0.6635694126816057,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-07-04T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5996471047281159,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -1.0415930246259013,
+      "reward": 0.6520796512312951,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-07-07T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5984426434588228,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -0.9789366607360974,
+      "reward": 0.6489468330368049,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-07-09T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5896803235254962,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -1.9928481989001343,
+      "reward": 0.6996424099450067,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-07-11T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5802814567509165,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -0.35368004182926377,
+      "reward": 0.6176840020914631,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-07-14T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5702509829442812,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 0.548594028458324,
+      "reward": 0.6274297014229162,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-07-15T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5827410983670882,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -0.5306439962215954,
+      "reward": 0.6265321998110798,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-07-16T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5934505452566813,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -1.4875823267048862,
+      "reward": 0.6743791163352443,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-07-17T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5983076598167547,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -1.7145565070913835,
+      "reward": 0.6857278253545691,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-07-18T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5956639346074162,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -0.5899456913538829,
+      "reward": 0.6294972845676942,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-07-23T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5866164696199315,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -2.595371115666608,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-07-24T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5877484767359636,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -1.3540365731522839,
+      "reward": 0.6677018286576142,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-07-30T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5882230793536757,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -1.9784711758777391,
+      "reward": 0.6989235587938869,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-07-31T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5992179934892377,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -0.7400573716052918,
+      "reward": 0.6370028685802646,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-08-01T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5953825204113831,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -0.31731687112130336,
+      "reward": 0.6158658435560651,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-08-07T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5927463665885666,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 1.5632527854969172,
+      "reward": 0.6781626392748459,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-08-08T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5756675559815012,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 2.820841183255142,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-08-11T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5995126750704338,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 2.028468520503317,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-08-12T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5976817168390042,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 1.5628445649599265,
+      "reward": 0.6781422282479963,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-08-14T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5732536599359133,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 0.32783490924149356,
+      "reward": 0.6163917454620746,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-08-18T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5715078252661995,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -1.5116402935247257,
+      "reward": 0.6755820146762362,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-08-19T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5549679390220383,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -2.2169158929011172,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-08-21T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5585161544612173,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -2.0098669457318046,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-08-22T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5958046742690113,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -0.6234393910760282,
+      "reward": 0.6311719695538014,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-08-25T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5962867630581753,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -0.9350061579437503,
+      "reward": 0.6467503078971875,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-09-01T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5772946240066548,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 1.4133981453844735,
+      "reward": 0.6706699072692237,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-09-10T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5759447452985831,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 1.4173250417449206,
+      "reward": 0.670866252087246,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-09-12T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5677362681018515,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 0.2209922752249741,
+      "reward": 0.6110496137612487,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-09-15T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5791211697063693,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -0.04906419032118804,
+      "reward": 0.6024532095160594,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-09-16T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5739510417274382,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -1.3798035587639814,
+      "reward": 0.668990177938199,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-09-17T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5692796780142945,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -2.6669693350835435,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-09-18T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5705983930733772,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -3.102235717994293,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-09-19T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5746829043636141,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -2.8268195466902015,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-09-22T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5981661118859266,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -1.4524439189202567,
+      "reward": 0.6726221959460128,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-09-23T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5920537020641824,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -1.0935854903752558,
+      "reward": 0.6546792745187627,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-09-24T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.575898823502672,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 0.08281152097825349,
+      "reward": 0.6041405760489127,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-09-25T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5703006508612334,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 0.8736141995954367,
+      "reward": 0.6436807099797718,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-09-29T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5622660506315756,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 2.2200211894507293,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-09-30T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5691630232662795,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 2.7396174896692957,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-10-03T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.575821563358325,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 1.0092692087530253,
+      "reward": 0.6504634604376512,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-10-07T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5548494307574395,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 1.8997701955130377,
+      "reward": 0.6949885097756519,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-10-10T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5786894131653222,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 2.306671649789305,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-10-13T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5857710436808492,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 2.632262207485142,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-10-14T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5873206086448292,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 2.583563659501706,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-10-16T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5715287631106508,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 1.3714906606528026,
+      "reward": 0.6685745330326401,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-10-20T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5397649099640269,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 0.13427155745331776,
+      "reward": 0.6067135778726659,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-10-23T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5713261613787269,
+      "regime": "low_falling_neutral",
+      "outcome_7d": -0.494565763149165,
+      "reward": 0.6247282881574582,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-11-03T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5914171755085377,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 0.4494757087102528,
+      "reward": 0.6224737854355126,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-11-04T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5697224889901478,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 1.2204245311581252,
+      "reward": 0.6610212265579063,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-11-06T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.576293131624334,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 1.974739020843052,
+      "reward": 0.6987369510421526,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-11-10T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5900740313292002,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 1.87023326106041,
+      "reward": 0.6935116630530205,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-11-12T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5665511565039804,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 0.7433586594424219,
+      "reward": 0.637167932972121,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-11-14T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5690010970296779,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -0.09745253289746643,
+      "reward": 0.6048726266448733,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-11-17T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.57046310009709,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 0.737503099358211,
+      "reward": 0.6368751549679106,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-11-19T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5818454861905434,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 0.5769086829938577,
+      "reward": 0.6288454341496929,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-11-24T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5914369119868719,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 0.10208208940850172,
+      "reward": 0.6051041044704251,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-11-27T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5839451442884098,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -0.97270513111493,
+      "reward": 0.6486352565557465,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-12-01T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5727735890886831,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -1.5959428096616144,
+      "reward": 0.6797971404830807,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-12-03T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5872335294385554,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 0.23454937273917004,
+      "reward": 0.6117274686369585,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-12-04T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5918314599163521,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -0.024775531761658337,
+      "reward": 0.6012387765880829,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-12-05T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.594436413075956,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -1.2462552197797037,
+      "reward": 0.6623127609889852,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-12-09T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5934822789207151,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -0.09326751716839114,
+      "reward": 0.6046633758584196,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-12-10T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5835619963804058,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 0.8090690270983828,
+      "reward": 0.6404534513549192,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-12-11T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5827575651917597,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 1.0573951051313768,
+      "reward": 0.6528697552565688,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-12-15T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5807297731348136,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 0.44107533243939745,
+      "reward": 0.6220537666219699,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-12-17T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5985680842810416,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 0.4785319082597561,
+      "reward": 0.6239265954129878,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-12-18T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5869781210831949,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 0.4776191094127349,
+      "reward": 0.6238809554706367,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-12-19T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5999336653692824,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 0.6285045289296824,
+      "reward": 0.6314252264464841,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-12-23T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5674754865687465,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 0.5783670109236406,
+      "reward": 0.6289183505461821,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-12-24T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5699552580463519,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 0.4138917684501273,
+      "reward": 0.6206945884225064,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-12-30T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5865393178737143,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -0.23902370382649965,
+      "reward": 0.611951185191325,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-12-31T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5962102755209188,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -1.7080246157614325,
+      "reward": 0.6854012307880716,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2026-01-02T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5654606932731397,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -2.2646518703080876,
+      "reward": -0.35,
+      "evaluated": true
+    }
+  ],
+  "test_rl": [
+    {
+      "timestamp": "2025-07-01T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5993981595743955,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -0.7303713912097004,
+      "reward": 0.636518569560485,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-07-04T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5225297830829062,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -1.0415930246259013,
+      "reward": 0.6520796512312951,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-07-07T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5910995931806128,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -0.9789366607360974,
+      "reward": 0.6489468330368049,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-07-09T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.562891268232085,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -1.9928481989001343,
+      "reward": 0.6996424099450067,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-07-11T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5346269546645144,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -0.35368004182926377,
+      "reward": 0.6176840020914631,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-07-14T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5214842421953183,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 0.548594028458324,
+      "reward": 0.6274297014229162,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-07-15T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5897978923136721,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -0.5306439962215954,
+      "reward": 0.6265321998110798,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-07-16T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5400801772463726,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -1.4875823267048862,
+      "reward": 0.6743791163352443,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-07-17T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5977284577918609,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -1.7145565070913835,
+      "reward": 0.6857278253545691,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-07-18T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5963391534915965,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -0.5899456913538829,
+      "reward": 0.6294972845676942,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-07-21T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5414064222225585,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -0.9391926092137782,
+      "reward": 0.6469596304606889,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-07-25T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5211238032577226,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -0.754720779482227,
+      "reward": 0.6377360389741114,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-07-28T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5518737211382263,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -0.4323181083347881,
+      "reward": 0.6216159054167394,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-07-30T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.55698078070309,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -1.9784711758777391,
+      "reward": 0.6989235587938869,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-07-31T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5245824089372271,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -0.7400573716052918,
+      "reward": 0.6370028685802646,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-08-04T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5573943690039563,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -0.4182382623292371,
+      "reward": 0.6209119131164619,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-08-08T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5537159720785495,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 2.820841183255142,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-08-11T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5933444353994287,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 2.028468520503317,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-08-19T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5611268989787889,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -2.2169158929011172,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-08-22T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5902752200785586,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -0.6234393910760282,
+      "reward": 0.6311719695538014,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-08-25T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.53956436908043,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -0.9350061579437503,
+      "reward": 0.6467503078971875,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-08-28T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.544822423043641,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 1.1111836708039295,
+      "reward": 0.6555591835401965,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-09-01T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5721626254234163,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 1.4133981453844735,
+      "reward": 0.6706699072692237,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-09-02T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5866032483461632,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 1.7327377174567586,
+      "reward": 0.6866368858728379,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-09-03T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.570628448381437,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 1.6141986360537435,
+      "reward": 0.6807099318026871,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-09-04T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.510712946745216,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 1.3539902079298847,
+      "reward": 0.6676995103964942,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-09-05T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5979067368393691,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 2.0132573461056484,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-09-10T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5713438002134772,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 1.4173250417449206,
+      "reward": 0.670866252087246,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-09-11T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.587639952853283,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 0.7872268101017719,
+      "reward": 0.6393613405050885,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-09-12T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.578602753228959,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 0.2209922752249741,
+      "reward": 0.6110496137612487,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-09-17T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5926011987693727,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -2.6669693350835435,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-09-18T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "BUY",
+      "confidence": 0.7626702278883095,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -3.102235717994293,
+      "reward": -0.8,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-09-19T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5683921226322298,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -2.8268195466902015,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-09-24T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5271695727345206,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 0.08281152097825349,
+      "reward": 0.6041405760489127,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-09-29T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5229381011521215,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 2.2200211894507293,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-09-30T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5859721858789977,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 2.7396174896692957,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-10-01T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.570382359691279,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 1.5745098907647244,
+      "reward": 0.6787254945382362,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-10-06T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5887756622268471,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 0.98055439803968,
+      "reward": 0.6490277199019839,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-10-09T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5485913095071657,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 2.626301535235774,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-10-13T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5837639636601384,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 2.632262207485142,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-10-15T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5850135519297537,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 2.5371640232115955,
+      "reward": -0.35,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-10-16T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5787265500265504,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 1.3714906606528026,
+      "reward": 0.6685745330326401,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-10-17T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5457631898188601,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 1.3382030622504717,
+      "reward": 0.6669101531125236,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-10-21T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5785949254615309,
+      "regime": "low_falling_neutral",
+      "outcome_7d": -0.5663236510673172,
+      "reward": 0.6283161825533659,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-10-23T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5196982858893492,
+      "regime": "low_falling_neutral",
+      "outcome_7d": -0.494565763149165,
+      "reward": 0.6247282881574582,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-10-27T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5163936590782808,
+      "regime": "low_falling_neutral",
+      "outcome_7d": -1.7574871803759082,
+      "reward": 0.6878743590187953,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-10-29T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5533140763042473,
+      "regime": "low_falling_neutral",
+      "outcome_7d": -1.8406073562883212,
+      "reward": 0.6920303678144161,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-10-30T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5813876933160435,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -0.7067820549234107,
+      "reward": 0.6353391027461706,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-10-31T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5986053997229953,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 0.5975406362622054,
+      "reward": 0.6298770318131103,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-11-03T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "SELL",
+      "confidence": 0.764132242451386,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 0.4494757087102528,
+      "reward": -0.3,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-11-10T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5156704018036788,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 1.87023326106041,
+      "reward": 0.6935116630530205,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-11-17T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5549715455798134,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 0.737503099358211,
+      "reward": 0.6368751549679106,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-11-19T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5717722804463802,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 0.5769086829938577,
+      "reward": 0.6288454341496929,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-11-21T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5045285119818792,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -0.1379077533311751,
+      "reward": 0.6068953876665587,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-11-24T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5909488218175452,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 0.10208208940850172,
+      "reward": 0.6051041044704251,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-11-25T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5871152970449274,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 0.5754342316726447,
+      "reward": 0.6287717115836322,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-11-27T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5925548211633281,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -0.97270513111493,
+      "reward": 0.6486352565557465,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-11-28T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5799474236802182,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -1.3864851095010267,
+      "reward": 0.6693242554750514,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-12-02T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5538745537836951,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -0.5134026321248356,
+      "reward": 0.6256701316062417,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-12-05T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5540887210770941,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -1.2462552197797037,
+      "reward": 0.6623127609889852,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-12-08T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5020651437493755,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -0.5469837888642576,
+      "reward": 0.6273491894432128,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-12-09T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5202111393844787,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -0.09326751716839114,
+      "reward": 0.6046633758584196,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-12-10T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5432560195939029,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 0.8090690270983828,
+      "reward": 0.6404534513549192,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-12-11T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5974054612819126,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 1.0573951051313768,
+      "reward": 0.6528697552565688,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-12-15T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5473349587050375,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 0.44107533243939745,
+      "reward": 0.6220537666219699,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-12-16T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5921314907642653,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 0.7045603071913904,
+      "reward": 0.6352280153595695,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-12-17T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5911770982949072,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 0.4785319082597561,
+      "reward": 0.6239265954129878,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-12-18T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5221487444249867,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 0.4776191094127349,
+      "reward": 0.6238809554706367,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-12-19T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5638637596358046,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 0.6285045289296824,
+      "reward": 0.6314252264464841,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-12-24T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5689221990475098,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 0.4138917684501273,
+      "reward": 0.6206945884225064,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-12-26T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5737332607325166,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 0.5237632620774719,
+      "reward": 0.6261881631038736,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-12-29T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5822266712657795,
+      "regime": "low_stable_neutral",
+      "outcome_7d": 0.7657437138859285,
+      "reward": 0.6382871856942964,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2025-12-30T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5512569913625621,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -0.23902370382649965,
+      "reward": 0.611951185191325,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2026-01-01T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.5482422724037168,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -1.362703683659983,
+      "reward": 0.6681351841829991,
+      "evaluated": true
+    },
+    {
+      "timestamp": "2026-01-05T00:00:00",
+      "symbol": "NIFTY50",
+      "decision": "HOLD",
+      "confidence": 0.582894178292104,
+      "regime": "low_stable_neutral",
+      "outcome_7d": -2.2274031153929696,
+      "reward": -0.35,
+      "evaluated": true
+    }
+  ]
+}

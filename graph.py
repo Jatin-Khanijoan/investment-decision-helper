@@ -159,18 +159,62 @@ def decide_with_llm(state: DecisionState) -> dict:
     system_prompt = """You are a disciplined investment reasoning model for India equities (NIFTY50). Use only provided context. Do not invent numbers. Make the best possible decision even with partial data. If confidence is low due to missing data, reflect that in the confidence score and explain in the 'why' field. Never use INSUFFICIENT_DATA as a decision - always choose BUY, HOLD, or SELL based on available information. Output strict JSON only."""
 
     agent_summaries = state.get("agent_summaries", "")
+    
+    # Get weights if available (for weighted prioritization)
+    weights = state.get("weights_used", {})
+    
+    # Group agents by priority if weights available
+    if weights:
+        high_priority = []
+        medium_priority = []
+        low_priority = []
+        
+        agent_outputs = state.get("agent_outputs", {})
+        for name, output in agent_outputs.items():
+            weight = weights.get(name, 0)
+            if isinstance(output, AgentOutput):
+                formatted = f"• {name.replace('_', ' ').title()}: {output.value} (confidence: {output.confidence:.2f}, weight: {weight:.3f})"
+                if output.notes:
+                    formatted += f" - {output.notes}"
+                    
+                if weight > 0.10:
+                    high_priority.append(formatted)
+                elif weight > 0.05:
+                    medium_priority.append(formatted)
+                else:
+                    low_priority.append(formatted)
+        
+        # Rebuild agent summaries with priority grouping
+        priority_context = []
+        if high_priority:
+            priority_context.append("=== HIGH PRIORITY SIGNALS (weight > 0.10) ===")
+            priority_context.extend(high_priority)
+            priority_context.append("")
+        if medium_priority:
+            priority_context.append("=== MEDIUM PRIORITY SIGNALS (weight 0.05-0.10) ===")
+            priority_context.extend(medium_priority)
+            priority_context.append("")
+        if low_priority:
+            priority_context.append("=== LOW PRIORITY SIGNALS (weight < 0.05) ===")
+            priority_context.extend(low_priority)
+        
+        if priority_context:
+            agent_summaries = "\n".join(priority_context)
 
     user_prompt = f"""Question: {state['question']}
 Symbol: {state['symbol']}
 Personal Context: {state.get('personal_context', '')}
 
-Below is comprehensive research data collected from multiple specialized agents:
+Below is comprehensive research data collected from multiple specialized agents.
+Agents are grouped by priority based on current market regime and adaptive learning.
+FOCUS YOUR ANALYSIS on HIGH PRIORITY signals - these are most relevant for current conditions.
 
 {agent_summaries}
 
 INSTRUCTIONS:
-- Analyze ALL the data provided above across macroeconomic, company-specific, policy, and quality assessment categories
-- Make a clear BUY/HOLD/SELL recommendation based on the available data
+- Analyze the data with special attention to HIGH PRIORITY signals
+- These signals have higher weights because they're more relevant for the current market regime
+- Make a clear BUY/HOLD/SELL recommendation based on the weighted data
 - Consider confidence levels and data completeness when assessing reliability
 - If data is insufficient for a strong recommendation, use HOLD with low confidence
 - Provide 3-6 specific bullet points explaining your reasoning
@@ -192,6 +236,47 @@ Required JSON structure:
     try:
         logger.info("Sending context to LLM (%d chars)", len(user_prompt))
         decision_json = call_llm(system_prompt, user_prompt)
+        
+        # Add explainability fields if we have regime and weights
+        if state.get("market_regime") and state.get("weights_used"):
+            try:
+                from explainer import generate_weight_explanation, generate_rl_proof
+                from rl_models import MarketRegime
+                from database import DatabaseManager
+                from rl_learner import ThompsonSamplingLearner
+                
+                # Parse regime from state
+                regime_key = state.get("market_regime")
+                regime_parts = regime_key.split("_")
+                if len(regime_parts) >= 3:
+                    regime = MarketRegime(
+                        inflation=regime_parts[0],
+                        rate_trend=regime_parts[1],
+                        sentiment=regime_parts[2],
+                        volatility=state.get("volatility", 0.15)
+                    )
+                    
+                    # Generate weight explanation
+                    configs = state.get("weight_configs", {})
+                    weight_explanation = generate_weight_explanation(
+                        state["weights_used"],
+                        regime,
+                        configs
+                    )
+                    decision_json["weight_explanation"] = weight_explanation
+                    decision_json["regime_detected"] = regime_key
+                    
+                    # Generate RL proof if learner available
+                    # Note: This would require passing RL learner through state
+                    # For now, we'll add a placeholder
+                    decision_json["rl_proof"] = {
+                        "regime": regime_key,
+                        "learning_enabled": "RL learning statistics available in full system"
+                    }
+                    
+            except Exception as e:
+                logger.warning(f"Could not add explainability: {e}")
+        
         logger.info(
             "LLM decision: %s (confidence: %.2f)",
             decision_json.get("decision", "UNKNOWN"),

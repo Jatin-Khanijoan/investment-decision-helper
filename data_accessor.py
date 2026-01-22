@@ -1,231 +1,189 @@
 """
-Data Accessor for NIFTY 50 historical price data.
-Provides fast lookup by (Date, Symbol) and historical window queries.
+Data accessor for NIFTY 50 historical price data.
+Loads and manages multiple years of CSV data.
 """
 import pandas as pd
+import numpy as np
 from datetime import datetime, timedelta
-from typing import Optional, Tuple
+from typing import Optional, List
 import logging
+import os
 
 logger = logging.getLogger(__name__)
 
 
 class NiftyDataAccessor:
     """
-    Accessor class for NIFTY 50 historical data.
-    Handles CSV loading, indexing, and data retrieval.
+    Accessor for NIFTY 50 historical price data from multiple CSV files.
     """
     
-    def __init__(self, csv_path: str = "NIFTY 50-23-01-2025-to-23-01-2026.csv"):
+    def __init__(self, csv_files: List[str] = None):
         """
-        Initialize the data accessor.
+        Initialize NiftyDataAccessor with historical data from multiple CSV files.
         
         Args:
-            csv_path: Path to the NIFTY 50 CSV file
+            csv_files: List of CSV file paths to load. If None, loads all available NIFTY files.
         """
-        self.csv_path = csv_path
-        self.df = None
-        self.train_end_date = None
-        self.test_start_date = None
-        self.load_data()
+        self.logger = logging.getLogger(__name__)
         
-    def load_data(self):
-        """Load CSV data into pandas DataFrame with proper indexing."""
-        logger.info(f"Loading data from {self.csv_path}")
+        # Default to all available NIFTY 50 files (2021-2026)
+        if csv_files is None:
+            csv_files = [
+                "NIFTY 50-22-01-2021-to-22-01-2022.csv",
+                "NIFTY 50-22-01-2022-to-22-01-2023.csv",
+                "NIFTY 50-22-01-2023-to-22-01-2024.csv",
+                "NIFTY 50-22-01-2024-to-22-01-2025.csv",
+                "NIFTY 50-23-01-2025-to-23-01-2026.csv"
+            ]
         
-        # Load CSV - note the spaces in column names
-        self.df = pd.read_csv(self.csv_path)
+        # Load and concatenate all CSV files
+        all_data = []
+        for csv_file in csv_files:
+            if not os.path.exists(csv_file):
+                self.logger.warning(f"File not found: {csv_file}, skipping")
+                continue
+                
+            self.logger.info(f"Loading data from {csv_file}")
+            df_chunk = pd.read_csv(csv_file)
+            
+            # Handle date column (may have spaces)
+            date_col = [col for col in df_chunk.columns if 'date' in col.lower()][0]
+            df_chunk['Date'] = pd.to_datetime(df_chunk[date_col], format='%d-%b-%Y')
+            
+            # Keep only necessary columns
+            columns_to_keep = ['Date']
+            for col in ['Open', 'High', 'Low', 'Close', 'Shares Traded', 'Turnover']:
+                matching = [c for c in df_chunk.columns if col.lower() in c.lower()]
+                if matching:
+                    df_chunk = df_chunk.rename(columns={matching[0]: col})
+                    columns_to_keep.append(col)
+            
+            all_data.append(df_chunk[columns_to_keep])
         
-        # Clean column names (remove trailing spaces)
-        self.df.columns = self.df.columns.str.strip()
+        if not all_data:
+            raise ValueError("No CSV files could be loaded")
         
-        # Parse date column
-        self.df['Date'] = pd.to_datetime(self.df['Date'], format='%d-%b-%Y')
+        # Concatenate all dataframes
+        self.df = pd.concat(all_data, ignore_index=True)
         
-        # Sort by date (oldest first)
-        self.df = self.df.sort_values('Date').reset_index(drop=True)
+        # Sort by date and remove duplicates
+        self.df = self.df.sort_values('Date')
+        self.df = self.df.drop_duplicates(subset=['Date'], keep='first')
         
-        # Set multi-index for fast lookup (Date as primary index for now)
-        # Note: This CSV appears to be NIFTY 50 index data, not individual stocks
+        # Set Date as index
         self.df.set_index('Date', inplace=True)
         
-        # Calculate train/test split
-        self._calculate_train_test_split()
+        # Log data info
+        self.logger.info(f"Loaded {len(self.df)} total trading days")
+        self.logger.info(f"Date range: {self.df.index.min()} to {self.df.index.max()}")
         
-        # Verify data completeness
-        self._verify_data_completeness()
+        # Define train/test split (use 2021-2024 for training, 2024-2026 for testing)
+        self.train_start = datetime(2021, 1, 22)
+        self.train_end = datetime(2024, 1, 22)
+        self.test_start = datetime(2024, 1, 23)
+        self.test_end = datetime(2026, 1, 22)
         
-        logger.info(f"Loaded {len(self.df)} rows of data")
-        logger.info(f"Date range: {self.df.index.min()} to {self.df.index.max()}")
+        # Count days in each split
+        train_mask = (self.df.index >= self.train_start) & (self.df.index <= self.train_end)
+        test_mask = (self.df.index >= self.test_start) & (self.df.index <= self.test_end)
         
-    def _calculate_train_test_split(self):
-        """
-        Calculate train/test split.
-        Training: Jan 2025 - Jun 2025
-        Testing: Jul 2025 - Jan 2026
-        """
-        # Find the mid-point around June 2025
-        mid_date = datetime(2025, 7, 1)
+        self.logger.info(f"Train period: {self.train_start.date()} to {self.train_end.date()}")
+        self.logger.info(f"Train days: {train_mask.sum()}")
+        self.logger.info(f"Test period: {self.test_start.date()} to {self.test_end.date()}")
+        self.logger.info(f"Test days: {test_mask.sum()}")
         
-        # Find closest actual trading date
-        dates_before_july = self.df[self.df.index < mid_date].index
-        dates_after_july = self.df[self.df.index >= mid_date].index
-        
-        if len(dates_before_july) > 0:
-            self.train_end_date = dates_before_july[-1]
-        
-        if len(dates_after_july) > 0:
-            self.test_start_date = dates_after_july[0]
-            
-        logger.info(f"Train period: {self.df.index.min()} to {self.train_end_date}")
-        logger.info(f"Test period: {self.test_start_date} to {self.df.index.max()}")
-        
-    def _verify_data_completeness(self):
-        """Verify data completeness and identify missing dates."""
-        # Check for missing values
-        missing_counts = self.df.isnull().sum()
-        if missing_counts.any():
-            logger.warning(f"Missing values found:\n{missing_counts[missing_counts > 0]}")
+        # Data quality checks
+        if self.df.isnull().any().any():
+            null_counts = self.df.isnull().sum()
+            self.logger.warning(f"Missing values found: {null_counts[null_counts > 0]}")
         else:
-            logger.info("No missing values found in data")
-            
-        # Check for duplicate dates
-        duplicate_dates = self.df.index.duplicated()
-        if duplicate_dates.any():
-            logger.warning(f"Found {duplicate_dates.sum()} duplicate dates")
+            self.logger.info("No missing values found in data")
+        
+        # Check for duplicates
+        if self.df.index.duplicated().any():
+            self.logger.warning(f"Found {self.df.index.duplicated().sum()} duplicate dates")
         else:
-            logger.info("No duplicate dates found")
-            
+            self.logger.info("No duplicate dates found")
+        
     def get_price(self, date: datetime, price_type: str = 'Close') -> Optional[float]:
         """
         Get price for a specific date.
         
         Args:
-            date: Date to lookup
-            price_type: Type of price ('Open', 'High', 'Low', 'Close')
+            date: Target date
+            price_type: 'Open', 'High', 'Low', or 'Close'
             
         Returns:
             Price value or None if not found
         """
         try:
-            # Convert to datetime if string
-            if isinstance(date, str):
-                date = pd.to_datetime(date)
-                
-            # Normalize to date only (remove time component)
-            date = pd.Timestamp(date.date())
+            return self.df.loc[date, price_type]
+        except KeyError:
+            # Try finding closest date
+            closest_date = self.df.index[self.df.index >= date][0] if any(self.df.index >= date) else None
+            if closest_date and (closest_date - date).days <= 3:  # Within 3 days
+                return self.df.loc[closest_date, price_type]
+            return None
             
-            if date in self.df.index:
-                return float(self.df.loc[date, price_type])
-            else:
-                logger.warning(f"Date {date} not found in data")
+    def get_price_after_days(self, start_date: datetime, days_ahead: int = 7) -> Optional[float]:
+        """
+        Get price N trading days after start_date.
+        
+        Args:
+            start_date: Starting date
+            days_ahead: Number of trading days to look ahead
+            
+        Returns:
+            Price or None if not available
+        """
+        try:
+            # Get all dates after start_date
+            future_dates = self.df.index[self.df.index > start_date]
+            
+            if len(future_dates) < days_ahead:
                 return None
-        except Exception as e:
-            logger.error(f"Error getting price for {date}: {e}")
+                
+            # Get the Nth trading day
+            target_date = future_dates[days_ahead - 1]
+            return self.df.loc[target_date, 'Close']
+        except (IndexError, KeyError):
             return None
             
     def get_historical_window(
         self, 
         end_date: datetime, 
-        days: int = 30,
-        include_end_date: bool = True
+        days: int = 20,
+        include_end_date: bool = False
     ) -> pd.DataFrame:
         """
-        Get historical data window ending at specified date.
+        Get historical data window before (and optionally including) end_date.
         
         Args:
-            end_date: End date of the window
-            days: Number of trading days to include
-            include_end_date: Whether to include the end_date in results
+            end_date: End date of window
+            days: Number of days to include
+            include_end_date: Whether to include end_date in window
             
         Returns:
             DataFrame with historical data
         """
-        try:
-            # Convert to datetime if string
-            if isinstance(end_date, str):
-                end_date = pd.to_datetime(end_date)
-                
-            # Normalize to date only
-            end_date = pd.Timestamp(end_date.date())
+        if include_end_date:
+            mask = self.df.index <= end_date
+        else:
+            mask = self.df.index < end_date
             
-            # Get all dates up to and including end_date
-            if include_end_date:
-                historical_data = self.df[self.df.index <= end_date]
-            else:
-                historical_data = self.df[self.df.index < end_date]
-                
-            # Take last N days
-            if len(historical_data) > days:
-                historical_data = historical_data.tail(days)
-                
-            return historical_data
-            
-        except Exception as e:
-            logger.error(f"Error getting historical window: {e}")
-            return pd.DataFrame()
-            
-    def get_price_after_days(
-        self, 
-        start_date: datetime, 
-        days_ahead: int = 7
-    ) -> Optional[float]:
-        """
-        Get closing price N days after a given date.
-        Useful for calculating outcomes in backtesting.
+        historical = self.df[mask].tail(days)
+        return historical
         
-        Args:
-            start_date: Starting date
-            days_ahead: Number of trading days ahead
-            
-        Returns:
-            Closing price or None if not found
-        """
-        try:
-            # Convert to datetime if string
-            if isinstance(start_date, str):
-                start_date = pd.to_datetime(start_date)
-                
-            # Normalize to date only
-            start_date = pd.Timestamp(start_date.date())
-            
-            # Get all dates after start_date
-            future_dates = self.df[self.df.index > start_date]
-            
-            # Take the Nth trading day
-            if len(future_dates) >= days_ahead:
-                target_date = future_dates.index[days_ahead - 1]
-                return float(self.df.loc[target_date, 'Close'])
-            else:
-                logger.warning(f"Not enough data to look {days_ahead} days ahead from {start_date}")
-                return None
-                
-        except Exception as e:
-            logger.error(f"Error getting price {days_ahead} days ahead: {e}")
-            return None
-            
-    def get_train_data(self) -> pd.DataFrame:
-        """Get training data (Jan-Jun 2025)."""
-        return self.df[self.df.index <= self.train_end_date]
-        
-    def get_test_data(self) -> pd.DataFrame:
-        """Get testing data (Jul-Jan 2026)."""
-        return self.df[self.df.index >= self.test_start_date]
-        
-    def get_return_percentage(
-        self, 
-        start_date: datetime, 
-        end_date: datetime
-    ) -> Optional[float]:
+    def calculate_return_percentage(self, start_date: datetime, end_date: datetime) -> Optional[float]:
         """
         Calculate return percentage between two dates.
         
         Args:
-            start_date: Starting date
-            end_date: Ending date
+            start_date: Start date
+            end_date: End date
             
         Returns:
-            Return percentage or None if data not found
+            Return percentage or None
         """
         start_price = self.get_price(start_date, 'Close')
         end_price = self.get_price(end_date, 'Close')
@@ -236,29 +194,28 @@ class NiftyDataAccessor:
 
 
 if __name__ == "__main__":
-    # Test the data accessor
+    # Test the accessor with all 5 years of data
     logging.basicConfig(level=logging.INFO)
     
     accessor = NiftyDataAccessor()
     
-    # Test get_price
-    test_date = datetime(2025, 6, 1)
+    print("\nData Summary:")
+    print(f"Total days: {len(accessor.df)}")
+    print(f"Date range: {accessor.df.index.min().date()} to {accessor.df.index.max().date()}")
+    print(f"\nFirst few records:")
+    print(accessor.df.head())
+    print(f"\nLast few records:")
+    print(accessor.df.tail())
+    
+    # Test price lookup
+    test_date = datetime(2022, 6, 15)
     price = accessor.get_price(test_date)
-    print(f"Price on {test_date}: {price}")
+    print(f"\nPrice on {test_date.date()}: {price}")
     
-    # Test historical window
-    window = accessor.get_historical_window(test_date, days=7)
-    print(f"\nLast 7 days before {test_date}:")
-    print(window[['Open', 'Close', 'High', 'Low']])
+    # Test forward lookup
+    price_after = accessor.get_price_after_days(test_date, days_ahead=7)
+    print(f"Price 7 days later: {price_after}")
     
-    # Test price after days
-    future_price = accessor.get_price_after_days(test_date, days_ahead=7)
-    print(f"\nPrice 7 days after {test_date}: {future_price}")
-    
-    # Test return calculation
-    end_date = datetime(2025, 6, 10)
-    return_pct = accessor.get_return_percentage(test_date, end_date)
-    if return_pct:
-        print(f"\nReturn from {test_date} to {end_date}: {return_pct:.2f}%")
-    else:
-        print(f"\nCould not calculate return (dates not found in data)")
+    if price and price_after:
+        ret = ((price_after - price) / price) * 100
+        print(f"7-day return: {ret:.2f}%")

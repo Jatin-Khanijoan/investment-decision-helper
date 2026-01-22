@@ -1,0 +1,1495 @@
+2026-01-23 03:20:17,527 - __main__ - INFO - ================================================================================
+2026-01-23 03:20:17,527 - __main__ - INFO - BACKTESTING: RL-BASED INVESTMENT DECISION SYSTEM
+2026-01-23 03:20:17,527 - __main__ - INFO - ================================================================================
+2026-01-23 03:20:17,527 - __main__ - INFO - 
+Initializing components...
+2026-01-23 03:20:17,527 - data_accessor - INFO - Loading data from NIFTY 50-22-01-2021-to-22-01-2022.csv
+2026-01-23 03:20:17,531 - data_accessor - INFO - Loading data from NIFTY 50-22-01-2022-to-22-01-2023.csv
+2026-01-23 03:20:17,534 - data_accessor - INFO - Loading data from NIFTY 50-22-01-2023-to-22-01-2024.csv
+2026-01-23 03:20:17,536 - data_accessor - INFO - Loading data from NIFTY 50-22-01-2024-to-22-01-2025.csv
+2026-01-23 03:20:17,537 - data_accessor - INFO - Loading data from NIFTY 50-23-01-2025-to-23-01-2026.csv
+2026-01-23 03:20:17,541 - data_accessor - INFO - Loaded 1239 total trading days
+2026-01-23 03:20:17,541 - data_accessor - INFO - Date range: 2021-01-22 00:00:00 to 2026-01-22 00:00:00
+2026-01-23 03:20:17,541 - data_accessor - INFO - Train period: 2021-01-22 to 2024-01-22
+2026-01-23 03:20:17,541 - data_accessor - INFO - Train days: 743
+2026-01-23 03:20:17,541 - data_accessor - INFO - Test period: 2024-01-23 to 2026-01-22
+2026-01-23 03:20:17,541 - data_accessor - INFO - Test days: 496
+2026-01-23 03:20:17,541 - data_accessor - INFO - No missing values found in data
+2026-01-23 03:20:17,541 - data_accessor - INFO - No duplicate dates found
+2026-01-23 03:20:17,541 - database - INFO - Initializing database at backtest_full.db
+2026-01-23 03:20:17,541 - database - INFO - Database initialized successfully
+2026-01-23 03:20:17,541 - __main__ - INFO - Training period: 2025-01-23 to 2025-06-30
+2026-01-23 03:20:17,542 - __main__ - INFO - Testing period: 2025-07-01 to 2026-01-15
+2026-01-23 03:20:17,542 - __main__ - INFO - 
+================================================================================
+2026-01-23 03:20:17,542 - __main__ - INFO - PHASE 1: TRAINING (Jan-Jun 2025)
+2026-01-23 03:20:17,542 - __main__ - INFO - ================================================================================
+2026-01-23 03:20:17,542 - __main__ - INFO - 
+[1/6] Running Equal Weights - Training...
+2026-01-23 03:20:17,542 - backtester - INFO - Starting backtest: equal_weights, 2025-01-23 to 2025-06-30, 75 decisions, RL learning=OFF
+2026-01-23 03:20:17,542 - backtester - INFO - Found 101 safe trading days
+2026-01-23 03:20:17,543 - reward_calculator - INFO - Reward: 0.660 for HOLD (return=1.19%, conf=0.60, correct=True)
+2026-01-23 03:20:17,544 - reward_calculator - INFO - Reward: 0.658 for HOLD (return=1.16%, conf=0.58, correct=True)
+2026-01-23 03:20:17,545 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=3.99%, conf=0.58, correct=False)
+2026-01-23 03:20:17,546 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=3.22%, conf=0.58, correct=False)
+2026-01-23 03:20:17,546 - reward_calculator - INFO - Reward: 0.627 for HOLD (return=-0.54%, conf=0.54, correct=True)
+2026-01-23 03:20:17,547 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=-3.24%, conf=0.58, correct=False)
+2026-01-23 03:20:17,548 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=-2.73%, conf=0.59, correct=False)
+2026-01-23 03:20:17,549 - reward_calculator - INFO - Reward: 0.696 for HOLD (return=-1.92%, conf=0.57, correct=True)
+2026-01-23 03:20:17,550 - reward_calculator - INFO - Reward: 0.654 for HOLD (return=-1.08%, conf=0.55, correct=True)
+2026-01-23 03:20:17,550 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=-2.08%, conf=0.56, correct=False)
+2026-01-23 03:20:17,551 - reward_calculator - INFO - Reward: 0.683 for HOLD (return=-1.66%, conf=0.56, correct=True)
+2026-01-23 03:20:17,552 - reward_calculator - INFO - Reward: 0.690 for HOLD (return=-1.81%, conf=0.59, correct=True)
+2026-01-23 03:20:17,553 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=-3.58%, conf=0.59, correct=False)
+2026-01-23 03:20:17,553 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=-3.55%, conf=0.59, correct=False)
+2026-01-23 03:20:17,554 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=-3.62%, conf=0.60, correct=False)
+2026-01-23 03:20:17,555 - reward_calculator - INFO - Reward: 0.601 for HOLD (return=0.02%, conf=0.57, correct=True)
+2026-01-23 03:20:17,556 - reward_calculator - INFO - Reward: 0.619 for HOLD (return=-0.38%, conf=0.57, correct=True)
+2026-01-23 03:20:17,557 - reward_calculator - INFO - Reward: 0.684 for HOLD (return=1.69%, conf=0.54, correct=True)
+2026-01-23 03:20:17,557 - reward_calculator - INFO - Reward: 0.679 for HOLD (return=1.59%, conf=0.56, correct=True)
+2026-01-23 03:20:17,558 - reward_calculator - INFO - Reward: 0.671 for HOLD (return=1.42%, conf=0.56, correct=True)
+2026-01-23 03:20:17,559 - reward_calculator - INFO - Reward: 0.638 for HOLD (return=0.77%, conf=0.58, correct=True)
+2026-01-23 03:20:17,560 - reward_calculator - INFO - Reward: 0.679 for HOLD (return=1.57%, conf=0.56, correct=True)
+2026-01-23 03:20:17,560 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=3.25%, conf=0.57, correct=False)
+2026-01-23 03:20:17,561 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=5.29%, conf=0.59, correct=False)
+2026-01-23 03:20:17,562 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=5.68%, conf=0.59, correct=False)
+2026-01-23 03:20:17,562 - backtester - INFO - Progress: 25/75 decisions, accuracy=56.0%
+2026-01-23 03:20:17,563 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=4.35%, conf=0.60, correct=False)
+2026-01-23 03:20:17,564 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=3.32%, conf=0.57, correct=False)
+2026-01-23 03:20:17,564 - reward_calculator - INFO - Reward: -0.300 for BUY (return=-0.08%, conf=0.90, correct=False)
+2026-01-23 03:20:17,565 - reward_calculator - INFO - Reward: -0.800 for BUY (return=-1.73%, conf=0.90, correct=False)
+2026-01-23 03:20:17,566 - reward_calculator - INFO - Reward: -0.800 for BUY (return=-3.23%, conf=0.90, correct=False)
+2026-01-23 03:20:17,567 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=-5.64%, conf=0.57, correct=False)
+2026-01-23 03:20:17,567 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=-4.48%, conf=0.58, correct=False)
+2026-01-23 03:20:17,568 - reward_calculator - INFO - Reward: 0.673 for HOLD (return=-1.46%, conf=0.56, correct=True)
+2026-01-23 03:20:17,569 - reward_calculator - INFO - Reward: 0.601 for HOLD (return=-0.02%, conf=0.59, correct=True)
+2026-01-23 03:20:17,570 - reward_calculator - INFO - Reward: 0.640 for HOLD (return=0.80%, conf=0.57, correct=True)
+2026-01-23 03:20:17,570 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=4.14%, conf=0.55, correct=False)
+2026-01-23 03:20:17,571 - reward_calculator - INFO - Reward: -0.800 for SELL (return=8.86%, conf=0.90, correct=False)
+2026-01-23 03:20:17,572 - reward_calculator - INFO - Reward: -0.800 for SELL (return=7.24%, conf=0.90, correct=False)
+2026-01-23 03:20:17,573 - reward_calculator - INFO - Reward: 1.352 for BUY (return=3.05%, conf=0.90, correct=True)
+2026-01-23 03:20:17,574 - reward_calculator - INFO - Reward: 1.390 for BUY (return=3.80%, conf=0.90, correct=True)
+2026-01-23 03:20:17,574 - reward_calculator - INFO - Reward: 1.302 for BUY (return=2.03%, conf=0.90, correct=True)
+2026-01-23 03:20:17,575 - reward_calculator - INFO - Reward: -0.300 for BUY (return=0.86%, conf=0.90, correct=False)
+2026-01-23 03:20:17,576 - reward_calculator - INFO - Reward: -0.300 for BUY (return=0.54%, conf=0.90, correct=False)
+2026-01-23 03:20:17,577 - reward_calculator - INFO - Reward: 0.627 for HOLD (return=0.55%, conf=0.57, correct=True)
+2026-01-23 03:20:17,577 - reward_calculator - INFO - Reward: 0.678 for HOLD (return=1.56%, conf=0.59, correct=True)
+2026-01-23 03:20:17,578 - reward_calculator - INFO - Reward: 0.611 for HOLD (return=-0.22%, conf=0.59, correct=True)
+2026-01-23 03:20:17,579 - reward_calculator - INFO - Reward: 0.667 for HOLD (return=-1.35%, conf=0.60, correct=True)
+2026-01-23 03:20:17,580 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=2.43%, conf=0.59, correct=False)
+2026-01-23 03:20:17,581 - reward_calculator - INFO - Reward: 0.648 for HOLD (return=0.95%, conf=0.57, correct=True)
+2026-01-23 03:20:17,581 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=2.80%, conf=0.60, correct=False)
+2026-01-23 03:20:17,581 - backtester - INFO - Progress: 50/75 decisions, accuracy=50.0%
+2026-01-23 03:20:17,582 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=2.48%, conf=0.59, correct=False)
+2026-01-23 03:20:17,583 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=2.82%, conf=0.56, correct=False)
+2026-01-23 03:20:17,584 - reward_calculator - INFO - Reward: 0.606 for HOLD (return=0.13%, conf=0.59, correct=True)
+2026-01-23 03:20:17,584 - reward_calculator - INFO - Reward: 0.638 for HOLD (return=0.76%, conf=0.57, correct=True)
+2026-01-23 03:20:17,585 - reward_calculator - INFO - Reward: 0.639 for HOLD (return=-0.77%, conf=0.59, correct=True)
+2026-01-23 03:20:17,586 - reward_calculator - INFO - Reward: 0.639 for HOLD (return=-0.77%, conf=0.57, correct=True)
+2026-01-23 03:20:17,587 - reward_calculator - INFO - Reward: 0.630 for HOLD (return=0.61%, conf=0.60, correct=True)
+2026-01-23 03:20:17,587 - reward_calculator - INFO - Reward: 0.613 for HOLD (return=-0.25%, conf=0.58, correct=True)
+2026-01-23 03:20:17,588 - reward_calculator - INFO - Reward: 0.662 for HOLD (return=-1.25%, conf=0.59, correct=True)
+2026-01-23 03:20:17,589 - reward_calculator - INFO - Reward: 0.676 for HOLD (return=-1.52%, conf=0.57, correct=True)
+2026-01-23 03:20:17,590 - reward_calculator - INFO - Reward: 0.615 for HOLD (return=-0.30%, conf=0.60, correct=True)
+2026-01-23 03:20:17,591 - reward_calculator - INFO - Reward: 0.651 for HOLD (return=1.01%, conf=0.59, correct=True)
+2026-01-23 03:20:17,591 - reward_calculator - INFO - Reward: 0.654 for HOLD (return=1.09%, conf=0.60, correct=True)
+2026-01-23 03:20:17,592 - reward_calculator - INFO - Reward: 0.671 for HOLD (return=1.43%, conf=0.58, correct=True)
+2026-01-23 03:20:17,593 - reward_calculator - INFO - Reward: 0.686 for HOLD (return=1.72%, conf=0.59, correct=True)
+2026-01-23 03:20:17,594 - reward_calculator - INFO - Reward: 0.670 for HOLD (return=1.41%, conf=0.58, correct=True)
+2026-01-23 03:20:17,594 - reward_calculator - INFO - Reward: 0.630 for HOLD (return=-0.60%, conf=0.58, correct=True)
+2026-01-23 03:20:17,595 - reward_calculator - INFO - Reward: 0.658 for HOLD (return=-1.16%, conf=0.55, correct=True)
+2026-01-23 03:20:17,596 - reward_calculator - INFO - Reward: 0.662 for HOLD (return=-1.24%, conf=0.56, correct=True)
+2026-01-23 03:20:17,597 - reward_calculator - INFO - Reward: 0.666 for HOLD (return=1.32%, conf=0.57, correct=True)
+2026-01-23 03:20:17,598 - reward_calculator - INFO - Reward: 0.660 for HOLD (return=1.20%, conf=0.59, correct=True)
+2026-01-23 03:20:17,598 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=2.80%, conf=0.58, correct=False)
+2026-01-23 03:20:17,599 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=3.33%, conf=0.59, correct=False)
+2026-01-23 03:20:17,600 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=2.92%, conf=0.59, correct=False)
+2026-01-23 03:20:17,601 - reward_calculator - INFO - Reward: 0.685 for HOLD (return=1.71%, conf=0.59, correct=True)
+2026-01-23 03:20:17,601 - backtester - INFO - Progress: 75/75 decisions, accuracy=60.0%
+2026-01-23 03:20:17,601 - backtester - INFO - Backtest complete: equal_weights, 75 decisions, accuracy=60.0%, avg_reward=0.257
+2026-01-23 03:20:17,601 - __main__ - INFO - 
+[2/6] Running Expert Weights - Training...
+2026-01-23 03:20:17,601 - backtester - INFO - Starting backtest: expert_weights, 2025-01-23 to 2025-06-30, 75 decisions, RL learning=OFF
+2026-01-23 03:20:17,601 - backtester - INFO - Found 101 safe trading days
+2026-01-23 03:20:17,602 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.136
+2026-01-23 03:20:17,602 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:17,602 - reward_calculator - INFO - Reward: 0.660 for HOLD (return=1.19%, conf=0.60, correct=True)
+2026-01-23 03:20:17,603 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.140
+2026-01-23 03:20:17,603 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:17,603 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=3.99%, conf=0.59, correct=False)
+2026-01-23 03:20:17,603 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.141
+2026-01-23 03:20:17,604 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:17,604 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=3.22%, conf=0.59, correct=False)
+2026-01-23 03:20:17,604 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.124
+2026-01-23 03:20:17,604 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:17,605 - reward_calculator - INFO - Reward: 0.695 for HOLD (return=1.90%, conf=0.60, correct=True)
+2026-01-23 03:20:17,605 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.119
+2026-01-23 03:20:17,605 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:17,606 - reward_calculator - INFO - Reward: 0.627 for HOLD (return=-0.54%, conf=0.54, correct=True)
+2026-01-23 03:20:17,606 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.118
+2026-01-23 03:20:17,606 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:17,607 - reward_calculator - INFO - Reward: 0.687 for HOLD (return=-1.75%, conf=0.55, correct=True)
+2026-01-23 03:20:17,607 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.120
+2026-01-23 03:20:17,607 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:17,607 - reward_calculator - INFO - Reward: 0.668 for HOLD (return=-1.35%, conf=0.58, correct=True)
+2026-01-23 03:20:17,608 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.132
+2026-01-23 03:20:17,608 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:17,608 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=-2.98%, conf=0.55, correct=False)
+2026-01-23 03:20:17,609 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.131
+2026-01-23 03:20:17,609 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:17,609 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=-3.24%, conf=0.58, correct=False)
+2026-01-23 03:20:17,610 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.119
+2026-01-23 03:20:17,610 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:17,610 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=-2.73%, conf=0.58, correct=False)
+2026-01-23 03:20:17,611 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.119
+2026-01-23 03:20:17,611 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:17,611 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=-2.61%, conf=0.58, correct=False)
+2026-01-23 03:20:17,611 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.131
+2026-01-23 03:20:17,612 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:17,612 - reward_calculator - INFO - Reward: 0.634 for HOLD (return=-0.69%, conf=0.55, correct=True)
+2026-01-23 03:20:17,612 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.130
+2026-01-23 03:20:17,612 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:17,613 - reward_calculator - INFO - Reward: 0.654 for HOLD (return=-1.08%, conf=0.56, correct=True)
+2026-01-23 03:20:17,613 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.128
+2026-01-23 03:20:17,613 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:17,614 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=-2.08%, conf=0.56, correct=False)
+2026-01-23 03:20:17,614 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.117
+2026-01-23 03:20:17,614 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:17,615 - reward_calculator - INFO - Reward: 0.690 for HOLD (return=-1.81%, conf=0.60, correct=True)
+2026-01-23 03:20:17,615 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.115
+2026-01-23 03:20:17,615 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:17,615 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=-3.55%, conf=0.60, correct=False)
+2026-01-23 03:20:17,616 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.107
+2026-01-23 03:20:17,616 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:17,616 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=-3.62%, conf=0.60, correct=False)
+2026-01-23 03:20:17,617 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.107
+2026-01-23 03:20:17,617 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:17,617 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=-2.01%, conf=0.59, correct=False)
+2026-01-23 03:20:17,618 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.105
+2026-01-23 03:20:17,618 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:17,618 - reward_calculator - INFO - Reward: 0.601 for HOLD (return=0.02%, conf=0.57, correct=True)
+2026-01-23 03:20:17,619 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.093
+2026-01-23 03:20:17,619 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:17,619 - reward_calculator - INFO - Reward: 0.619 for HOLD (return=-0.38%, conf=0.57, correct=True)
+2026-01-23 03:20:17,620 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.110
+2026-01-23 03:20:17,620 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:17,620 - reward_calculator - INFO - Reward: 0.684 for HOLD (return=1.69%, conf=0.55, correct=True)
+2026-01-23 03:20:17,620 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.083
+2026-01-23 03:20:17,621 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:17,621 - reward_calculator - INFO - Reward: 0.671 for HOLD (return=1.42%, conf=0.56, correct=True)
+2026-01-23 03:20:17,621 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.100
+2026-01-23 03:20:17,621 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:17,622 - reward_calculator - INFO - Reward: 0.638 for HOLD (return=0.77%, conf=0.59, correct=True)
+2026-01-23 03:20:17,622 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.110
+2026-01-23 03:20:17,622 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:17,623 - reward_calculator - INFO - Reward: 0.664 for HOLD (return=1.28%, conf=0.56, correct=True)
+2026-01-23 03:20:17,623 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.110
+2026-01-23 03:20:17,623 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:17,624 - reward_calculator - INFO - Reward: 0.679 for HOLD (return=1.57%, conf=0.56, correct=True)
+2026-01-23 03:20:17,624 - backtester - INFO - Progress: 25/75 decisions, accuracy=60.0%
+2026-01-23 03:20:17,624 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.109
+2026-01-23 03:20:17,624 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:17,624 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=3.25%, conf=0.56, correct=False)
+2026-01-23 03:20:17,625 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.100
+2026-01-23 03:20:17,625 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:17,625 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=5.29%, conf=0.60, correct=False)
+2026-01-23 03:20:17,626 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.101
+2026-01-23 03:20:17,626 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:17,626 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=5.68%, conf=0.59, correct=False)
+2026-01-23 03:20:17,627 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.103
+2026-01-23 03:20:17,627 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:17,627 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=4.35%, conf=0.59, correct=False)
+2026-01-23 03:20:17,628 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.117
+2026-01-23 03:20:17,628 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:17,628 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=3.32%, conf=0.57, correct=False)
+2026-01-23 03:20:17,628 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.124
+2026-01-23 03:20:17,629 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:17,629 - reward_calculator - INFO - Reward: -0.800 for BUY (return=-3.23%, conf=0.90, correct=False)
+2026-01-23 03:20:17,629 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.129
+2026-01-23 03:20:17,629 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:17,630 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=-4.48%, conf=0.57, correct=False)
+2026-01-23 03:20:17,630 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.103
+2026-01-23 03:20:17,630 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:17,631 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=-4.76%, conf=0.59, correct=False)
+2026-01-23 03:20:17,631 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.123
+2026-01-23 03:20:17,631 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:17,632 - reward_calculator - INFO - Reward: 0.601 for HOLD (return=-0.02%, conf=0.59, correct=True)
+2026-01-23 03:20:17,632 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.120
+2026-01-23 03:20:17,632 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:17,632 - reward_calculator - INFO - Reward: 0.640 for HOLD (return=0.80%, conf=0.58, correct=True)
+2026-01-23 03:20:17,633 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.132
+2026-01-23 03:20:17,633 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:17,633 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=4.14%, conf=0.55, correct=False)
+2026-01-23 03:20:17,634 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.179
+2026-01-23 03:20:17,634 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:17,634 - reward_calculator - INFO - Reward: -0.800 for SELL (return=8.86%, conf=0.90, correct=False)
+2026-01-23 03:20:17,635 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.190
+2026-01-23 03:20:17,635 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:17,635 - reward_calculator - INFO - Reward: -0.800 for SELL (return=7.24%, conf=0.90, correct=False)
+2026-01-23 03:20:17,636 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.191
+2026-01-23 03:20:17,636 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:17,636 - reward_calculator - INFO - Reward: -0.800 for SELL (return=8.62%, conf=0.90, correct=False)
+2026-01-23 03:20:17,636 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.203
+2026-01-23 03:20:17,637 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:17,637 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=6.21%, conf=0.60, correct=False)
+2026-01-23 03:20:17,637 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.216
+2026-01-23 03:20:17,637 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:17,638 - reward_calculator - INFO - Reward: 1.352 for BUY (return=3.05%, conf=0.90, correct=True)
+2026-01-23 03:20:17,638 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.219
+2026-01-23 03:20:17,638 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:17,639 - reward_calculator - INFO - Reward: 1.302 for BUY (return=2.03%, conf=0.90, correct=True)
+2026-01-23 03:20:17,639 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.222
+2026-01-23 03:20:17,639 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:17,640 - reward_calculator - INFO - Reward: -0.300 for BUY (return=0.86%, conf=0.90, correct=False)
+2026-01-23 03:20:17,640 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.219
+2026-01-23 03:20:17,640 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:17,640 - reward_calculator - INFO - Reward: -0.300 for BUY (return=0.74%, conf=0.90, correct=False)
+2026-01-23 03:20:17,641 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.215
+2026-01-23 03:20:17,641 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:17,641 - reward_calculator - INFO - Reward: 0.627 for HOLD (return=0.55%, conf=0.56, correct=True)
+2026-01-23 03:20:17,642 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.218
+2026-01-23 03:20:17,642 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:17,642 - reward_calculator - INFO - Reward: 0.678 for HOLD (return=1.56%, conf=0.60, correct=True)
+2026-01-23 03:20:17,643 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.219
+2026-01-23 03:20:17,643 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:17,643 - reward_calculator - INFO - Reward: 0.611 for HOLD (return=-0.22%, conf=0.58, correct=True)
+2026-01-23 03:20:17,644 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.219
+2026-01-23 03:20:17,644 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:17,644 - reward_calculator - INFO - Reward: 0.667 for HOLD (return=-1.35%, conf=0.59, correct=True)
+2026-01-23 03:20:17,645 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.218
+2026-01-23 03:20:17,645 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:17,645 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=2.43%, conf=0.59, correct=False)
+2026-01-23 03:20:17,645 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.209
+2026-01-23 03:20:17,645 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:17,646 - reward_calculator - INFO - Reward: 0.648 for HOLD (return=0.95%, conf=0.57, correct=True)
+2026-01-23 03:20:17,646 - backtester - INFO - Progress: 50/75 decisions, accuracy=48.0%
+2026-01-23 03:20:17,646 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.208
+2026-01-23 03:20:17,646 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:17,647 - reward_calculator - INFO - Reward: 0.642 for HOLD (return=0.84%, conf=0.58, correct=True)
+2026-01-23 03:20:17,647 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.208
+2026-01-23 03:20:17,647 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:17,648 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=2.80%, conf=0.59, correct=False)
+2026-01-23 03:20:17,648 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.197
+2026-01-23 03:20:17,648 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:17,648 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=2.48%, conf=0.59, correct=False)
+2026-01-23 03:20:17,649 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.147
+2026-01-23 03:20:17,649 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:17,649 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=2.77%, conf=0.60, correct=False)
+2026-01-23 03:20:17,650 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.191
+2026-01-23 03:20:17,650 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:17,650 - reward_calculator - INFO - Reward: 0.622 for HOLD (return=-0.45%, conf=0.55, correct=True)
+2026-01-23 03:20:17,651 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.197
+2026-01-23 03:20:17,651 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:17,651 - reward_calculator - INFO - Reward: 0.606 for HOLD (return=0.13%, conf=0.58, correct=True)
+2026-01-23 03:20:17,652 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.190
+2026-01-23 03:20:17,652 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:17,652 - reward_calculator - INFO - Reward: -0.300 for BUY (return=-0.24%, conf=0.90, correct=False)
+2026-01-23 03:20:17,653 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.183
+2026-01-23 03:20:17,653 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:17,653 - reward_calculator - INFO - Reward: 0.639 for HOLD (return=-0.77%, conf=0.59, correct=True)
+2026-01-23 03:20:17,653 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.186
+2026-01-23 03:20:17,653 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:17,654 - reward_calculator - INFO - Reward: 0.613 for HOLD (return=-0.25%, conf=0.58, correct=True)
+2026-01-23 03:20:17,654 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.187
+2026-01-23 03:20:17,654 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:17,655 - reward_calculator - INFO - Reward: 0.662 for HOLD (return=-1.25%, conf=0.60, correct=True)
+2026-01-23 03:20:17,655 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.184
+2026-01-23 03:20:17,655 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:17,656 - reward_calculator - INFO - Reward: 0.676 for HOLD (return=-1.52%, conf=0.57, correct=True)
+2026-01-23 03:20:17,656 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.187
+2026-01-23 03:20:17,656 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:17,657 - reward_calculator - INFO - Reward: 0.651 for HOLD (return=1.01%, conf=0.58, correct=True)
+2026-01-23 03:20:17,657 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.187
+2026-01-23 03:20:17,657 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:17,657 - reward_calculator - INFO - Reward: 0.654 for HOLD (return=1.09%, conf=0.60, correct=True)
+2026-01-23 03:20:17,658 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.187
+2026-01-23 03:20:17,658 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:17,658 - reward_calculator - INFO - Reward: 0.671 for HOLD (return=1.43%, conf=0.58, correct=True)
+2026-01-23 03:20:17,659 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.189
+2026-01-23 03:20:17,659 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:17,659 - reward_calculator - INFO - Reward: 0.670 for HOLD (return=1.41%, conf=0.59, correct=True)
+2026-01-23 03:20:17,660 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.188
+2026-01-23 03:20:17,660 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:17,660 - reward_calculator - INFO - Reward: 0.620 for HOLD (return=0.40%, conf=0.59, correct=True)
+2026-01-23 03:20:17,661 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.183
+2026-01-23 03:20:17,661 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:17,661 - reward_calculator - INFO - Reward: 0.640 for HOLD (return=0.79%, conf=0.60, correct=True)
+2026-01-23 03:20:17,662 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.123
+2026-01-23 03:20:17,662 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:17,662 - reward_calculator - INFO - Reward: 0.630 for HOLD (return=-0.60%, conf=0.57, correct=True)
+2026-01-23 03:20:17,662 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.111
+2026-01-23 03:20:17,663 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:17,663 - reward_calculator - INFO - Reward: 0.662 for HOLD (return=-1.24%, conf=0.56, correct=True)
+2026-01-23 03:20:17,663 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.102
+2026-01-23 03:20:17,663 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:17,664 - reward_calculator - INFO - Reward: 0.617 for HOLD (return=0.34%, conf=0.60, correct=True)
+2026-01-23 03:20:17,664 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.104
+2026-01-23 03:20:17,664 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:17,665 - reward_calculator - INFO - Reward: 0.666 for HOLD (return=1.32%, conf=0.57, correct=True)
+2026-01-23 03:20:17,665 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.102
+2026-01-23 03:20:17,665 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:17,665 - reward_calculator - INFO - Reward: 0.660 for HOLD (return=1.20%, conf=0.59, correct=True)
+2026-01-23 03:20:17,666 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.102
+2026-01-23 03:20:17,666 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:17,666 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=2.80%, conf=0.58, correct=False)
+2026-01-23 03:20:17,667 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.097
+2026-01-23 03:20:17,667 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:17,667 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=3.33%, conf=0.60, correct=False)
+2026-01-23 03:20:17,668 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.099
+2026-01-23 03:20:17,668 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:17,668 - reward_calculator - INFO - Reward: 0.685 for HOLD (return=1.71%, conf=0.58, correct=True)
+2026-01-23 03:20:17,668 - backtester - INFO - Progress: 75/75 decisions, accuracy=57.3%
+2026-01-23 03:20:17,668 - backtester - INFO - Backtest complete: expert_weights, 75 decisions, accuracy=57.3%, avg_reward=0.219
+2026-01-23 03:20:17,668 - __main__ - INFO - 
+[3/6] Running RL Weights - Training (Learning Enabled)...
+2026-01-23 03:20:17,668 - backtester - INFO - Starting backtest: rl_weights, 2025-01-23 to 2025-06-30, 75 decisions, RL learning=ON
+2026-01-23 03:20:17,668 - backtester - INFO - Found 101 safe trading days
+2026-01-23 03:20:17,669 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.136
+2026-01-23 03:20:17,669 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:17,669 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:17,670 - reward_calculator - INFO - Reward: 0.660 for HOLD (return=1.19%, conf=0.60, correct=True)
+2026-01-23 03:20:17,670 - rl_learner - INFO - Updating RL states for low_stable_neutral, reward=0.660, normalized=0.584
+2026-01-23 03:20:17,728 - rl_learner - INFO - Updated 15 agent states for low_stable_neutral
+2026-01-23 03:20:17,732 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.135
+2026-01-23 03:20:17,733 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:17,733 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:17,734 - reward_calculator - INFO - Reward: 0.658 for HOLD (return=1.16%, conf=0.56, correct=True)
+2026-01-23 03:20:17,735 - rl_learner - INFO - Updating RL states for low_stable_neutral, reward=0.658, normalized=0.583
+2026-01-23 03:20:17,793 - rl_learner - INFO - Updated 15 agent states for low_stable_neutral
+2026-01-23 03:20:17,795 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.140
+2026-01-23 03:20:17,795 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:17,795 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:17,796 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=3.99%, conf=0.56, correct=False)
+2026-01-23 03:20:17,796 - rl_learner - INFO - Updating RL states for low_stable_neutral, reward=-0.350, normalized=0.180
+2026-01-23 03:20:17,851 - rl_learner - INFO - Updated 15 agent states for low_stable_neutral
+2026-01-23 03:20:17,853 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.141
+2026-01-23 03:20:17,853 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:17,853 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:17,854 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=3.22%, conf=0.54, correct=False)
+2026-01-23 03:20:17,854 - rl_learner - INFO - Updating RL states for low_stable_neutral, reward=-0.350, normalized=0.180
+2026-01-23 03:20:17,910 - rl_learner - INFO - Updated 15 agent states for low_stable_neutral
+2026-01-23 03:20:17,911 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.124
+2026-01-23 03:20:17,911 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:17,911 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:17,911 - reward_calculator - INFO - Reward: 0.695 for HOLD (return=1.90%, conf=0.56, correct=True)
+2026-01-23 03:20:17,911 - rl_learner - INFO - Updating RL states for low_stable_neutral, reward=0.695, normalized=0.598
+2026-01-23 03:20:17,969 - rl_learner - INFO - Updated 15 agent states for low_stable_neutral
+2026-01-23 03:20:17,971 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.124
+2026-01-23 03:20:17,971 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:17,971 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:17,972 - reward_calculator - INFO - Reward: 0.667 for HOLD (return=1.34%, conf=0.56, correct=True)
+2026-01-23 03:20:17,972 - rl_learner - INFO - Updating RL states for low_stable_neutral, reward=0.667, normalized=0.587
+2026-01-23 03:20:18,030 - rl_learner - INFO - Updated 15 agent states for low_stable_neutral
+2026-01-23 03:20:18,033 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.119
+2026-01-23 03:20:18,034 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:18,034 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:18,035 - reward_calculator - INFO - Reward: 0.627 for HOLD (return=-0.54%, conf=0.60, correct=True)
+2026-01-23 03:20:18,035 - rl_learner - INFO - Updating RL states for low_stable_neutral, reward=0.627, normalized=0.571
+2026-01-23 03:20:18,094 - rl_learner - INFO - Updated 15 agent states for low_stable_neutral
+2026-01-23 03:20:18,097 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.120
+2026-01-23 03:20:18,097 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:18,097 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:18,098 - reward_calculator - INFO - Reward: 0.668 for HOLD (return=-1.35%, conf=0.58, correct=True)
+2026-01-23 03:20:18,098 - rl_learner - INFO - Updating RL states for low_stable_neutral, reward=0.668, normalized=0.587
+2026-01-23 03:20:18,161 - rl_learner - INFO - Updated 15 agent states for low_stable_neutral
+2026-01-23 03:20:18,162 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.132
+2026-01-23 03:20:18,162 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:18,162 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:18,163 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=-2.98%, conf=0.57, correct=False)
+2026-01-23 03:20:18,163 - rl_learner - INFO - Updating RL states for low_stable_neutral, reward=-0.350, normalized=0.180
+2026-01-23 03:20:18,222 - rl_learner - INFO - Updated 15 agent states for low_stable_neutral
+2026-01-23 03:20:18,223 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.119
+2026-01-23 03:20:18,223 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:18,223 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:18,224 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=-2.73%, conf=0.57, correct=False)
+2026-01-23 03:20:18,224 - rl_learner - INFO - Updating RL states for low_stable_neutral, reward=-0.350, normalized=0.180
+2026-01-23 03:20:18,280 - rl_learner - INFO - Updated 15 agent states for low_stable_neutral
+2026-01-23 03:20:18,281 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.119
+2026-01-23 03:20:18,282 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:18,282 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:18,283 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=-2.61%, conf=0.57, correct=False)
+2026-01-23 03:20:18,283 - rl_learner - INFO - Updating RL states for low_stable_neutral, reward=-0.350, normalized=0.180
+2026-01-23 03:20:18,339 - rl_learner - INFO - Updated 15 agent states for low_stable_neutral
+2026-01-23 03:20:18,343 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.122
+2026-01-23 03:20:18,343 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:18,343 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:18,345 - reward_calculator - INFO - Reward: 0.696 for HOLD (return=-1.92%, conf=0.52, correct=True)
+2026-01-23 03:20:18,345 - rl_learner - INFO - Updating RL states for low_stable_neutral, reward=0.696, normalized=0.598
+2026-01-23 03:20:18,406 - rl_learner - INFO - Updated 15 agent states for low_stable_neutral
+2026-01-23 03:20:18,408 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.117
+2026-01-23 03:20:18,408 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:18,408 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:18,408 - reward_calculator - INFO - Reward: 0.690 for HOLD (return=-1.81%, conf=0.50, correct=True)
+2026-01-23 03:20:18,408 - rl_learner - INFO - Updating RL states for low_stable_neutral, reward=0.690, normalized=0.596
+2026-01-23 03:20:18,468 - rl_learner - INFO - Updated 15 agent states for low_stable_neutral
+2026-01-23 03:20:18,472 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.116
+2026-01-23 03:20:18,472 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:18,473 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:18,476 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=-3.58%, conf=0.56, correct=False)
+2026-01-23 03:20:18,476 - rl_learner - INFO - Updating RL states for low_stable_neutral, reward=-0.350, normalized=0.180
+2026-01-23 03:20:18,537 - rl_learner - INFO - Updated 15 agent states for low_stable_neutral
+2026-01-23 03:20:18,540 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.115
+2026-01-23 03:20:18,541 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:18,541 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:18,542 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=-3.55%, conf=0.56, correct=False)
+2026-01-23 03:20:18,542 - rl_learner - INFO - Updating RL states for low_stable_neutral, reward=-0.350, normalized=0.180
+2026-01-23 03:20:18,602 - rl_learner - INFO - Updated 15 agent states for low_stable_neutral
+2026-01-23 03:20:18,604 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.107
+2026-01-23 03:20:18,605 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:18,605 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:18,606 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=-3.62%, conf=0.57, correct=False)
+2026-01-23 03:20:18,606 - rl_learner - INFO - Updating RL states for low_stable_neutral, reward=-0.350, normalized=0.180
+2026-01-23 03:20:18,669 - rl_learner - INFO - Updated 15 agent states for low_stable_neutral
+2026-01-23 03:20:18,673 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.107
+2026-01-23 03:20:18,674 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:18,674 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:18,677 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=-2.01%, conf=0.55, correct=False)
+2026-01-23 03:20:18,677 - rl_learner - INFO - Updating RL states for low_stable_neutral, reward=-0.350, normalized=0.180
+2026-01-23 03:20:18,735 - rl_learner - INFO - Updated 15 agent states for low_stable_neutral
+2026-01-23 03:20:18,737 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.105
+2026-01-23 03:20:18,737 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:18,737 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:18,738 - reward_calculator - INFO - Reward: 0.601 for HOLD (return=0.02%, conf=0.56, correct=True)
+2026-01-23 03:20:18,738 - rl_learner - INFO - Updating RL states for low_stable_neutral, reward=0.601, normalized=0.560
+2026-01-23 03:20:18,795 - rl_learner - INFO - Updated 15 agent states for low_stable_neutral
+2026-01-23 03:20:18,796 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.093
+2026-01-23 03:20:18,797 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:18,797 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:18,797 - reward_calculator - INFO - Reward: 0.619 for HOLD (return=-0.38%, conf=0.53, correct=True)
+2026-01-23 03:20:18,797 - rl_learner - INFO - Updating RL states for low_stable_neutral, reward=0.619, normalized=0.568
+2026-01-23 03:20:18,858 - rl_learner - INFO - Updated 15 agent states for low_stable_neutral
+2026-01-23 03:20:18,862 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.110
+2026-01-23 03:20:18,862 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:18,862 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:18,864 - reward_calculator - INFO - Reward: -0.800 for SELL (return=1.69%, conf=0.74, correct=False)
+2026-01-23 03:20:18,864 - rl_learner - INFO - Updating RL states for low_rising_neutral, reward=-0.800, normalized=0.000
+2026-01-23 03:20:18,925 - rl_learner - INFO - Updated 15 agent states for low_rising_neutral
+2026-01-23 03:20:18,926 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.111
+2026-01-23 03:20:18,926 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:18,926 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:18,927 - reward_calculator - INFO - Reward: 0.679 for HOLD (return=1.59%, conf=0.58, correct=True)
+2026-01-23 03:20:18,927 - rl_learner - INFO - Updating RL states for low_rising_neutral, reward=0.679, normalized=0.592
+2026-01-23 03:20:18,985 - rl_learner - INFO - Updated 15 agent states for low_rising_neutral
+2026-01-23 03:20:18,988 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.083
+2026-01-23 03:20:18,988 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:18,988 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:18,989 - reward_calculator - INFO - Reward: 0.671 for HOLD (return=1.42%, conf=0.56, correct=True)
+2026-01-23 03:20:18,989 - rl_learner - INFO - Updating RL states for low_rising_neutral, reward=0.671, normalized=0.588
+2026-01-23 03:20:19,047 - rl_learner - INFO - Updated 15 agent states for low_rising_neutral
+2026-01-23 03:20:19,050 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.100
+2026-01-23 03:20:19,050 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:19,050 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:19,051 - reward_calculator - INFO - Reward: 0.638 for HOLD (return=0.77%, conf=0.57, correct=True)
+2026-01-23 03:20:19,051 - rl_learner - INFO - Updating RL states for low_rising_neutral, reward=0.638, normalized=0.575
+2026-01-23 03:20:19,116 - rl_learner - INFO - Updated 15 agent states for low_rising_neutral
+2026-01-23 03:20:19,117 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.110
+2026-01-23 03:20:19,117 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:19,117 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:19,118 - reward_calculator - INFO - Reward: 0.679 for HOLD (return=1.57%, conf=0.59, correct=True)
+2026-01-23 03:20:19,118 - rl_learner - INFO - Updating RL states for low_stable_neutral, reward=0.679, normalized=0.591
+2026-01-23 03:20:19,174 - rl_learner - INFO - Updated 15 agent states for low_stable_neutral
+2026-01-23 03:20:19,175 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.109
+2026-01-23 03:20:19,176 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:19,176 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:19,177 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=3.25%, conf=0.58, correct=False)
+2026-01-23 03:20:19,177 - rl_learner - INFO - Updating RL states for low_stable_neutral, reward=-0.350, normalized=0.180
+2026-01-23 03:20:19,233 - rl_learner - INFO - Updated 15 agent states for low_stable_neutral
+2026-01-23 03:20:19,233 - backtester - INFO - Progress: 25/75 decisions, accuracy=56.0%
+2026-01-23 03:20:19,235 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.100
+2026-01-23 03:20:19,236 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:19,236 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:19,237 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=3.79%, conf=0.59, correct=False)
+2026-01-23 03:20:19,237 - rl_learner - INFO - Updating RL states for low_stable_neutral, reward=-0.350, normalized=0.180
+2026-01-23 03:20:19,296 - rl_learner - INFO - Updated 15 agent states for low_stable_neutral
+2026-01-23 03:20:19,300 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.100
+2026-01-23 03:20:19,301 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:19,301 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:19,304 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=5.29%, conf=0.59, correct=False)
+2026-01-23 03:20:19,304 - rl_learner - INFO - Updating RL states for low_stable_neutral, reward=-0.350, normalized=0.180
+2026-01-23 03:20:19,363 - rl_learner - INFO - Updated 15 agent states for low_stable_neutral
+2026-01-23 03:20:19,367 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.101
+2026-01-23 03:20:19,367 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:19,367 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:19,369 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=5.68%, conf=0.58, correct=False)
+2026-01-23 03:20:19,369 - rl_learner - INFO - Updating RL states for low_stable_neutral, reward=-0.350, normalized=0.180
+2026-01-23 03:20:19,429 - rl_learner - INFO - Updated 15 agent states for low_stable_neutral
+2026-01-23 03:20:19,430 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.117
+2026-01-23 03:20:19,431 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:19,431 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:19,431 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=3.32%, conf=0.56, correct=False)
+2026-01-23 03:20:19,432 - rl_learner - INFO - Updating RL states for low_stable_neutral, reward=-0.350, normalized=0.180
+2026-01-23 03:20:19,496 - rl_learner - INFO - Updated 15 agent states for low_stable_neutral
+2026-01-23 03:20:19,501 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.117
+2026-01-23 03:20:19,501 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:19,502 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:19,504 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=2.67%, conf=0.51, correct=False)
+2026-01-23 03:20:19,504 - rl_learner - INFO - Updating RL states for low_stable_neutral, reward=-0.350, normalized=0.180
+2026-01-23 03:20:19,565 - rl_learner - INFO - Updated 15 agent states for low_stable_neutral
+2026-01-23 03:20:19,568 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.128
+2026-01-23 03:20:19,569 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:19,569 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:19,570 - reward_calculator - INFO - Reward: -0.300 for BUY (return=-0.08%, conf=0.90, correct=False)
+2026-01-23 03:20:19,571 - rl_learner - INFO - Updating RL states for low_stable_bullish, reward=-0.300, normalized=0.200
+2026-01-23 03:20:19,636 - rl_learner - INFO - Updated 15 agent states for low_stable_bullish
+2026-01-23 03:20:19,639 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.133
+2026-01-23 03:20:19,640 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:19,640 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:19,642 - reward_calculator - INFO - Reward: -0.800 for BUY (return=-1.73%, conf=0.90, correct=False)
+2026-01-23 03:20:19,642 - rl_learner - INFO - Updating RL states for low_falling_bullish, reward=-0.800, normalized=0.000
+2026-01-23 03:20:19,706 - rl_learner - INFO - Updated 15 agent states for low_falling_bullish
+2026-01-23 03:20:19,709 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.124
+2026-01-23 03:20:19,710 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:19,710 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:19,712 - reward_calculator - INFO - Reward: -0.800 for BUY (return=-3.23%, conf=0.90, correct=False)
+2026-01-23 03:20:19,712 - rl_learner - INFO - Updating RL states for low_falling_bullish, reward=-0.800, normalized=0.000
+2026-01-23 03:20:19,775 - rl_learner - INFO - Updated 15 agent states for low_falling_bullish
+2026-01-23 03:20:19,777 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.129
+2026-01-23 03:20:19,777 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:19,778 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:19,779 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=-5.64%, conf=0.51, correct=False)
+2026-01-23 03:20:19,779 - rl_learner - INFO - Updating RL states for low_falling_neutral, reward=-0.350, normalized=0.180
+2026-01-23 03:20:19,837 - rl_learner - INFO - Updated 15 agent states for low_falling_neutral
+2026-01-23 03:20:19,839 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.129
+2026-01-23 03:20:19,839 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:19,839 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:19,840 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=-4.48%, conf=0.51, correct=False)
+2026-01-23 03:20:19,840 - rl_learner - INFO - Updating RL states for low_falling_neutral, reward=-0.350, normalized=0.180
+2026-01-23 03:20:19,900 - rl_learner - INFO - Updated 15 agent states for low_falling_neutral
+2026-01-23 03:20:19,901 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.122
+2026-01-23 03:20:19,901 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:19,901 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:19,901 - reward_calculator - INFO - Reward: 1.273 for SELL (return=-1.46%, conf=0.81, correct=True)
+2026-01-23 03:20:19,901 - rl_learner - INFO - Updating RL states for low_falling_neutral, reward=1.273, normalized=0.829
+2026-01-23 03:20:19,958 - rl_learner - INFO - Updated 15 agent states for low_falling_neutral
+2026-01-23 03:20:19,959 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.120
+2026-01-23 03:20:19,960 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:19,960 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:19,960 - reward_calculator - INFO - Reward: 0.640 for HOLD (return=0.80%, conf=0.53, correct=True)
+2026-01-23 03:20:19,960 - rl_learner - INFO - Updating RL states for low_stable_neutral, reward=0.640, normalized=0.576
+2026-01-23 03:20:20,019 - rl_learner - INFO - Updated 15 agent states for low_stable_neutral
+2026-01-23 03:20:20,022 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.132
+2026-01-23 03:20:20,023 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:20,023 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:20,024 - reward_calculator - INFO - Reward: -0.800 for SELL (return=4.14%, conf=0.76, correct=False)
+2026-01-23 03:20:20,025 - rl_learner - INFO - Updating RL states for low_stable_neutral, reward=-0.800, normalized=0.000
+2026-01-23 03:20:20,086 - rl_learner - INFO - Updated 15 agent states for low_stable_neutral
+2026-01-23 03:20:20,089 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.179
+2026-01-23 03:20:20,089 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:20,089 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:20,090 - reward_calculator - INFO - Reward: -0.800 for SELL (return=8.86%, conf=0.90, correct=False)
+2026-01-23 03:20:20,090 - rl_learner - INFO - Updating RL states for medium_stable_bearish, reward=-0.800, normalized=0.000
+2026-01-23 03:20:20,148 - rl_learner - INFO - Updated 15 agent states for medium_stable_bearish
+2026-01-23 03:20:20,149 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.190
+2026-01-23 03:20:20,149 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:20,149 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:20,150 - reward_calculator - INFO - Reward: -0.800 for SELL (return=7.24%, conf=0.90, correct=False)
+2026-01-23 03:20:20,150 - rl_learner - INFO - Updating RL states for medium_stable_bearish, reward=-0.800, normalized=0.000
+2026-01-23 03:20:20,219 - rl_learner - INFO - Updated 15 agent states for medium_stable_bearish
+2026-01-23 03:20:20,220 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.191
+2026-01-23 03:20:20,220 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:20,220 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:20,221 - reward_calculator - INFO - Reward: -0.800 for SELL (return=8.62%, conf=0.87, correct=False)
+2026-01-23 03:20:20,221 - rl_learner - INFO - Updating RL states for medium_stable_bearish, reward=-0.800, normalized=0.000
+2026-01-23 03:20:20,280 - rl_learner - INFO - Updated 15 agent states for medium_stable_bearish
+2026-01-23 03:20:20,282 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.203
+2026-01-23 03:20:20,283 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:20,283 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:20,285 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=6.21%, conf=0.57, correct=False)
+2026-01-23 03:20:20,285 - rl_learner - INFO - Updating RL states for medium_stable_neutral, reward=-0.350, normalized=0.180
+2026-01-23 03:20:20,345 - rl_learner - INFO - Updated 15 agent states for medium_stable_neutral
+2026-01-23 03:20:20,348 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.216
+2026-01-23 03:20:20,348 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:20,348 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:20,350 - reward_calculator - INFO - Reward: 1.390 for BUY (return=3.80%, conf=0.89, correct=True)
+2026-01-23 03:20:20,351 - rl_learner - INFO - Updating RL states for medium_stable_bullish, reward=1.390, normalized=0.876
+2026-01-23 03:20:20,413 - rl_learner - INFO - Updated 15 agent states for medium_stable_bullish
+2026-01-23 03:20:20,414 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.219
+2026-01-23 03:20:20,414 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:20,414 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:20,415 - reward_calculator - INFO - Reward: 1.302 for BUY (return=2.03%, conf=0.90, correct=True)
+2026-01-23 03:20:20,415 - rl_learner - INFO - Updating RL states for medium_stable_bullish, reward=1.302, normalized=0.841
+2026-01-23 03:20:20,472 - rl_learner - INFO - Updated 15 agent states for medium_stable_bullish
+2026-01-23 03:20:20,474 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.222
+2026-01-23 03:20:20,474 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:20,474 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:20,474 - reward_calculator - INFO - Reward: -0.300 for BUY (return=0.86%, conf=0.90, correct=False)
+2026-01-23 03:20:20,474 - rl_learner - INFO - Updating RL states for medium_stable_bullish, reward=-0.300, normalized=0.200
+2026-01-23 03:20:20,531 - rl_learner - INFO - Updated 15 agent states for medium_stable_bullish
+2026-01-23 03:20:20,533 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.219
+2026-01-23 03:20:20,534 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:20,534 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:20,535 - reward_calculator - INFO - Reward: -0.300 for BUY (return=0.74%, conf=0.90, correct=False)
+2026-01-23 03:20:20,535 - rl_learner - INFO - Updating RL states for medium_falling_bullish, reward=-0.300, normalized=0.200
+2026-01-23 03:20:20,593 - rl_learner - INFO - Updated 15 agent states for medium_falling_bullish
+2026-01-23 03:20:20,595 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.219
+2026-01-23 03:20:20,595 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:20,596 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:20,597 - reward_calculator - INFO - Reward: -0.300 for BUY (return=0.54%, conf=0.90, correct=False)
+2026-01-23 03:20:20,597 - rl_learner - INFO - Updating RL states for medium_falling_bullish, reward=-0.300, normalized=0.200
+2026-01-23 03:20:20,656 - rl_learner - INFO - Updated 15 agent states for medium_falling_bullish
+2026-01-23 03:20:20,660 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.215
+2026-01-23 03:20:20,660 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:20,661 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:20,663 - reward_calculator - INFO - Reward: 0.627 for HOLD (return=0.55%, conf=0.53, correct=True)
+2026-01-23 03:20:20,663 - rl_learner - INFO - Updating RL states for medium_falling_neutral, reward=0.627, normalized=0.571
+2026-01-23 03:20:20,721 - rl_learner - INFO - Updated 15 agent states for medium_falling_neutral
+2026-01-23 03:20:20,723 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.219
+2026-01-23 03:20:20,723 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:20,723 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:20,724 - reward_calculator - INFO - Reward: 0.611 for HOLD (return=-0.22%, conf=0.56, correct=True)
+2026-01-23 03:20:20,724 - rl_learner - INFO - Updating RL states for medium_falling_neutral, reward=0.611, normalized=0.564
+2026-01-23 03:20:20,780 - rl_learner - INFO - Updated 15 agent states for medium_falling_neutral
+2026-01-23 03:20:20,782 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.219
+2026-01-23 03:20:20,782 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:20,782 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:20,783 - reward_calculator - INFO - Reward: 0.667 for HOLD (return=-1.35%, conf=0.59, correct=True)
+2026-01-23 03:20:20,783 - rl_learner - INFO - Updating RL states for medium_falling_neutral, reward=0.667, normalized=0.587
+2026-01-23 03:20:20,840 - rl_learner - INFO - Updated 15 agent states for medium_falling_neutral
+2026-01-23 03:20:20,840 - backtester - INFO - Progress: 50/75 decisions, accuracy=42.0%
+2026-01-23 03:20:20,841 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.209
+2026-01-23 03:20:20,842 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:20,842 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:20,843 - reward_calculator - INFO - Reward: 0.648 for HOLD (return=0.95%, conf=0.55, correct=True)
+2026-01-23 03:20:20,843 - rl_learner - INFO - Updating RL states for medium_falling_neutral, reward=0.648, normalized=0.579
+2026-01-23 03:20:20,899 - rl_learner - INFO - Updated 15 agent states for medium_falling_neutral
+2026-01-23 03:20:20,900 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.208
+2026-01-23 03:20:20,900 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:20,900 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:20,901 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=2.80%, conf=0.56, correct=False)
+2026-01-23 03:20:20,901 - rl_learner - INFO - Updating RL states for medium_falling_neutral, reward=-0.350, normalized=0.180
+2026-01-23 03:20:20,961 - rl_learner - INFO - Updated 15 agent states for medium_falling_neutral
+2026-01-23 03:20:20,964 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.150
+2026-01-23 03:20:20,964 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:20,964 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:20,967 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=2.82%, conf=0.54, correct=False)
+2026-01-23 03:20:20,967 - rl_learner - INFO - Updating RL states for low_stable_neutral, reward=-0.350, normalized=0.180
+2026-01-23 03:20:21,025 - rl_learner - INFO - Updated 15 agent states for low_stable_neutral
+2026-01-23 03:20:21,028 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.197
+2026-01-23 03:20:21,029 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:21,029 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:21,030 - reward_calculator - INFO - Reward: 0.606 for HOLD (return=0.13%, conf=0.56, correct=True)
+2026-01-23 03:20:21,030 - rl_learner - INFO - Updating RL states for medium_stable_neutral, reward=0.606, normalized=0.563
+2026-01-23 03:20:21,091 - rl_learner - INFO - Updated 15 agent states for medium_stable_neutral
+2026-01-23 03:20:21,093 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.184
+2026-01-23 03:20:21,093 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:21,094 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:21,095 - reward_calculator - INFO - Reward: 0.638 for HOLD (return=0.76%, conf=0.52, correct=True)
+2026-01-23 03:20:21,095 - rl_learner - INFO - Updating RL states for medium_stable_neutral, reward=0.638, normalized=0.575
+2026-01-23 03:20:21,155 - rl_learner - INFO - Updated 15 agent states for medium_stable_neutral
+2026-01-23 03:20:21,159 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.190
+2026-01-23 03:20:21,159 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:21,159 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:21,161 - reward_calculator - INFO - Reward: -0.300 for BUY (return=-0.24%, conf=0.90, correct=False)
+2026-01-23 03:20:21,161 - rl_learner - INFO - Updating RL states for medium_stable_bullish, reward=-0.300, normalized=0.200
+2026-01-23 03:20:21,221 - rl_learner - INFO - Updated 15 agent states for medium_stable_bullish
+2026-01-23 03:20:21,222 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.183
+2026-01-23 03:20:21,223 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:21,223 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:21,223 - reward_calculator - INFO - Reward: 0.639 for HOLD (return=-0.77%, conf=0.57, correct=True)
+2026-01-23 03:20:21,223 - rl_learner - INFO - Updating RL states for medium_stable_neutral, reward=0.639, normalized=0.575
+2026-01-23 03:20:21,283 - rl_learner - INFO - Updated 15 agent states for medium_stable_neutral
+2026-01-23 03:20:21,288 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.181
+2026-01-23 03:20:21,289 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:21,289 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:21,290 - reward_calculator - INFO - Reward: 0.639 for HOLD (return=-0.77%, conf=0.53, correct=True)
+2026-01-23 03:20:21,291 - rl_learner - INFO - Updating RL states for medium_stable_neutral, reward=0.639, normalized=0.575
+2026-01-23 03:20:21,348 - rl_learner - INFO - Updated 15 agent states for medium_stable_neutral
+2026-01-23 03:20:21,352 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.186
+2026-01-23 03:20:21,352 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:21,352 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:21,354 - reward_calculator - INFO - Reward: 0.630 for HOLD (return=0.61%, conf=0.55, correct=True)
+2026-01-23 03:20:21,354 - rl_learner - INFO - Updating RL states for medium_stable_neutral, reward=0.630, normalized=0.572
+2026-01-23 03:20:21,416 - rl_learner - INFO - Updated 15 agent states for medium_stable_neutral
+2026-01-23 03:20:21,419 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.188
+2026-01-23 03:20:21,420 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:21,420 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:21,421 - reward_calculator - INFO - Reward: 0.622 for HOLD (return=0.43%, conf=0.56, correct=True)
+2026-01-23 03:20:21,421 - rl_learner - INFO - Updating RL states for medium_stable_neutral, reward=0.622, normalized=0.569
+2026-01-23 03:20:21,482 - rl_learner - INFO - Updated 15 agent states for medium_stable_neutral
+2026-01-23 03:20:21,484 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.187
+2026-01-23 03:20:21,485 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:21,485 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:21,486 - reward_calculator - INFO - Reward: 0.662 for HOLD (return=-1.25%, conf=0.57, correct=True)
+2026-01-23 03:20:21,486 - rl_learner - INFO - Updating RL states for medium_stable_neutral, reward=0.662, normalized=0.585
+2026-01-23 03:20:21,545 - rl_learner - INFO - Updated 15 agent states for medium_stable_neutral
+2026-01-23 03:20:21,549 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.184
+2026-01-23 03:20:21,549 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:21,550 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:21,552 - reward_calculator - INFO - Reward: -0.800 for BUY (return=-1.52%, conf=0.71, correct=False)
+2026-01-23 03:20:21,552 - rl_learner - INFO - Updating RL states for medium_stable_neutral, reward=-0.800, normalized=0.000
+2026-01-23 03:20:21,613 - rl_learner - INFO - Updated 15 agent states for medium_stable_neutral
+2026-01-23 03:20:21,615 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.187
+2026-01-23 03:20:21,615 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:21,615 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:21,615 - reward_calculator - INFO - Reward: 0.615 for HOLD (return=-0.30%, conf=0.58, correct=True)
+2026-01-23 03:20:21,615 - rl_learner - INFO - Updating RL states for medium_stable_neutral, reward=0.615, normalized=0.566
+2026-01-23 03:20:21,674 - rl_learner - INFO - Updated 15 agent states for medium_stable_neutral
+2026-01-23 03:20:21,676 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.187
+2026-01-23 03:20:21,676 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:21,676 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:21,677 - reward_calculator - INFO - Reward: 0.651 for HOLD (return=1.01%, conf=0.52, correct=True)
+2026-01-23 03:20:21,677 - rl_learner - INFO - Updating RL states for medium_stable_neutral, reward=0.651, normalized=0.580
+2026-01-23 03:20:21,734 - rl_learner - INFO - Updated 15 agent states for medium_stable_neutral
+2026-01-23 03:20:21,737 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.187
+2026-01-23 03:20:21,738 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:21,738 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:21,740 - reward_calculator - INFO - Reward: 0.686 for HOLD (return=1.72%, conf=0.59, correct=True)
+2026-01-23 03:20:21,741 - rl_learner - INFO - Updating RL states for medium_stable_neutral, reward=0.686, normalized=0.594
+2026-01-23 03:20:21,802 - rl_learner - INFO - Updated 15 agent states for medium_stable_neutral
+2026-01-23 03:20:21,806 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.189
+2026-01-23 03:20:21,806 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:21,806 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:21,809 - reward_calculator - INFO - Reward: 0.670 for HOLD (return=1.41%, conf=0.59, correct=True)
+2026-01-23 03:20:21,809 - rl_learner - INFO - Updating RL states for medium_stable_neutral, reward=0.670, normalized=0.588
+2026-01-23 03:20:21,879 - rl_learner - INFO - Updated 15 agent states for medium_stable_neutral
+2026-01-23 03:20:21,881 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.188
+2026-01-23 03:20:21,882 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:21,882 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:21,883 - reward_calculator - INFO - Reward: 0.620 for HOLD (return=0.40%, conf=0.53, correct=True)
+2026-01-23 03:20:21,883 - rl_learner - INFO - Updating RL states for medium_stable_neutral, reward=0.620, normalized=0.568
+2026-01-23 03:20:21,940 - rl_learner - INFO - Updated 15 agent states for medium_stable_neutral
+2026-01-23 03:20:21,942 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.183
+2026-01-23 03:20:21,942 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:21,942 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:21,943 - reward_calculator - INFO - Reward: 0.640 for HOLD (return=0.79%, conf=0.57, correct=True)
+2026-01-23 03:20:21,943 - rl_learner - INFO - Updating RL states for medium_stable_neutral, reward=0.640, normalized=0.576
+2026-01-23 03:20:22,002 - rl_learner - INFO - Updated 15 agent states for medium_stable_neutral
+2026-01-23 03:20:22,007 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.111
+2026-01-23 03:20:22,008 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:22,008 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:22,010 - reward_calculator - INFO - Reward: 0.658 for HOLD (return=-1.16%, conf=0.56, correct=True)
+2026-01-23 03:20:22,010 - rl_learner - INFO - Updating RL states for low_stable_neutral, reward=0.658, normalized=0.583
+2026-01-23 03:20:22,066 - rl_learner - INFO - Updated 15 agent states for low_stable_neutral
+2026-01-23 03:20:22,067 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.111
+2026-01-23 03:20:22,068 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:22,068 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:22,068 - reward_calculator - INFO - Reward: 0.662 for HOLD (return=-1.24%, conf=0.54, correct=True)
+2026-01-23 03:20:22,068 - rl_learner - INFO - Updating RL states for low_stable_neutral, reward=0.662, normalized=0.585
+2026-01-23 03:20:22,126 - rl_learner - INFO - Updated 15 agent states for low_stable_neutral
+2026-01-23 03:20:22,127 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.095
+2026-01-23 03:20:22,127 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:22,127 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:22,128 - reward_calculator - INFO - Reward: 0.606 for HOLD (return=-0.12%, conf=0.55, correct=True)
+2026-01-23 03:20:22,128 - rl_learner - INFO - Updating RL states for low_stable_neutral, reward=0.606, normalized=0.562
+2026-01-23 03:20:22,187 - rl_learner - INFO - Updated 15 agent states for low_stable_neutral
+2026-01-23 03:20:22,191 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.104
+2026-01-23 03:20:22,191 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:22,192 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:22,193 - reward_calculator - INFO - Reward: 0.666 for HOLD (return=1.32%, conf=0.58, correct=True)
+2026-01-23 03:20:22,194 - rl_learner - INFO - Updating RL states for low_stable_neutral, reward=0.666, normalized=0.586
+2026-01-23 03:20:22,252 - rl_learner - INFO - Updated 15 agent states for low_stable_neutral
+2026-01-23 03:20:22,256 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.102
+2026-01-23 03:20:22,256 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:22,256 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:22,257 - reward_calculator - INFO - Reward: 0.660 for HOLD (return=1.20%, conf=0.57, correct=True)
+2026-01-23 03:20:22,258 - rl_learner - INFO - Updating RL states for low_stable_neutral, reward=0.660, normalized=0.584
+2026-01-23 03:20:22,321 - rl_learner - INFO - Updated 15 agent states for low_stable_neutral
+2026-01-23 03:20:22,325 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.090
+2026-01-23 03:20:22,326 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:22,326 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:22,328 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=2.92%, conf=0.59, correct=False)
+2026-01-23 03:20:22,328 - rl_learner - INFO - Updating RL states for low_stable_neutral, reward=-0.350, normalized=0.180
+2026-01-23 03:20:22,387 - rl_learner - INFO - Updated 15 agent states for low_stable_neutral
+2026-01-23 03:20:22,388 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.099
+2026-01-23 03:20:22,389 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:22,389 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:22,389 - reward_calculator - INFO - Reward: 0.685 for HOLD (return=1.71%, conf=0.54, correct=True)
+2026-01-23 03:20:22,389 - rl_learner - INFO - Updating RL states for low_stable_neutral, reward=0.685, normalized=0.594
+2026-01-23 03:20:22,447 - rl_learner - INFO - Updated 15 agent states for low_stable_neutral
+2026-01-23 03:20:22,447 - backtester - INFO - Progress: 75/75 decisions, accuracy=54.7%
+2026-01-23 03:20:22,447 - backtester - INFO - Backtest complete: rl_weights, 75 decisions, accuracy=54.7%, avg_reward=0.179
+2026-01-23 03:20:22,447 - __main__ - INFO - 
+================================================================================
+2026-01-23 03:20:22,447 - __main__ - INFO - TRAINING RESULTS
+2026-01-23 03:20:22,447 - __main__ - INFO - ================================================================================
+2026-01-23 03:20:22,448 - __main__ - INFO - 
+Equal Weights:
+2026-01-23 03:20:22,448 - __main__ - INFO -   Accuracy: 60.0% (45/75)
+2026-01-23 03:20:22,448 - __main__ - INFO -   Avg Reward: 0.257
+2026-01-23 03:20:22,448 - __main__ - INFO -   Avg Return: 0.70%
+2026-01-23 03:20:22,448 - __main__ - INFO -   Sharpe Ratio: 0.270
+2026-01-23 03:20:22,448 - __main__ - INFO - 
+Expert Weights:
+2026-01-23 03:20:22,448 - __main__ - INFO -   Accuracy: 57.3% (43/75)
+2026-01-23 03:20:22,448 - __main__ - INFO -   Avg Reward: 0.219
+2026-01-23 03:20:22,448 - __main__ - INFO -   Avg Return: 0.83%
+2026-01-23 03:20:22,448 - __main__ - INFO -   Sharpe Ratio: 0.300
+2026-01-23 03:20:22,448 - __main__ - INFO - 
+RL Weights:
+2026-01-23 03:20:22,448 - __main__ - INFO -   Accuracy: 54.7% (41/75)
+2026-01-23 03:20:22,448 - __main__ - INFO -   Avg Reward: 0.179
+2026-01-23 03:20:22,448 - __main__ - INFO -   Avg Return: 0.75%
+2026-01-23 03:20:22,448 - __main__ - INFO -   Sharpe Ratio: 0.272
+2026-01-23 03:20:22,448 - __main__ - INFO - 
+================================================================================
+2026-01-23 03:20:22,448 - __main__ - INFO - PHASE 2: TESTING (Jul-Jan 2026) - RL LEARNING FROZEN
+2026-01-23 03:20:22,448 - __main__ - INFO - ================================================================================
+2026-01-23 03:20:22,448 - __main__ - INFO - 
+[4/6] Running Equal Weights - Testing...
+2026-01-23 03:20:22,448 - backtester - INFO - Starting backtest: equal_weights, 2025-07-01 to 2026-01-15, 75 decisions, RL learning=OFF
+2026-01-23 03:20:22,449 - backtester - INFO - Found 129 safe trading days
+2026-01-23 03:20:22,452 - reward_calculator - INFO - Reward: 0.637 for HOLD (return=-0.73%, conf=0.58, correct=True)
+2026-01-23 03:20:22,454 - reward_calculator - INFO - Reward: 0.660 for HOLD (return=-1.19%, conf=0.59, correct=True)
+2026-01-23 03:20:22,457 - reward_calculator - INFO - Reward: 0.652 for HOLD (return=-1.04%, conf=0.60, correct=True)
+2026-01-23 03:20:22,459 - reward_calculator - INFO - Reward: 0.700 for HOLD (return=-1.99%, conf=0.59, correct=True)
+2026-01-23 03:20:22,461 - reward_calculator - INFO - Reward: 0.652 for HOLD (return=-1.04%, conf=0.59, correct=True)
+2026-01-23 03:20:22,463 - reward_calculator - INFO - Reward: 0.627 for HOLD (return=0.55%, conf=0.57, correct=True)
+2026-01-23 03:20:22,465 - reward_calculator - INFO - Reward: 0.686 for HOLD (return=-1.71%, conf=0.60, correct=True)
+2026-01-23 03:20:22,467 - reward_calculator - INFO - Reward: 0.647 for HOLD (return=-0.94%, conf=0.59, correct=True)
+2026-01-23 03:20:22,468 - reward_calculator - INFO - Reward: 0.658 for HOLD (return=-1.17%, conf=0.59, correct=True)
+2026-01-23 03:20:22,469 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=-2.60%, conf=0.59, correct=False)
+2026-01-23 03:20:22,470 - reward_calculator - INFO - Reward: 0.668 for HOLD (return=-1.35%, conf=0.59, correct=True)
+2026-01-23 03:20:22,471 - reward_calculator - INFO - Reward: 0.645 for HOLD (return=-0.91%, conf=0.57, correct=True)
+2026-01-23 03:20:22,472 - reward_calculator - INFO - Reward: 0.699 for HOLD (return=-1.98%, conf=0.58, correct=True)
+2026-01-23 03:20:22,474 - reward_calculator - INFO - Reward: 0.616 for HOLD (return=-0.32%, conf=0.59, correct=True)
+2026-01-23 03:20:22,474 - reward_calculator - INFO - Reward: 0.604 for HOLD (return=-0.07%, conf=0.58, correct=True)
+2026-01-23 03:20:22,475 - reward_calculator - INFO - Reward: 0.662 for HOLD (return=1.23%, conf=0.58, correct=True)
+2026-01-23 03:20:22,476 - reward_calculator - INFO - Reward: 0.678 for HOLD (return=1.56%, conf=0.60, correct=True)
+2026-01-23 03:20:22,478 - reward_calculator - INFO - Reward: 0.678 for HOLD (return=1.56%, conf=0.59, correct=True)
+2026-01-23 03:20:22,479 - reward_calculator - INFO - Reward: 0.671 for HOLD (return=1.42%, conf=0.60, correct=True)
+2026-01-23 03:20:22,481 - reward_calculator - INFO - Reward: 0.616 for HOLD (return=0.33%, conf=0.58, correct=True)
+2026-01-23 03:20:22,483 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=-2.22%, conf=0.56, correct=False)
+2026-01-23 03:20:22,484 - reward_calculator - INFO - Reward: 0.671 for HOLD (return=1.41%, conf=0.57, correct=True)
+2026-01-23 03:20:22,486 - reward_calculator - INFO - Reward: 0.687 for HOLD (return=1.73%, conf=0.59, correct=True)
+2026-01-23 03:20:22,487 - reward_calculator - INFO - Reward: 0.668 for HOLD (return=1.35%, conf=0.57, correct=True)
+2026-01-23 03:20:22,489 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=2.23%, conf=0.59, correct=False)
+2026-01-23 03:20:22,489 - backtester - INFO - Progress: 25/75 decisions, accuracy=88.0%
+2026-01-23 03:20:22,490 - reward_calculator - INFO - Reward: 0.671 for HOLD (return=1.42%, conf=0.58, correct=True)
+2026-01-23 03:20:22,491 - reward_calculator - INFO - Reward: 0.611 for HOLD (return=0.22%, conf=0.57, correct=True)
+2026-01-23 03:20:22,492 - reward_calculator - INFO - Reward: 0.602 for HOLD (return=-0.05%, conf=0.58, correct=True)
+2026-01-23 03:20:22,493 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=-2.67%, conf=0.57, correct=False)
+2026-01-23 03:20:22,493 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=-3.10%, conf=0.58, correct=False)
+2026-01-23 03:20:22,494 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=-2.83%, conf=0.58, correct=False)
+2026-01-23 03:20:22,495 - reward_calculator - INFO - Reward: 0.673 for HOLD (return=-1.45%, conf=0.60, correct=True)
+2026-01-23 03:20:22,496 - reward_calculator - INFO - Reward: 0.679 for HOLD (return=1.59%, conf=0.56, correct=True)
+2026-01-23 03:20:22,497 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=2.22%, conf=0.56, correct=False)
+2026-01-23 03:20:22,498 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=2.74%, conf=0.56, correct=False)
+2026-01-23 03:20:22,498 - reward_calculator - INFO - Reward: 0.679 for HOLD (return=1.57%, conf=0.60, correct=True)
+2026-01-23 03:20:22,499 - reward_calculator - INFO - Reward: 0.650 for HOLD (return=1.01%, conf=0.58, correct=True)
+2026-01-23 03:20:22,500 - reward_calculator - INFO - Reward: 0.695 for HOLD (return=1.90%, conf=0.56, correct=True)
+2026-01-23 03:20:22,501 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=2.65%, conf=0.58, correct=False)
+2026-01-23 03:20:22,502 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=2.63%, conf=0.58, correct=False)
+2026-01-23 03:20:22,502 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=2.31%, conf=0.58, correct=False)
+2026-01-23 03:20:22,503 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=2.63%, conf=0.59, correct=False)
+2026-01-23 03:20:22,504 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=2.54%, conf=0.59, correct=False)
+2026-01-23 03:20:22,505 - reward_calculator - INFO - Reward: 0.669 for HOLD (return=1.37%, conf=0.58, correct=True)
+2026-01-23 03:20:22,506 - reward_calculator - INFO - Reward: 0.667 for HOLD (return=1.34%, conf=0.56, correct=True)
+2026-01-23 03:20:22,506 - reward_calculator - INFO - Reward: 0.607 for HOLD (return=0.13%, conf=0.54, correct=True)
+2026-01-23 03:20:22,507 - reward_calculator - INFO - Reward: 0.628 for HOLD (return=-0.57%, conf=0.56, correct=True)
+2026-01-23 03:20:22,508 - reward_calculator - INFO - Reward: 0.625 for HOLD (return=-0.49%, conf=0.58, correct=True)
+2026-01-23 03:20:22,509 - reward_calculator - INFO - Reward: 0.688 for HOLD (return=-1.76%, conf=0.59, correct=True)
+2026-01-23 03:20:22,510 - reward_calculator - INFO - Reward: 0.635 for HOLD (return=-0.71%, conf=0.59, correct=True)
+2026-01-23 03:20:22,510 - backtester - INFO - Progress: 50/75 decisions, accuracy=74.0%
+2026-01-23 03:20:22,510 - reward_calculator - INFO - Reward: 0.622 for HOLD (return=0.45%, conf=0.59, correct=True)
+2026-01-23 03:20:22,511 - reward_calculator - INFO - Reward: 0.699 for HOLD (return=1.97%, conf=0.57, correct=True)
+2026-01-23 03:20:22,512 - reward_calculator - INFO - Reward: 0.694 for HOLD (return=1.87%, conf=0.59, correct=True)
+2026-01-23 03:20:22,513 - reward_calculator - INFO - Reward: 0.697 for HOLD (return=1.94%, conf=0.59, correct=True)
+2026-01-23 03:20:22,514 - reward_calculator - INFO - Reward: 0.637 for HOLD (return=0.74%, conf=0.57, correct=True)
+2026-01-23 03:20:22,514 - reward_calculator - INFO - Reward: 0.616 for HOLD (return=0.31%, conf=0.57, correct=True)
+2026-01-23 03:20:22,515 - reward_calculator - INFO - Reward: 0.605 for HOLD (return=-0.10%, conf=0.57, correct=True)
+2026-01-23 03:20:22,516 - reward_calculator - INFO - Reward: 0.637 for HOLD (return=0.74%, conf=0.58, correct=True)
+2026-01-23 03:20:22,517 - reward_calculator - INFO - Reward: 0.659 for HOLD (return=1.18%, conf=0.60, correct=True)
+2026-01-23 03:20:22,517 - reward_calculator - INFO - Reward: 0.629 for HOLD (return=0.58%, conf=0.59, correct=True)
+2026-01-23 03:20:22,518 - reward_calculator - INFO - Reward: 0.603 for HOLD (return=-0.06%, conf=0.58, correct=True)
+2026-01-23 03:20:22,519 - reward_calculator - INFO - Reward: 0.605 for HOLD (return=0.10%, conf=0.60, correct=True)
+2026-01-23 03:20:22,520 - reward_calculator - INFO - Reward: 0.629 for HOLD (return=0.58%, conf=0.59, correct=True)
+2026-01-23 03:20:22,521 - reward_calculator - INFO - Reward: 0.604 for HOLD (return=-0.07%, conf=0.60, correct=True)
+2026-01-23 03:20:22,521 - reward_calculator - INFO - Reward: 0.649 for HOLD (return=-0.97%, conf=0.59, correct=True)
+2026-01-23 03:20:22,522 - reward_calculator - INFO - Reward: 0.601 for HOLD (return=-0.02%, conf=0.59, correct=True)
+2026-01-23 03:20:22,523 - reward_calculator - INFO - Reward: 0.662 for HOLD (return=-1.25%, conf=0.60, correct=True)
+2026-01-23 03:20:22,524 - reward_calculator - INFO - Reward: 0.627 for HOLD (return=-0.55%, conf=0.59, correct=True)
+2026-01-23 03:20:22,525 - reward_calculator - INFO - Reward: 0.605 for HOLD (return=-0.09%, conf=0.59, correct=True)
+2026-01-23 03:20:22,525 - reward_calculator - INFO - Reward: 0.653 for HOLD (return=1.06%, conf=0.58, correct=True)
+2026-01-23 03:20:22,526 - reward_calculator - INFO - Reward: 0.622 for HOLD (return=0.44%, conf=0.59, correct=True)
+2026-01-23 03:20:22,527 - reward_calculator - INFO - Reward: 0.626 for HOLD (return=0.52%, conf=0.59, correct=True)
+2026-01-23 03:20:22,528 - reward_calculator - INFO - Reward: 0.638 for HOLD (return=0.77%, conf=0.58, correct=True)
+2026-01-23 03:20:22,528 - reward_calculator - INFO - Reward: 0.612 for HOLD (return=-0.24%, conf=0.58, correct=True)
+2026-01-23 03:20:22,529 - reward_calculator - INFO - Reward: 0.685 for HOLD (return=-1.71%, conf=0.60, correct=True)
+2026-01-23 03:20:22,529 - backtester - INFO - Progress: 75/75 decisions, accuracy=82.7%
+2026-01-23 03:20:22,529 - backtester - INFO - Backtest complete: equal_weights, 75 decisions, accuracy=82.7%, avg_reward=0.475
+2026-01-23 03:20:22,529 - __main__ - INFO - 
+[5/6] Running Expert Weights - Testing...
+2026-01-23 03:20:22,529 - backtester - INFO - Starting backtest: expert_weights, 2025-07-01 to 2026-01-15, 75 decisions, RL learning=OFF
+2026-01-23 03:20:22,530 - backtester - INFO - Found 129 safe trading days
+2026-01-23 03:20:22,530 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.104
+2026-01-23 03:20:22,530 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:22,531 - reward_calculator - INFO - Reward: 0.637 for HOLD (return=-0.73%, conf=0.57, correct=True)
+2026-01-23 03:20:22,531 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.105
+2026-01-23 03:20:22,531 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:22,531 - reward_calculator - INFO - Reward: 0.660 for HOLD (return=-1.19%, conf=0.60, correct=True)
+2026-01-23 03:20:22,532 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.100
+2026-01-23 03:20:22,532 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:22,532 - reward_calculator - INFO - Reward: 0.664 for HOLD (return=-1.27%, conf=0.59, correct=True)
+2026-01-23 03:20:22,533 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.100
+2026-01-23 03:20:22,533 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:22,533 - reward_calculator - INFO - Reward: 0.652 for HOLD (return=-1.04%, conf=0.60, correct=True)
+2026-01-23 03:20:22,534 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.100
+2026-01-23 03:20:22,534 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:22,534 - reward_calculator - INFO - Reward: 0.649 for HOLD (return=-0.98%, conf=0.60, correct=True)
+2026-01-23 03:20:22,535 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.092
+2026-01-23 03:20:22,535 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:22,535 - reward_calculator - INFO - Reward: 0.700 for HOLD (return=-1.99%, conf=0.59, correct=True)
+2026-01-23 03:20:22,536 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.090
+2026-01-23 03:20:22,536 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:22,536 - reward_calculator - INFO - Reward: 0.618 for HOLD (return=-0.35%, conf=0.58, correct=True)
+2026-01-23 03:20:22,536 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.090
+2026-01-23 03:20:22,537 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:22,537 - reward_calculator - INFO - Reward: 0.627 for HOLD (return=0.55%, conf=0.57, correct=True)
+2026-01-23 03:20:22,537 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.090
+2026-01-23 03:20:22,537 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:22,538 - reward_calculator - INFO - Reward: 0.627 for HOLD (return=-0.53%, conf=0.58, correct=True)
+2026-01-23 03:20:22,538 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.090
+2026-01-23 03:20:22,538 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:22,539 - reward_calculator - INFO - Reward: 0.674 for HOLD (return=-1.49%, conf=0.59, correct=True)
+2026-01-23 03:20:22,539 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.079
+2026-01-23 03:20:22,539 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:22,540 - reward_calculator - INFO - Reward: 0.686 for HOLD (return=-1.71%, conf=0.60, correct=True)
+2026-01-23 03:20:22,540 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.079
+2026-01-23 03:20:22,540 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:22,540 - reward_calculator - INFO - Reward: 0.629 for HOLD (return=-0.59%, conf=0.60, correct=True)
+2026-01-23 03:20:22,541 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.063
+2026-01-23 03:20:22,541 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:22,541 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=-2.60%, conf=0.59, correct=False)
+2026-01-23 03:20:22,542 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.064
+2026-01-23 03:20:22,542 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:22,542 - reward_calculator - INFO - Reward: 0.668 for HOLD (return=-1.35%, conf=0.59, correct=True)
+2026-01-23 03:20:22,543 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.076
+2026-01-23 03:20:22,543 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:22,543 - reward_calculator - INFO - Reward: 0.699 for HOLD (return=-1.98%, conf=0.59, correct=True)
+2026-01-23 03:20:22,544 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.075
+2026-01-23 03:20:22,544 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:22,544 - reward_calculator - INFO - Reward: 0.637 for HOLD (return=-0.74%, conf=0.60, correct=True)
+2026-01-23 03:20:22,544 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.079
+2026-01-23 03:20:22,545 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:22,545 - reward_calculator - INFO - Reward: 0.616 for HOLD (return=-0.32%, conf=0.60, correct=True)
+2026-01-23 03:20:22,545 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.079
+2026-01-23 03:20:22,545 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:22,546 - reward_calculator - INFO - Reward: 0.678 for HOLD (return=1.56%, conf=0.59, correct=True)
+2026-01-23 03:20:22,546 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.085
+2026-01-23 03:20:22,546 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:22,547 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=2.82%, conf=0.58, correct=False)
+2026-01-23 03:20:22,547 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.091
+2026-01-23 03:20:22,547 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:22,547 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=2.03%, conf=0.60, correct=False)
+2026-01-23 03:20:22,548 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.091
+2026-01-23 03:20:22,548 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:22,548 - reward_calculator - INFO - Reward: 0.678 for HOLD (return=1.56%, conf=0.60, correct=True)
+2026-01-23 03:20:22,549 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.092
+2026-01-23 03:20:22,549 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:22,549 - reward_calculator - INFO - Reward: 0.616 for HOLD (return=0.33%, conf=0.57, correct=True)
+2026-01-23 03:20:22,550 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.098
+2026-01-23 03:20:22,550 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:22,550 - reward_calculator - INFO - Reward: 0.676 for HOLD (return=-1.51%, conf=0.57, correct=True)
+2026-01-23 03:20:22,551 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.099
+2026-01-23 03:20:22,551 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:22,551 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=-2.22%, conf=0.55, correct=False)
+2026-01-23 03:20:22,552 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.094
+2026-01-23 03:20:22,552 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:22,552 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=-2.01%, conf=0.56, correct=False)
+2026-01-23 03:20:22,552 - backtester - INFO - Progress: 25/75 decisions, accuracy=80.0%
+2026-01-23 03:20:22,552 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.094
+2026-01-23 03:20:22,553 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:22,553 - reward_calculator - INFO - Reward: 0.631 for HOLD (return=-0.62%, conf=0.60, correct=True)
+2026-01-23 03:20:22,553 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.091
+2026-01-23 03:20:22,553 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:22,554 - reward_calculator - INFO - Reward: 0.647 for HOLD (return=-0.94%, conf=0.60, correct=True)
+2026-01-23 03:20:22,554 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.102
+2026-01-23 03:20:22,554 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:22,555 - reward_calculator - INFO - Reward: 0.671 for HOLD (return=1.41%, conf=0.58, correct=True)
+2026-01-23 03:20:22,555 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.087
+2026-01-23 03:20:22,555 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:22,556 - reward_calculator - INFO - Reward: 0.671 for HOLD (return=1.42%, conf=0.58, correct=True)
+2026-01-23 03:20:22,556 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.087
+2026-01-23 03:20:22,556 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:22,557 - reward_calculator - INFO - Reward: 0.611 for HOLD (return=0.22%, conf=0.57, correct=True)
+2026-01-23 03:20:22,557 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.080
+2026-01-23 03:20:22,557 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:22,557 - reward_calculator - INFO - Reward: 0.602 for HOLD (return=-0.05%, conf=0.58, correct=True)
+2026-01-23 03:20:22,558 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.082
+2026-01-23 03:20:22,558 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:22,558 - reward_calculator - INFO - Reward: 0.669 for HOLD (return=-1.38%, conf=0.57, correct=True)
+2026-01-23 03:20:22,559 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.083
+2026-01-23 03:20:22,559 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:22,559 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=-2.67%, conf=0.57, correct=False)
+2026-01-23 03:20:22,560 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.083
+2026-01-23 03:20:22,560 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:22,560 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=-3.10%, conf=0.57, correct=False)
+2026-01-23 03:20:22,561 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.078
+2026-01-23 03:20:22,561 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:22,561 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=-2.83%, conf=0.57, correct=False)
+2026-01-23 03:20:22,562 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.080
+2026-01-23 03:20:22,562 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:22,562 - reward_calculator - INFO - Reward: 0.673 for HOLD (return=-1.45%, conf=0.60, correct=True)
+2026-01-23 03:20:22,562 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.069
+2026-01-23 03:20:22,563 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:22,563 - reward_calculator - INFO - Reward: 0.655 for HOLD (return=-1.09%, conf=0.59, correct=True)
+2026-01-23 03:20:22,563 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.062
+2026-01-23 03:20:22,563 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:22,564 - reward_calculator - INFO - Reward: 0.604 for HOLD (return=0.08%, conf=0.58, correct=True)
+2026-01-23 03:20:22,564 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.067
+2026-01-23 03:20:22,564 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:22,565 - reward_calculator - INFO - Reward: 0.644 for HOLD (return=0.87%, conf=0.57, correct=True)
+2026-01-23 03:20:22,565 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.071
+2026-01-23 03:20:22,565 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:22,565 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=2.22%, conf=0.56, correct=False)
+2026-01-23 03:20:22,566 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.068
+2026-01-23 03:20:22,566 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:22,566 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=2.74%, conf=0.57, correct=False)
+2026-01-23 03:20:22,567 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.076
+2026-01-23 03:20:22,567 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:22,567 - reward_calculator - INFO - Reward: 0.650 for HOLD (return=1.01%, conf=0.58, correct=True)
+2026-01-23 03:20:22,568 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.079
+2026-01-23 03:20:22,568 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:22,568 - reward_calculator - INFO - Reward: 0.695 for HOLD (return=1.90%, conf=0.55, correct=True)
+2026-01-23 03:20:22,569 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.081
+2026-01-23 03:20:22,569 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:22,569 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=2.31%, conf=0.58, correct=False)
+2026-01-23 03:20:22,570 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.081
+2026-01-23 03:20:22,570 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:22,570 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=2.63%, conf=0.59, correct=False)
+2026-01-23 03:20:22,571 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.078
+2026-01-23 03:20:22,571 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:22,571 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=2.58%, conf=0.59, correct=False)
+2026-01-23 03:20:22,571 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.089
+2026-01-23 03:20:22,571 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:22,572 - reward_calculator - INFO - Reward: 0.669 for HOLD (return=1.37%, conf=0.57, correct=True)
+2026-01-23 03:20:22,573 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.087
+2026-01-23 03:20:22,573 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:22,573 - reward_calculator - INFO - Reward: 0.607 for HOLD (return=0.13%, conf=0.54, correct=True)
+2026-01-23 03:20:22,574 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.084
+2026-01-23 03:20:22,574 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:22,575 - reward_calculator - INFO - Reward: 0.625 for HOLD (return=-0.49%, conf=0.57, correct=True)
+2026-01-23 03:20:22,576 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.075
+2026-01-23 03:20:22,576 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:22,576 - reward_calculator - INFO - Reward: 0.622 for HOLD (return=0.45%, conf=0.59, correct=True)
+2026-01-23 03:20:22,576 - backtester - INFO - Progress: 50/75 decisions, accuracy=74.0%
+2026-01-23 03:20:22,577 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.080
+2026-01-23 03:20:22,577 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:22,577 - reward_calculator - INFO - Reward: 0.661 for HOLD (return=1.22%, conf=0.57, correct=True)
+2026-01-23 03:20:22,578 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.081
+2026-01-23 03:20:22,578 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:22,578 - reward_calculator - INFO - Reward: 0.699 for HOLD (return=1.97%, conf=0.58, correct=True)
+2026-01-23 03:20:22,579 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.079
+2026-01-23 03:20:22,579 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:22,579 - reward_calculator - INFO - Reward: 0.694 for HOLD (return=1.87%, conf=0.59, correct=True)
+2026-01-23 03:20:22,580 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.081
+2026-01-23 03:20:22,580 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:22,580 - reward_calculator - INFO - Reward: 0.637 for HOLD (return=0.74%, conf=0.57, correct=True)
+2026-01-23 03:20:22,581 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.069
+2026-01-23 03:20:22,581 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:22,581 - reward_calculator - INFO - Reward: 0.605 for HOLD (return=-0.10%, conf=0.57, correct=True)
+2026-01-23 03:20:22,581 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.069
+2026-01-23 03:20:22,582 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:22,582 - reward_calculator - INFO - Reward: 0.637 for HOLD (return=0.74%, conf=0.57, correct=True)
+2026-01-23 03:20:22,582 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.071
+2026-01-23 03:20:22,582 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:22,583 - reward_calculator - INFO - Reward: 0.629 for HOLD (return=0.58%, conf=0.58, correct=True)
+2026-01-23 03:20:22,583 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.072
+2026-01-23 03:20:22,583 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:22,584 - reward_calculator - INFO - Reward: 0.605 for HOLD (return=0.10%, conf=0.59, correct=True)
+2026-01-23 03:20:22,584 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.080
+2026-01-23 03:20:22,584 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:22,585 - reward_calculator - INFO - Reward: 0.649 for HOLD (return=-0.97%, conf=0.58, correct=True)
+2026-01-23 03:20:22,585 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.076
+2026-01-23 03:20:22,585 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:22,586 - reward_calculator - INFO - Reward: 0.680 for HOLD (return=-1.60%, conf=0.57, correct=True)
+2026-01-23 03:20:22,586 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.074
+2026-01-23 03:20:22,586 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:22,587 - reward_calculator - INFO - Reward: 0.612 for HOLD (return=0.23%, conf=0.59, correct=True)
+2026-01-23 03:20:22,587 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.074
+2026-01-23 03:20:22,587 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:22,587 - reward_calculator - INFO - Reward: 0.601 for HOLD (return=-0.02%, conf=0.59, correct=True)
+2026-01-23 03:20:22,588 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.076
+2026-01-23 03:20:22,588 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:22,588 - reward_calculator - INFO - Reward: 0.662 for HOLD (return=-1.25%, conf=0.59, correct=True)
+2026-01-23 03:20:22,589 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.080
+2026-01-23 03:20:22,589 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:22,589 - reward_calculator - INFO - Reward: 0.605 for HOLD (return=-0.09%, conf=0.59, correct=True)
+2026-01-23 03:20:22,590 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.081
+2026-01-23 03:20:22,590 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:22,590 - reward_calculator - INFO - Reward: 0.640 for HOLD (return=0.81%, conf=0.58, correct=True)
+2026-01-23 03:20:22,591 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.084
+2026-01-23 03:20:22,591 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:22,591 - reward_calculator - INFO - Reward: 0.653 for HOLD (return=1.06%, conf=0.58, correct=True)
+2026-01-23 03:20:22,592 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.084
+2026-01-23 03:20:22,592 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:22,592 - reward_calculator - INFO - Reward: 0.622 for HOLD (return=0.44%, conf=0.58, correct=True)
+2026-01-23 03:20:22,593 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.082
+2026-01-23 03:20:22,593 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:22,593 - reward_calculator - INFO - Reward: 0.624 for HOLD (return=0.48%, conf=0.60, correct=True)
+2026-01-23 03:20:22,594 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.080
+2026-01-23 03:20:22,594 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:22,594 - reward_calculator - INFO - Reward: 0.624 for HOLD (return=0.48%, conf=0.59, correct=True)
+2026-01-23 03:20:22,595 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.082
+2026-01-23 03:20:22,595 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:22,595 - reward_calculator - INFO - Reward: 0.631 for HOLD (return=0.63%, conf=0.60, correct=True)
+2026-01-23 03:20:22,596 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.073
+2026-01-23 03:20:22,596 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:22,596 - reward_calculator - INFO - Reward: 0.629 for HOLD (return=0.58%, conf=0.57, correct=True)
+2026-01-23 03:20:22,596 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.073
+2026-01-23 03:20:22,597 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:22,597 - reward_calculator - INFO - Reward: 0.621 for HOLD (return=0.41%, conf=0.57, correct=True)
+2026-01-23 03:20:22,597 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.073
+2026-01-23 03:20:22,597 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:22,598 - reward_calculator - INFO - Reward: 0.612 for HOLD (return=-0.24%, conf=0.59, correct=True)
+2026-01-23 03:20:22,598 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.078
+2026-01-23 03:20:22,598 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:22,599 - reward_calculator - INFO - Reward: 0.685 for HOLD (return=-1.71%, conf=0.60, correct=True)
+2026-01-23 03:20:22,599 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.079
+2026-01-23 03:20:22,599 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=disabled
+2026-01-23 03:20:22,600 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=-2.26%, conf=0.57, correct=False)
+2026-01-23 03:20:22,600 - backtester - INFO - Progress: 75/75 decisions, accuracy=81.3%
+2026-01-23 03:20:22,600 - backtester - INFO - Backtest complete: expert_weights, 75 decisions, accuracy=81.3%, avg_reward=0.459
+2026-01-23 03:20:22,600 - __main__ - INFO - 
+[6/6] Running RL Weights - Testing (Frozen Weights)...
+2026-01-23 03:20:22,600 - backtester - INFO - Starting backtest: rl_weights, 2025-07-01 to 2026-01-15, 75 decisions, RL learning=OFF
+2026-01-23 03:20:22,600 - backtester - INFO - Found 129 safe trading days
+2026-01-23 03:20:22,601 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.104
+2026-01-23 03:20:22,601 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:22,601 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:22,601 - reward_calculator - INFO - Reward: 0.637 for HOLD (return=-0.73%, conf=0.60, correct=True)
+2026-01-23 03:20:22,602 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.100
+2026-01-23 03:20:22,602 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:22,602 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:22,602 - reward_calculator - INFO - Reward: 0.652 for HOLD (return=-1.04%, conf=0.52, correct=True)
+2026-01-23 03:20:22,603 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.100
+2026-01-23 03:20:22,603 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:22,603 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:22,603 - reward_calculator - INFO - Reward: 0.649 for HOLD (return=-0.98%, conf=0.59, correct=True)
+2026-01-23 03:20:22,604 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.092
+2026-01-23 03:20:22,604 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:22,604 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:22,604 - reward_calculator - INFO - Reward: 0.700 for HOLD (return=-1.99%, conf=0.56, correct=True)
+2026-01-23 03:20:22,605 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.090
+2026-01-23 03:20:22,605 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:22,605 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:22,605 - reward_calculator - INFO - Reward: 0.618 for HOLD (return=-0.35%, conf=0.53, correct=True)
+2026-01-23 03:20:22,606 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.090
+2026-01-23 03:20:22,606 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:22,606 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:22,606 - reward_calculator - INFO - Reward: 0.627 for HOLD (return=0.55%, conf=0.52, correct=True)
+2026-01-23 03:20:22,607 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.090
+2026-01-23 03:20:22,607 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:22,607 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:22,607 - reward_calculator - INFO - Reward: 0.627 for HOLD (return=-0.53%, conf=0.59, correct=True)
+2026-01-23 03:20:22,608 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.090
+2026-01-23 03:20:22,608 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:22,608 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:22,608 - reward_calculator - INFO - Reward: 0.674 for HOLD (return=-1.49%, conf=0.54, correct=True)
+2026-01-23 03:20:22,609 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.079
+2026-01-23 03:20:22,609 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:22,609 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:22,609 - reward_calculator - INFO - Reward: 0.686 for HOLD (return=-1.71%, conf=0.60, correct=True)
+2026-01-23 03:20:22,610 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.079
+2026-01-23 03:20:22,610 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:22,610 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:22,610 - reward_calculator - INFO - Reward: 0.629 for HOLD (return=-0.59%, conf=0.60, correct=True)
+2026-01-23 03:20:22,611 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.080
+2026-01-23 03:20:22,611 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:22,611 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:22,611 - reward_calculator - INFO - Reward: 0.647 for HOLD (return=-0.94%, conf=0.54, correct=True)
+2026-01-23 03:20:22,612 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.069
+2026-01-23 03:20:22,612 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:22,612 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:22,612 - reward_calculator - INFO - Reward: 0.638 for HOLD (return=-0.75%, conf=0.52, correct=True)
+2026-01-23 03:20:22,613 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.071
+2026-01-23 03:20:22,613 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:22,613 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:22,613 - reward_calculator - INFO - Reward: 0.622 for HOLD (return=-0.43%, conf=0.55, correct=True)
+2026-01-23 03:20:22,614 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.076
+2026-01-23 03:20:22,614 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:22,614 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:22,614 - reward_calculator - INFO - Reward: 0.699 for HOLD (return=-1.98%, conf=0.56, correct=True)
+2026-01-23 03:20:22,615 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.075
+2026-01-23 03:20:22,615 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:22,615 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:22,615 - reward_calculator - INFO - Reward: 0.637 for HOLD (return=-0.74%, conf=0.52, correct=True)
+2026-01-23 03:20:22,616 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.083
+2026-01-23 03:20:22,616 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:22,616 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:22,616 - reward_calculator - INFO - Reward: 0.621 for HOLD (return=-0.42%, conf=0.56, correct=True)
+2026-01-23 03:20:22,617 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.085
+2026-01-23 03:20:22,617 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:22,617 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:22,617 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=2.82%, conf=0.55, correct=False)
+2026-01-23 03:20:22,618 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.091
+2026-01-23 03:20:22,618 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:22,618 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:22,618 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=2.03%, conf=0.59, correct=False)
+2026-01-23 03:20:22,619 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.099
+2026-01-23 03:20:22,619 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:22,619 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:22,619 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=-2.22%, conf=0.56, correct=False)
+2026-01-23 03:20:22,620 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.094
+2026-01-23 03:20:22,620 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:22,620 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:22,620 - reward_calculator - INFO - Reward: 0.631 for HOLD (return=-0.62%, conf=0.59, correct=True)
+2026-01-23 03:20:22,621 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.091
+2026-01-23 03:20:22,621 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:22,621 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:22,621 - reward_calculator - INFO - Reward: 0.647 for HOLD (return=-0.94%, conf=0.54, correct=True)
+2026-01-23 03:20:22,622 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.102
+2026-01-23 03:20:22,622 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:22,622 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:22,622 - reward_calculator - INFO - Reward: 0.656 for HOLD (return=1.11%, conf=0.54, correct=True)
+2026-01-23 03:20:22,623 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.102
+2026-01-23 03:20:22,623 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:22,623 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:22,623 - reward_calculator - INFO - Reward: 0.671 for HOLD (return=1.41%, conf=0.57, correct=True)
+2026-01-23 03:20:22,624 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.099
+2026-01-23 03:20:22,624 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:22,624 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:22,624 - reward_calculator - INFO - Reward: 0.687 for HOLD (return=1.73%, conf=0.59, correct=True)
+2026-01-23 03:20:22,625 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.101
+2026-01-23 03:20:22,625 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:22,625 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:22,625 - reward_calculator - INFO - Reward: 0.681 for HOLD (return=1.61%, conf=0.57, correct=True)
+2026-01-23 03:20:22,625 - backtester - INFO - Progress: 25/75 decisions, accuracy=88.0%
+2026-01-23 03:20:22,626 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.100
+2026-01-23 03:20:22,626 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:22,626 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:22,626 - reward_calculator - INFO - Reward: 0.668 for HOLD (return=1.35%, conf=0.51, correct=True)
+2026-01-23 03:20:22,627 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.100
+2026-01-23 03:20:22,627 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:22,627 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:22,627 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=2.01%, conf=0.60, correct=False)
+2026-01-23 03:20:22,628 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.087
+2026-01-23 03:20:22,628 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:22,628 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:22,628 - reward_calculator - INFO - Reward: 0.671 for HOLD (return=1.42%, conf=0.57, correct=True)
+2026-01-23 03:20:22,629 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.086
+2026-01-23 03:20:22,629 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:22,629 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:22,629 - reward_calculator - INFO - Reward: 0.639 for HOLD (return=0.79%, conf=0.59, correct=True)
+2026-01-23 03:20:22,630 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.087
+2026-01-23 03:20:22,630 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:22,630 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:22,630 - reward_calculator - INFO - Reward: 0.611 for HOLD (return=0.22%, conf=0.58, correct=True)
+2026-01-23 03:20:22,631 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.083
+2026-01-23 03:20:22,631 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:22,631 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:22,631 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=-2.67%, conf=0.59, correct=False)
+2026-01-23 03:20:22,632 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.083
+2026-01-23 03:20:22,632 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:22,632 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:22,632 - reward_calculator - INFO - Reward: -0.800 for BUY (return=-3.10%, conf=0.76, correct=False)
+2026-01-23 03:20:22,633 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.078
+2026-01-23 03:20:22,633 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:22,633 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:22,633 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=-2.83%, conf=0.57, correct=False)
+2026-01-23 03:20:22,634 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.062
+2026-01-23 03:20:22,634 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:22,634 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:22,634 - reward_calculator - INFO - Reward: 0.604 for HOLD (return=0.08%, conf=0.53, correct=True)
+2026-01-23 03:20:22,635 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.071
+2026-01-23 03:20:22,635 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:22,635 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:22,635 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=2.22%, conf=0.52, correct=False)
+2026-01-23 03:20:22,636 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.068
+2026-01-23 03:20:22,636 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:22,636 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:22,636 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=2.74%, conf=0.59, correct=False)
+2026-01-23 03:20:22,637 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.076
+2026-01-23 03:20:22,637 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:22,637 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:22,637 - reward_calculator - INFO - Reward: 0.679 for HOLD (return=1.57%, conf=0.57, correct=True)
+2026-01-23 03:20:22,638 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.080
+2026-01-23 03:20:22,638 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:22,638 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:22,638 - reward_calculator - INFO - Reward: 0.649 for HOLD (return=0.98%, conf=0.59, correct=True)
+2026-01-23 03:20:22,639 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.081
+2026-01-23 03:20:22,639 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:22,639 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:22,639 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=2.63%, conf=0.55, correct=False)
+2026-01-23 03:20:22,640 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.081
+2026-01-23 03:20:22,640 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:22,640 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:22,640 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=2.63%, conf=0.58, correct=False)
+2026-01-23 03:20:22,641 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.081
+2026-01-23 03:20:22,641 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:22,641 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:22,641 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=2.54%, conf=0.59, correct=False)
+2026-01-23 03:20:22,642 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.089
+2026-01-23 03:20:22,642 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:22,642 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:22,642 - reward_calculator - INFO - Reward: 0.669 for HOLD (return=1.37%, conf=0.58, correct=True)
+2026-01-23 03:20:22,643 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.089
+2026-01-23 03:20:22,643 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:22,643 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:22,643 - reward_calculator - INFO - Reward: 0.667 for HOLD (return=1.34%, conf=0.55, correct=True)
+2026-01-23 03:20:22,644 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.087
+2026-01-23 03:20:22,644 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:22,644 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:22,644 - reward_calculator - INFO - Reward: 0.628 for HOLD (return=-0.57%, conf=0.58, correct=True)
+2026-01-23 03:20:22,645 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.084
+2026-01-23 03:20:22,645 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:22,645 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:22,645 - reward_calculator - INFO - Reward: 0.625 for HOLD (return=-0.49%, conf=0.52, correct=True)
+2026-01-23 03:20:22,646 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.069
+2026-01-23 03:20:22,646 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:22,646 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:22,646 - reward_calculator - INFO - Reward: 0.688 for HOLD (return=-1.76%, conf=0.52, correct=True)
+2026-01-23 03:20:22,647 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.068
+2026-01-23 03:20:22,647 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:22,647 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:22,647 - reward_calculator - INFO - Reward: 0.692 for HOLD (return=-1.84%, conf=0.55, correct=True)
+2026-01-23 03:20:22,648 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.072
+2026-01-23 03:20:22,648 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:22,648 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:22,648 - reward_calculator - INFO - Reward: 0.635 for HOLD (return=-0.71%, conf=0.58, correct=True)
+2026-01-23 03:20:22,648 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.078
+2026-01-23 03:20:22,649 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:22,649 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:22,649 - reward_calculator - INFO - Reward: 0.630 for HOLD (return=0.60%, conf=0.60, correct=True)
+2026-01-23 03:20:22,649 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.075
+2026-01-23 03:20:22,650 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:22,650 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:22,650 - reward_calculator - INFO - Reward: -0.300 for SELL (return=0.45%, conf=0.76, correct=False)
+2026-01-23 03:20:22,650 - backtester - INFO - Progress: 50/75 decisions, accuracy=74.0%
+2026-01-23 03:20:22,650 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.079
+2026-01-23 03:20:22,650 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:22,651 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:22,651 - reward_calculator - INFO - Reward: 0.694 for HOLD (return=1.87%, conf=0.52, correct=True)
+2026-01-23 03:20:22,651 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.069
+2026-01-23 03:20:22,651 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:22,651 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:22,652 - reward_calculator - INFO - Reward: 0.637 for HOLD (return=0.74%, conf=0.55, correct=True)
+2026-01-23 03:20:22,652 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.071
+2026-01-23 03:20:22,652 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:22,652 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:22,653 - reward_calculator - INFO - Reward: 0.629 for HOLD (return=0.58%, conf=0.57, correct=True)
+2026-01-23 03:20:22,653 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.074
+2026-01-23 03:20:22,653 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:22,653 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:22,654 - reward_calculator - INFO - Reward: 0.607 for HOLD (return=-0.14%, conf=0.50, correct=True)
+2026-01-23 03:20:22,654 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.072
+2026-01-23 03:20:22,654 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:22,654 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:22,655 - reward_calculator - INFO - Reward: 0.605 for HOLD (return=0.10%, conf=0.59, correct=True)
+2026-01-23 03:20:22,655 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.073
+2026-01-23 03:20:22,655 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:22,655 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:22,656 - reward_calculator - INFO - Reward: 0.629 for HOLD (return=0.58%, conf=0.59, correct=True)
+2026-01-23 03:20:22,656 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.080
+2026-01-23 03:20:22,656 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:22,656 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:22,657 - reward_calculator - INFO - Reward: 0.649 for HOLD (return=-0.97%, conf=0.59, correct=True)
+2026-01-23 03:20:22,657 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.076
+2026-01-23 03:20:22,657 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:22,657 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:22,657 - reward_calculator - INFO - Reward: 0.669 for HOLD (return=-1.39%, conf=0.58, correct=True)
+2026-01-23 03:20:22,658 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.075
+2026-01-23 03:20:22,658 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:22,658 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:22,658 - reward_calculator - INFO - Reward: 0.626 for HOLD (return=-0.51%, conf=0.55, correct=True)
+2026-01-23 03:20:22,659 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.076
+2026-01-23 03:20:22,659 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:22,659 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:22,659 - reward_calculator - INFO - Reward: 0.662 for HOLD (return=-1.25%, conf=0.55, correct=True)
+2026-01-23 03:20:22,660 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.082
+2026-01-23 03:20:22,660 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:22,660 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:22,660 - reward_calculator - INFO - Reward: 0.627 for HOLD (return=-0.55%, conf=0.50, correct=True)
+2026-01-23 03:20:22,661 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.080
+2026-01-23 03:20:22,661 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:22,661 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:22,661 - reward_calculator - INFO - Reward: 0.605 for HOLD (return=-0.09%, conf=0.52, correct=True)
+2026-01-23 03:20:22,662 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.081
+2026-01-23 03:20:22,662 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:22,662 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:22,662 - reward_calculator - INFO - Reward: 0.640 for HOLD (return=0.81%, conf=0.54, correct=True)
+2026-01-23 03:20:22,663 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.084
+2026-01-23 03:20:22,663 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:22,663 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:22,663 - reward_calculator - INFO - Reward: 0.653 for HOLD (return=1.06%, conf=0.60, correct=True)
+2026-01-23 03:20:22,664 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.084
+2026-01-23 03:20:22,664 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:22,664 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:22,664 - reward_calculator - INFO - Reward: 0.622 for HOLD (return=0.44%, conf=0.55, correct=True)
+2026-01-23 03:20:22,665 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.085
+2026-01-23 03:20:22,665 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:22,665 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:22,665 - reward_calculator - INFO - Reward: 0.635 for HOLD (return=0.70%, conf=0.59, correct=True)
+2026-01-23 03:20:22,666 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.082
+2026-01-23 03:20:22,666 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:22,666 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:22,666 - reward_calculator - INFO - Reward: 0.624 for HOLD (return=0.48%, conf=0.59, correct=True)
+2026-01-23 03:20:22,666 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.080
+2026-01-23 03:20:22,667 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:22,667 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:22,667 - reward_calculator - INFO - Reward: 0.624 for HOLD (return=0.48%, conf=0.52, correct=True)
+2026-01-23 03:20:22,667 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.082
+2026-01-23 03:20:22,667 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:22,668 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:22,668 - reward_calculator - INFO - Reward: 0.631 for HOLD (return=0.63%, conf=0.56, correct=True)
+2026-01-23 03:20:22,668 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.073
+2026-01-23 03:20:22,668 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:22,668 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:22,669 - reward_calculator - INFO - Reward: 0.621 for HOLD (return=0.41%, conf=0.57, correct=True)
+2026-01-23 03:20:22,669 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.075
+2026-01-23 03:20:22,669 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:22,669 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:22,670 - reward_calculator - INFO - Reward: 0.626 for HOLD (return=0.52%, conf=0.57, correct=True)
+2026-01-23 03:20:22,670 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.076
+2026-01-23 03:20:22,670 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:22,670 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:22,671 - reward_calculator - INFO - Reward: 0.638 for HOLD (return=0.77%, conf=0.58, correct=True)
+2026-01-23 03:20:22,671 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.073
+2026-01-23 03:20:22,671 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:22,671 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:22,672 - reward_calculator - INFO - Reward: 0.612 for HOLD (return=-0.24%, conf=0.55, correct=True)
+2026-01-23 03:20:22,672 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.078
+2026-01-23 03:20:22,672 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:22,672 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:22,673 - reward_calculator - INFO - Reward: 0.668 for HOLD (return=-1.36%, conf=0.55, correct=True)
+2026-01-23 03:20:22,673 - regime_detector - INFO - Detected regime: medium_stable_neutral, volatility=0.072
+2026-01-23 03:20:22,673 - weight_manager - INFO - Blended weights with RL ratio 0.70
+2026-01-23 03:20:22,673 - weight_manager - INFO - Final weights computed for regime medium_stable_neutral, RL=enabled
+2026-01-23 03:20:22,674 - reward_calculator - INFO - Reward: -0.350 for HOLD (return=-2.23%, conf=0.58, correct=False)
+2026-01-23 03:20:22,674 - backtester - INFO - Progress: 75/75 decisions, accuracy=81.3%
+2026-01-23 03:20:22,674 - backtester - INFO - Backtest complete: rl_weights, 75 decisions, accuracy=81.3%, avg_reward=0.454
+2026-01-23 03:20:22,674 - __main__ - INFO - 
+================================================================================
+2026-01-23 03:20:22,674 - __main__ - INFO - TESTING RESULTS (Generalization)
+2026-01-23 03:20:22,674 - __main__ - INFO - ================================================================================
+2026-01-23 03:20:22,674 - __main__ - INFO - 
+Equal Weights:
+2026-01-23 03:20:22,674 - __main__ - INFO -   Accuracy: 82.7% (62/75)
+2026-01-23 03:20:22,674 - __main__ - INFO -   Avg Reward: 0.475
+2026-01-23 03:20:22,674 - __main__ - INFO -   Avg Return: 0.23%
+2026-01-23 03:20:22,674 - __main__ - INFO -   Sharpe Ratio: 0.153
+2026-01-23 03:20:22,674 - __main__ - INFO - 
+Expert Weights:
+2026-01-23 03:20:22,674 - __main__ - INFO -   Accuracy: 81.3% (61/75)
+2026-01-23 03:20:22,674 - __main__ - INFO -   Avg Reward: 0.459
+2026-01-23 03:20:22,674 - __main__ - INFO -   Avg Return: -0.07%
+2026-01-23 03:20:22,674 - __main__ - INFO -   Sharpe Ratio: -0.045
+2026-01-23 03:20:22,674 - __main__ - INFO - 
+RL Weights:
+2026-01-23 03:20:22,674 - __main__ - INFO -   Accuracy: 81.3% (61/75)
+2026-01-23 03:20:22,674 - __main__ - INFO -   Avg Reward: 0.454
+2026-01-23 03:20:22,674 - __main__ - INFO -   Avg Return: 0.07%
+2026-01-23 03:20:22,674 - __main__ - INFO -   Sharpe Ratio: 0.050
+2026-01-23 03:20:22,674 - __main__ - INFO - 
+================================================================================
+2026-01-23 03:20:22,674 - __main__ - INFO - FINAL COMPARISON SUMMARY
+2026-01-23 03:20:22,674 - __main__ - INFO - ================================================================================
+2026-01-23 03:20:22,674 - __main__ - INFO - 
+Training Phase:
+2026-01-23 03:20:22,674 - __main__ - INFO -   Equal       :  60.0% acc,  0.257 reward
+2026-01-23 03:20:22,674 - __main__ - INFO -   Expert      :  57.3% acc,  0.219 reward
+2026-01-23 03:20:22,674 - __main__ - INFO -   RL          :  54.7% acc,  0.179 reward
+2026-01-23 03:20:22,674 - __main__ - INFO - 
+Testing Phase:
+2026-01-23 03:20:22,674 - __main__ - INFO -   Equal       :  82.7% acc,  0.475 reward
+2026-01-23 03:20:22,674 - __main__ - INFO -   Expert      :  81.3% acc,  0.459 reward
+2026-01-23 03:20:22,675 - __main__ - INFO -   RL          :  81.3% acc,  0.454 reward
+2026-01-23 03:20:22,677 - __main__ - INFO - Saved results to backtest_results.json
+2026-01-23 03:20:22,677 - database - INFO - Database connection closed
+2026-01-23 03:20:22,677 - __main__ - INFO - 
+================================================================================
+2026-01-23 03:20:22,677 - __main__ - INFO - BACKTESTING COMPLETE
+2026-01-23 03:20:22,677 - __main__ - INFO - ================================================================================
+2026-01-23 03:20:22,677 - __main__ - INFO - 
+Results saved to: backtest_results.json
+2026-01-23 03:20:22,677 - __main__ - INFO - Database saved to: backtest_full.db
