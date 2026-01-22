@@ -16,7 +16,9 @@ from plotly.subplots import make_subplots
 
 # Import backend modules
 from providers.utils import load_universe, validate_symbol
-from graph import build_graph
+# from graph import build_graph
+from graph_rl import build_rl_graph as build_graph
+
 from state import DecisionState
 
 # Configure page

@@ -23,6 +23,30 @@ from agents.data_quality_agents import (
 )
 from agents.missing_data_search_agent import missing_data_search_agent
 
+# Import RL components
+try:
+    from weight_manager import WeightManager
+    from rl_learner import ThompsonSamplingLearner
+    from database import DatabaseManager
+    from explainer import generate_weight_explanation
+    from data_accessor import NiftyDataAccessor
+    from datetime import datetime
+    import numpy as np
+    
+    # Initialize RL components
+    db_manager = DatabaseManager("kautilya_production.db")
+    rl_learner = ThompsonSamplingLearner(db_manager)
+    weight_manager = WeightManager(rl_learner=rl_learner)
+    data_accessor = NiftyDataAccessor()
+    
+    RL_ENABLED = True
+    logger.info("✅ RL components initialized successfully")
+except Exception as e:
+    logger.warning(f"⚠️  RL components not available: {e}")
+    RL_ENABLED = False
+    weight_manager = None
+    data_accessor = None
+
 logger = logging.getLogger(__name__)
 
 

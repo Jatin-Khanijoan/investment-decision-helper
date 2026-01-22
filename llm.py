@@ -19,7 +19,7 @@ def get_llm_client():
         raise ValueError("GEMINI_API_KEY not set")
 
     genai.configure(api_key=api_key)
-    model_name = os.getenv("GEMINI_MODEL", "gemini-2.0-flash-thinking-exp-1219")
+    model_name = os.getenv("GEMINI_MODEL", "gemini-2.0-flash")
     return genai.GenerativeModel(model_name)
 
 
