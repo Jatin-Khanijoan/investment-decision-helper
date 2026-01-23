@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """
 Run full backtesting comparison: equal weights vs expert weights vs RL weights.
-Train on Jan-Jun 2025, test on Jul-Jan 2026.
+Uses full 5-year NIFTY 50 data (Jan 2021 - Jan 2026).
+Train on 3 years (2021-2023), test on 2 years (2024-2026).
 """
 import logging
 from datetime import datetime
@@ -14,7 +15,11 @@ from backtester import Backtester
 
 logging.basicConfig(
     level=logging.INFO,
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.StreamHandler(),
+        logging.FileHandler('backtest_5year_log.txt', mode='w')
+    ]
 )
 logger = logging.getLogger(__name__)
 
@@ -93,26 +98,33 @@ def main():
     weight_manager = WeightManager(rl_learner=rl_learner)
     backtester = Backtester(data, db, weight_manager, rl_learner)
     
-    # Define periods
-    train_start = datetime(2025, 1, 23)
-    train_end = datetime(2025, 6, 30)
-    test_start = datetime(2025, 7, 1)
-    test_end = datetime(2026, 1, 15)  # Leave buffer for 7-day forward
-    
-    logger.info(f"Training period: {train_start.date()} to {train_end.date()}")
-    logger.info(f"Testing period: {test_start.date()} to {test_end.date()}")
+    # Define periods - USE FULL 5 YEARS OF DATA
+    # Training: 3 years (Jan 2021 - Dec 2023) for robust RL learning
+    # Testing: 2 years (Jan 2024 - Jan 2026) for generalization testing
+    train_start = datetime(2021, 1, 25)  # First available date
+    train_end = datetime(2023, 12, 29)   # End of 2023
+    test_start = datetime(2024, 1, 2)    # Start of 2024
+    test_end = datetime(2026, 1, 12)     # Leave buffer for 7-day forward
+
+    logger.info(f"=" * 60)
+    logger.info(f"DATA PERIOD CONFIGURATION")
+    logger.info(f"=" * 60)
+    logger.info(f"Training period: {train_start.date()} to {train_end.date()} (~3 years)")
+    logger.info(f"Testing period: {test_start.date()} to {test_end.date()} (~2 years)")
+    logger.info(f"Total data span: 5 years of NIFTY 50 data")
     
     # Storage for results
     all_results = {}
     
     # ========================================================================
-    # PHASE 1: TRAINING (Jan-Jun 2025)
+    # PHASE 1: TRAINING (Jan 2021 - Dec 2023) - 3 YEARS
     # ========================================================================
     logger.info("\n" + "=" * 80)
-    logger.info("PHASE 1: TRAINING (Jan-Jun 2025)")
+    logger.info("PHASE 1: TRAINING (Jan 2021 - Dec 2023) - 3 YEARS OF DATA")
     logger.info("=" * 80)
-    
-    num_train_decisions = 75
+
+    # More decisions with 3 years of training data for robust RL learning
+    num_train_decisions = 300
     
     # 1.1: Equal Weights (Training)
     logger.info("\n[1/6] Running Equal Weights - Training...")
@@ -162,13 +174,14 @@ def main():
         logger.info(f"  Sharpe Ratio: {metrics['sharpe_ratio']:.3f}")
     
     # ========================================================================
-    # PHASE 2: TESTING (Jul-Jan 2026)
+    # PHASE 2: TESTING (Jan 2024 - Jan 2026) - 2 YEARS
     # ========================================================================
     logger.info("\n" + "=" * 80)
-    logger.info("PHASE 2: TESTING (Jul-Jan 2026) - RL LEARNING FROZEN")
+    logger.info("PHASE 2: TESTING (Jan 2024 - Jan 2026) - 2 YEARS, RL FROZEN")
     logger.info("=" * 80)
-    
-    num_test_decisions = 75
+
+    # More test decisions with 2 years of test data
+    num_test_decisions = 200
     
     # 2.1: Equal Weights (Testing)
     logger.info("\n[4/6] Running Equal Weights - Testing...")

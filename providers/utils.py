@@ -1,5 +1,10 @@
 import json
+import sys
 from pathlib import Path
+
+# Add parent directory for config import
+sys.path.insert(0, str(Path(__file__).parent.parent))
+from config import STOCKS_FILE
 
 NIFTY50_SYMBOLS = {
     "Reliance Industries": "RELIANCE",
@@ -55,9 +60,10 @@ NIFTY50_SYMBOLS = {
 }
 
 
-def load_universe(path: str = "stocks.json") -> dict[str, str]:
-    if Path(path).exists():
-        with open(path) as f:
+def load_universe(path: str = None) -> dict[str, str]:
+    stocks_path = Path(path) if path else STOCKS_FILE
+    if stocks_path.exists():
+        with open(stocks_path) as f:
             companies = json.load(f)
             return {NIFTY50_SYMBOLS.get(c, c): c for c in companies}
     return NIFTY50_SYMBOLS

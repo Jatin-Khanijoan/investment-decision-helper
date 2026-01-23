@@ -8,12 +8,14 @@ Usage:
     result = await graph.ainvoke(initial_state)
 """
 import asyncio
+import json
 import logging
 from datetime import datetime
 from langgraph.graph import StateGraph, END
 from state import DecisionState, AgentOutput
-from personal import personal_info
+from personal import personal_info, get_investment_persona
 from llm import call_llm
+from config import USER_PROFILE_FILE, PRODUCTION_DB
 
 # Import all 15 agents
 from agents.macro_agents import inflation_agent, interest_rates_agent, gdp_growth_agent
@@ -39,7 +41,7 @@ logger = logging.getLogger(__name__)
 
 # Initialize RL components globally
 try:
-    db_manager = DatabaseManager("kautilya_production.db")
+    db_manager = DatabaseManager(str(PRODUCTION_DB))
     rl_learner = ThompsonSamplingLearner(db_manager)
     weight_manager = WeightManager(rl_learner=rl_learner)
     data_accessor = NiftyDataAccessor()
@@ -55,21 +57,98 @@ except Exception as e:
 
 
 def load_personal_context(state: DecisionState) -> dict:
-    """Load user's personal investment profile."""
+    """Load user's personal investment profile with comprehensive details."""
     user_id = state["user_id"]
     logger.info("Loading personal context for user: %s", user_id)
     personal_data = personal_info(user_id)
+    
+    # FALLBACK: Check if we got default profile, if so try loading JSON directly
+    # This addresses issues where personal.py might be cached or path resolution fails
+    try:
+        if personal_data.get("name") in ["Guest User", "Unknown"] or not personal_data.get("profile_complete"):
+            profile_file = USER_PROFILE_FILE
 
+            if profile_file.exists():
+                logger.info("⚠️ Falling back to direct JSON loading from %s", profile_file)
+                with open(profile_file, 'r') as f:
+                    profile_json = json.load(f)
+                    # We need to reconstruct the personal_data structure manually since personal_info did it
+                    # This is a simplified version of what personal_info does, focusing on what LLM needs
+                    personal_data = {
+                        "name": profile_json.get("name", "User"),
+                        "age": profile_json.get("age", 30),
+                        "risk_profile": {
+                            "risk_label": profile_json.get("risk_label", "Moderate"),
+                            "risk_tolerance_score": profile_json.get("risk_tolerance", 5),
+                            "notes": profile_json.get("market_drop_reaction", "")
+                        },
+                        "investment_goals": {
+                            "primary_goal": profile_json.get("primary_goal", "Wealth Creation"),
+                            "time_horizon": profile_json.get("investment_horizon", "5-10 years")
+                        },
+                        "portfolio_summary": {
+                            "total_value": profile_json.get("portfolio_value", 0),
+                            "holdings": profile_json.get("holdings", []),
+                            "allocation": {
+                                "equities": profile_json.get("equity_allocation", 0) / 100,
+                                "mutual_funds": profile_json.get("mutual_fund_allocation", 0) / 100,
+                                "bonds_fixed_deposits": profile_json.get("bonds_fd_allocation", 0) / 100,
+                                "cash": profile_json.get("cash_allocation", 0) / 100,
+                                "gold_etf": profile_json.get("gold_allocation", 0) / 100
+                            }
+                        },
+                        "profile_complete": True
+                    }
+                    logger.info("✅ Successfully loaded profile directly from JSON. Holdings: %d", 
+                               len(personal_data["portfolio_summary"]["holdings"]))
+    except Exception as e:
+        logger.error("❌ Direct JSON load failed: %s", e)
+
+    # Get comprehensive investment persona for decision-making
+    persona = get_investment_persona(user_id)
+
+    # Build detailed context for LLM
     if isinstance(personal_data, dict):
-        context = f"User: {personal_data.get('name', 'Unknown')}, "
-        context += f"Age: {personal_data.get('age', 'N/A')}, "
-        context += f"Occupation: {personal_data.get('occupation', 'N/A')}, "
-        context += f"Salary: {personal_data.get('salary', 'N/A')}"
+        # Basic info
+        context = f"User: {personal_data.get('name', 'Unknown')}\n"
+        context += f"Age: {personal_data.get('age', 'N/A')}\n"
+        context += f"Occupation: {personal_data.get('occupation', 'N/A')}\n"
+
+        # Financial status
+        salary = personal_data.get('salary', 0)
+        if salary > 0:
+            context += f"Annual Salary: ₹{salary:,}\n"
+
+        # Risk profile
+        risk_profile = personal_data.get('risk_profile', {})
+        context += f"Risk Tolerance: {risk_profile.get('risk_label', 'Moderate')} ({risk_profile.get('risk_tolerance_score', 5)}/10)\n"
+        context += f"Investment Experience: {risk_profile.get('investment_experience', 'Beginner')}\n"
+
+        # Investment goals
+        goals = personal_data.get('investment_goals', {})
+        context += f"Primary Goal: {goals.get('primary_goal', 'Wealth Creation')}\n"
+        context += f"Time Horizon: {goals.get('time_horizon', '5-10 years')}\n"
+
+        # Portfolio info
+        portfolio = personal_data.get('portfolio_summary', {})
+        if portfolio.get('total_value', 0) > 0:
+            context += f"Current Portfolio: ₹{portfolio['total_value']:,}\n"
+
+        # Market preferences
+        prefs = personal_data.get('market_preferences', {})
+        if prefs.get('preferred_sectors'):
+            context += f"Preferred Sectors: {', '.join(prefs['preferred_sectors'])}\n"
+        if prefs.get('avoid_sectors'):
+            context += f"Sectors to Avoid: {', '.join(prefs['avoid_sectors'])}\n"
+
+        # Profile completeness warning
+        if not personal_data.get('profile_complete', False):
+            context += "\n⚠️ User profile incomplete - using conservative defaults.\n"
     else:
         context = str(personal_data)
 
-    logger.info("Personal context loaded: %s", context)
-    return {"personal_context": context}
+    logger.info("Personal context loaded for: %s", personal_data.get('name', 'Unknown'))
+    return {"personal_context": context, "personal_data": personal_data}
 
 
 async def gather_signals(state: DecisionState) -> dict:
@@ -164,67 +243,126 @@ def apply_rl_weighting(state: DecisionState) -> dict:
 
 def merge_context(state: DecisionState) -> dict:
     """
-    Merge agent outputs with RL weights into prioritized context for LLM.
-    HIGH priority agents get >10% weight, MEDIUM 5-10%, LOW <5%.
+    Merge agent outputs with RL weights into compact prioritized context for LLM.
+    Only HIGH priority signals get full details; others are summarized.
     """
     logger.info("📝 Merging agent outputs with RL-based prioritization...")
-    
+
     agent_outputs = state.get("agent_outputs", {})
     weights = state.get("weights_used", {})
     all_citations = set()
-    
+
     # Group agents by priority based on RL weights
     high_priority = []
-    medium_priority = []
-    low_priority = []
-    
+    other_signals = []
+    agent_names_used = []
+
     for name, output in agent_outputs.items():
         if not isinstance(output, AgentOutput):
             continue
-            
-        weight = weights.get(name, 1.0/15)  # Default equal weight if not found
-        
-        # Format output with weight and confidence
-        formatted = f"**{name.replace('_', ' ').title()}** (weight: {weight:.3f}, confidence: {output.confidence:.2f})\n"
-        formatted += f"  {output.value}\n"
-        if output.notes:
-            formatted += f"  Notes: {output.notes}\n"
-        
+
+        weight = weights.get(name, 1.0/15)
+        agent_names_used.append(name.replace('_', ' ').title())
+
         # Collect citations
         if output.sources:
             all_citations.update(output.sources)
-        
-        # Categorize by weight
+
+        # Only HIGH priority (>10% weight) gets full details
         if weight > 0.10:
+            formatted = f"• {name.replace('_', ' ').title()} [w:{weight:.2f}]: {output.value}"
+            if output.notes:
+                formatted += f" ({output.notes})"
             high_priority.append(formatted)
-        elif weight > 0.05:
-            medium_priority.append(formatted)
         else:
-            low_priority.append(formatted)
-    
-    # Build prioritized context
+            # Compact format for others: just name and signal direction
+            value_str = str(output.value)
+            signal = value_str[:50] + "..." if len(value_str) > 50 else value_str
+            other_signals.append(f"{name.replace('_', ' ').title()}: {signal}")
+
+    # Build compact context
     context_parts = []
-    
+
     if high_priority:
-        context_parts.append("=== 🔥 HIGH PRIORITY SIGNALS (weight > 0.10) ===")
-        context_parts.append("These signals are MOST RELEVANT for current market conditions:\n")
+        context_parts.append("KEY SIGNALS:")
         context_parts.extend(high_priority)
-        context_parts.append("")
-    
-    if medium_priority:
-        context_parts.append("=== 📊 MEDIUM PRIORITY SIGNALS (weight 0.05-0.10) ===")
-        context_parts.extend(medium_priority)
-        context_parts.append("")
-    
-    if low_priority:
-        context_parts.append("=== 📋 SUPPORTING SIGNALS (weight < 0.05) ===")
-        context_parts.extend(low_priority)
-    
+
+    if other_signals:
+        context_parts.append("\nOTHER SIGNALS: " + " | ".join(other_signals))
+
     full_context = "\n".join(context_parts)
+
+    logger.info(f"✅ Context built: {len(high_priority)} key signals, {len(other_signals)} supporting")
+
+    return {
+        "agent_summaries": full_context,
+        "citations": list(all_citations),
+        "agents_used": agent_names_used
+    }
+
+
+def _get_compact_portfolio(personal_data: dict) -> str:
+    """Generate compact portfolio summary for LLM prompt."""
+    portfolio = personal_data.get("portfolio_summary", {})
+    if not portfolio:
+        return "No portfolio data available"
+
+    total = portfolio.get("total_value", 0)
+    holdings = portfolio.get("holdings", [])
+    allocation = portfolio.get("allocation", {})
     
-    logger.info(f"✅ Context built: {len(high_priority)} high, {len(medium_priority)} medium, {len(low_priority)} low priority signals")
+    # Build portfolio context even if no specific holdings
+    parts = [f"Total Portfolio Value: ₹{total:,}"]
     
-    return {"agent_summaries": full_context, "citations": list(all_citations)}
+    # Add allocation breakdown
+    if allocation:
+        alloc_parts = []
+        if allocation.get("equities", 0) > 0:
+            alloc_parts.append(f"Equities: {allocation['equities']*100:.0f}%")
+        if allocation.get("mutual_funds", 0) > 0:
+            alloc_parts.append(f"MFs: {allocation['mutual_funds']*100:.0f}%")
+        if allocation.get("bonds_fixed_deposits", 0) > 0:
+            alloc_parts.append(f"Bonds/FD: {allocation['bonds_fixed_deposits']*100:.0f}%")
+        if allocation.get("cash", 0) > 0:
+            alloc_parts.append(f"Cash: {allocation['cash']*100:.0f}%")
+        if allocation.get("gold_etf", 0) > 0:
+            alloc_parts.append(f"Gold: {allocation['gold_etf']*100:.0f}%")
+        if alloc_parts:
+            parts.append("Allocation: " + ", ".join(alloc_parts))
+
+    # Add specific holdings if available
+    if holdings:
+        # Separate gainers and losers
+        losers = [h for h in holdings if h.get("gain_loss_pct", 0) < 0]
+        gainers = [h for h in holdings if h.get("gain_loss_pct", 0) >= 0]
+
+        if losers:
+            loss_summary = ", ".join([
+                f"{h['ticker']}({h.get('gain_loss_pct', 0):+.1f}%)"
+                for h in sorted(losers, key=lambda x: x.get("gain_loss_pct", 0))[:3]
+            ])
+            parts.append(f"📉 Losing Positions: {loss_summary}")
+
+        if gainers:
+            gain_summary = ", ".join([
+                f"{h['ticker']}({h.get('gain_loss_pct', 0):+.1f}%)"
+                for h in sorted(gainers, key=lambda x: x.get("gain_loss_pct", 0), reverse=True)[:3]
+            ])
+            parts.append(f"📈 Winning Positions: {gain_summary}")
+
+        # Sector concentration
+        sectors = {}
+        for h in holdings:
+            sec = h.get("sector", "Other")
+            sectors[sec] = sectors.get(sec, 0) + h.get("value_inr", 0)
+        if sectors and total > 0:
+            top_sector = max(sectors.items(), key=lambda x: x[1])
+            if top_sector[1] / total > 0.3:
+                parts.append(f"⚠️ Sector Concentration: {top_sector[0]} ({top_sector[1]/total*100:.0f}%)")
+    else:
+        parts.append("No specific stock holdings tracked")
+
+    return "\n".join(parts)
 
 
 def decide_with_llm(state: DecisionState) -> dict:
@@ -233,54 +371,75 @@ def decide_with_llm(state: DecisionState) -> dict:
     """
     logger.info("🧠 Making final decision with LLM for: %s", state["question"][:50])
 
-    system_prompt = """You are an expert investment advisor for India equities (NIFTY50) using an advanced RL-enhanced multi-agent system.
+    # Get personal data for personalization
+    personal_data = state.get("personal_data", {})
+    
+    # Log personal data structure for debugging
+    logger.info("📋 Personal data keys: %s", list(personal_data.keys()))
+    portfolio_summary = personal_data.get("portfolio_summary", {})
+    logger.info("📊 Portfolio summary keys: %s", list(portfolio_summary.keys()))
+    logger.info("📈 Holdings count: %d", len(portfolio_summary.get("holdings", [])))
+    logger.info("💼 Mutual funds count: %d", len(portfolio_summary.get("mutual_funds", [])))
+    logger.info("💰 Portfolio total value: ₹%d", portfolio_summary.get("total_value", 0))
+    
+    # Log actual holdings data
+    holdings = portfolio_summary.get("holdings", [])
+    if holdings:
+        logger.info("📌 Holdings details:")
+        for h in holdings[:3]:  # Show first 3
+            logger.info("   - %s (%s): ₹%d, P/L: %.1f%%", 
+                       h.get("name", "?"), h.get("ticker", "?"), 
+                       h.get("value_inr", 0), h.get("gain_loss_pct", 0))
+    
+    # Get formatted portfolio and log it
+    portfolio_context = _get_compact_portfolio(personal_data)
+    logger.info("📝 Formatted portfolio context:\n%s", portfolio_context)
 
-CRITICAL: The signals are prioritized using Thompson Sampling reinforcement learning that adapts to market conditions.
-- HIGH PRIORITY signals have >10% weight - these are MOST IMPORTANT for current market regime
-- MEDIUM PRIORITY signals provide supporting context
-- LOW PRIORITY signals are included for completeness
+    system_prompt = """You are an India equities (NIFTY50) investment advisor using RL-weighted multi-agent analysis.
 
-INSTRUCTIONS:
-- Base your decision PRIMARILY on HIGH PRIORITY signals
-- Use medium/low priority as supporting evidence only
-- Make a clear BUY/HOLD/SELL recommendation
-- Provide specific, actionable reasoning citing the high-priority factors
-- Output strict JSON only"""
+REQUIREMENTS:
+1. Reference user's age, risk profile, and specific holdings by name
+2. Focus on KEY SIGNALS (highest RL weights) for current market regime
+3. Mention relevant portfolio positions (especially losses or sector overlap)
+4. Output strict JSON only
+5. Use granular confidence scores (e.g., 0.65, 0.78, 0.82) based on signal strength and data completeness. Avoid default 0.5/0.6."""
 
     agent_summaries = state.get("agent_summaries", "")
     weight_explanation = state.get("weight_explanation", "")
     regime = state.get("market_regime", "unknown")
-    
-    user_prompt = f"""Investment Question: {state['question']}
-Symbol: {state['symbol']}
-Sector: {state.get('sector', 'Unknown')}
-Personal Context: {state.get('personal_context', '')}
+    agents_used = state.get("agents_used", [])
+    citations = state.get("citations", [])
 
-AGENT ANALYSIS (RL-Weighted by Market Regime):
+    user_prompt = f"""Q: {state['question']}
+Symbol: {state['symbol']} | Sector: {state.get('sector', 'Unknown')} | Regime: {regime}
+
+USER: {personal_data.get('name', 'User')}, Age {personal_data.get('age', 30)}, Risk: {personal_data.get('risk_profile', {}).get('risk_label', 'Moderate')}
+Goal: {personal_data.get('investment_goals', {}).get('primary_goal', 'Wealth creation')} | Horizon: {personal_data.get('investment_goals', {}).get('time_horizon', 'Long-term')}
+
+PORTFOLIO SUMMARY:
+{_get_compact_portfolio(personal_data)}
+
 {agent_summaries}
 
----
-WEIGHT EXPLANATION (Why these priorities):
-{weight_explanation}
----
-Detected Market Regime: {regime}
----
+Regime Context: {weight_explanation}
 
-Required JSON output:
-{{
-  "decision": "BUY | HOLD | SELL",
-  "confidence": 0.0-1.0,
-  "horizon": "short | medium | long",
-  "why": "Detailed explanation focusing on HIGH PRIORITY signals and their implications",
-  "key_factors": ["specific high-priority factors driving this decision"],
-  "risks": ["specific risks from the analysis"],
-  "personalization_considerations": ["how this fits user profile"],
-  "used_agents": ["list key agents that influenced decision"],
-  "citations": {state.get('citations', [])}
-}}"""
+Return JSON:
+{{"decision":"BUY|HOLD|SELL","confidence":0.0-1.0,"horizon":"short|medium|long","why":"explanation referencing user profile","key_factors":["factors"],"risks":["risks"],"personalization_considerations":["3-5 user-specific points"],"used_agents":{json.dumps(agents_used)},"citations":{json.dumps(citations)}}}"""
 
     try:
         logger.info("Sending RL-weighted context to LLM (%d chars)", len(user_prompt))
+        
+        # Log complete payload being sent to Gemini
+        logger.info("="*80)
+        logger.info("📤 LLM PAYLOAD - SYSTEM PROMPT:")
+        logger.info("="*80)
+        logger.info(system_prompt)
+        logger.info("="*80)
+        logger.info("📤 LLM PAYLOAD - USER PROMPT:")
+        logger.info("="*80)
+        logger.info(user_prompt)
+        logger.info("="*80)
+        
         decision_json = call_llm(system_prompt, user_prompt)
         
         # Add RL metadata to output for transparency

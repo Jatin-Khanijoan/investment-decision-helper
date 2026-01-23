@@ -20,6 +20,7 @@ from providers.utils import load_universe, validate_symbol
 from graph_rl import build_rl_graph as build_graph
 
 from state import DecisionState
+from personal import personal_info, get_investment_persona
 
 # Configure page
 st.set_page_config(
@@ -293,15 +294,41 @@ def main():
     
     # Sidebar for inputs
     with st.sidebar:
-        st.header("🔧 Analysis Parameters")
+        # Profile Status Card
+        st.header("👤 Profile Status")
+        profile_data = personal_info()
         
+        # Debug info
+        if st.checkbox("Show Profile Debug", value=False):
+            st.code(f"Name: {profile_data.get('name')}\nAge: {profile_data.get('age')}\nRisk: {profile_data.get('risk_profile', {}).get('risk_label')}\nHoldings: {len(profile_data.get('portfolio_summary', {}).get('holdings', []))}")
+            st.write(f"CWD: {os.getcwd()}")
+            
+        profile_complete = profile_data.get('profile_complete', False)
+
+        if profile_complete:
+            st.success(f"✅ {profile_data.get('name', 'User')}")
+            col1, col2 = st.columns(2)
+            with col1:
+                st.caption(f"Risk: {profile_data['risk_profile']['risk_label']}")
+            with col2:
+                st.caption(f"Goal: {profile_data['investment_goals']['primary_goal']}")
+        else:
+            st.warning("⚠️ Profile Incomplete")
+            st.caption("Complete your profile for personalized recommendations")
+            if st.button("📝 Complete Profile", use_container_width=True):
+                st.switch_page("pages/1_Profile_Card.py")
+
+        st.markdown("---")
+        st.header("🔧 Analysis Parameters")
+
         # Load NIFTY50 symbols
         nifty50_symbols = load_nifty50_symbols()
         
-        # User inputs
+        # User inputs - use profile name if available
+        default_user = profile_data.get('name', 'demo_user') if profile_complete else "demo_user"
         user_id = st.text_input(
             "👤 User ID",
-            value="demo_user",
+            value=default_user,
             help="Enter your unique user identifier"
         )
         

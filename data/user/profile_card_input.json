@@ -1,0 +1,167 @@
+{
+  "name": "Arjun Sharma",
+  "age": 26,
+  "email": "arjun.sharma@gmail.com",
+  "gender": "Male",
+  "occupation": "Software Engineer",
+  "education": "Bachelor's Degree",
+  "marital_status": "Single",
+  "country": "India",
+  "preferred_currency": "INR",
+  "salary": 1800000,
+  "monthly_take_home": 125000,
+  "savings_rate": 35,
+  "net_worth": 2500000,
+  "emergency_fund_months": 8,
+  "epf_balance": 320000,
+  "ppf_balance": 150000,
+  "nps_balance": 80000,
+  "risk_tolerance": 8,
+  "risk_label": "Aggressive",
+  "investment_experience": "Intermediate",
+  "market_drop_reaction": "Buy more at lower prices",
+  "portfolio_value": 1200000,
+  "equity_allocation": 70,
+  "mutual_fund_allocation": 15,
+  "bonds_fd_allocation": 5,
+  "cash_allocation": 5,
+  "gold_allocation": 5,
+  "investment_horizon": "10+ years",
+  "primary_goal": "Wealth Creation",
+  "sip_monthly": 25000,
+  "trade_frequency": "Monthly",
+  "tax_regime": "New Regime",
+  "preferred_sectors": ["IT", "Banking", "Pharma"],
+  "avoid_sectors": ["Tobacco", "Alcohol"],
+  "profile_complete": true,
+  "holdings": [
+    {
+      "ticker": "TCS.NS",
+      "name": "Tata Consultancy Services",
+      "sector": "IT",
+      "quantity": 25,
+      "avg_buy_price": 3200,
+      "current_price": 4100,
+      "value_inr": 102500,
+      "gain_loss_pct": 28.1,
+      "holding_period_months": 18
+    },
+    {
+      "ticker": "RELIANCE.NS",
+      "name": "Reliance Industries",
+      "sector": "Energy",
+      "quantity": 40,
+      "avg_buy_price": 2800,
+      "current_price": 2450,
+      "value_inr": 98000,
+      "gain_loss_pct": -12.5,
+      "holding_period_months": 8
+    },
+    {
+      "ticker": "HDFCBANK.NS",
+      "name": "HDFC Bank",
+      "sector": "Banking",
+      "quantity": 60,
+      "avg_buy_price": 1550,
+      "current_price": 1720,
+      "value_inr": 103200,
+      "gain_loss_pct": 11.0,
+      "holding_period_months": 24
+    },
+    {
+      "ticker": "INFY.NS",
+      "name": "Infosys",
+      "sector": "IT",
+      "quantity": 50,
+      "avg_buy_price": 1650,
+      "current_price": 1520,
+      "value_inr": 76000,
+      "gain_loss_pct": -7.9,
+      "holding_period_months": 6
+    },
+    {
+      "ticker": "ICICIBANK.NS",
+      "name": "ICICI Bank",
+      "sector": "Banking",
+      "quantity": 80,
+      "avg_buy_price": 980,
+      "current_price": 1150,
+      "value_inr": 92000,
+      "gain_loss_pct": 17.3,
+      "holding_period_months": 14
+    },
+    {
+      "ticker": "SBIN.NS",
+      "name": "State Bank of India",
+      "sector": "Banking",
+      "quantity": 120,
+      "avg_buy_price": 620,
+      "current_price": 580,
+      "value_inr": 69600,
+      "gain_loss_pct": -6.5,
+      "holding_period_months": 4
+    },
+    {
+      "ticker": "BHARTIARTL.NS",
+      "name": "Bharti Airtel",
+      "sector": "Telecom",
+      "quantity": 45,
+      "avg_buy_price": 1100,
+      "current_price": 1680,
+      "value_inr": 75600,
+      "gain_loss_pct": 52.7,
+      "holding_period_months": 30
+    },
+    {
+      "ticker": "WIPRO.NS",
+      "name": "Wipro",
+      "sector": "IT",
+      "quantity": 150,
+      "avg_buy_price": 480,
+      "current_price": 420,
+      "value_inr": 63000,
+      "gain_loss_pct": -12.5,
+      "holding_period_months": 10
+    }
+  ],
+  "mutual_funds": [
+    {
+      "name": "Axis Bluechip Fund - Direct Growth",
+      "type": "Large Cap Equity",
+      "value_inr": 85000,
+      "sip_amount": 10000,
+      "returns_1yr_pct": 12.5
+    },
+    {
+      "name": "Parag Parikh Flexi Cap Fund - Direct Growth",
+      "type": "Flexi Cap",
+      "value_inr": 95000,
+      "sip_amount": 15000,
+      "returns_1yr_pct": 18.2
+    }
+  ],
+  "watchlist": ["SUNPHARMA.NS", "DRREDDY.NS", "TATAMOTORS.NS", "MARUTI.NS"],
+  "recent_transactions": [
+    {
+      "date": "2025-12-15",
+      "action": "BUY",
+      "ticker": "SBIN.NS",
+      "quantity": 50,
+      "price": 595
+    },
+    {
+      "date": "2025-11-20",
+      "action": "BUY",
+      "ticker": "INFY.NS",
+      "quantity": 25,
+      "price": 1580
+    },
+    {
+      "date": "2025-10-10",
+      "action": "SELL",
+      "ticker": "TATASTEEL.NS",
+      "quantity": 100,
+      "price": 145
+    }
+  ]
+}

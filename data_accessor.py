@@ -9,6 +9,8 @@ from typing import Optional, List
 import logging
 import os
 
+from config import NIFTY_CSV_FILES
+
 logger = logging.getLogger(__name__)
 
 
@@ -16,25 +18,19 @@ class NiftyDataAccessor:
     """
     Accessor for NIFTY 50 historical price data from multiple CSV files.
     """
-    
+
     def __init__(self, csv_files: List[str] = None):
         """
         Initialize NiftyDataAccessor with historical data from multiple CSV files.
-        
+
         Args:
             csv_files: List of CSV file paths to load. If None, loads all available NIFTY files.
         """
         self.logger = logging.getLogger(__name__)
-        
+
         # Default to all available NIFTY 50 files (2021-2026)
         if csv_files is None:
-            csv_files = [
-                "NIFTY 50-22-01-2021-to-22-01-2022.csv",
-                "NIFTY 50-22-01-2022-to-22-01-2023.csv",
-                "NIFTY 50-22-01-2023-to-22-01-2024.csv",
-                "NIFTY 50-22-01-2024-to-22-01-2025.csv",
-                "NIFTY 50-23-01-2025-to-23-01-2026.csv"
-            ]
+            csv_files = [str(f) for f in NIFTY_CSV_FILES]
         
         # Load and concatenate all CSV files
         all_data = []
